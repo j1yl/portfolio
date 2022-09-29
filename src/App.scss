@@ -54,3 +54,16 @@
     }
   }
 }
+
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
+}
+
+.card-layout-items {
+  flex-basis: 33.3333333%;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+}
