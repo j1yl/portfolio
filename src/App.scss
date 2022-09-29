@@ -56,14 +56,23 @@
 }
 
 .card-layout {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -0.25rem;
-  margin-left: -0.25rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  #about {
+    grid-column: 1 / span 2;
+  }
+  .card-layout-items {
+    padding: 1rem;
+    border: 0.2rem solid $color4;
+    border-radius: 1rem;
+    .card-layout-items-title {
+      color: $color4;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
 }
 
-.card-layout-items {
-  flex-basis: 33.3333333%;
-  padding-right: 0.25rem;
-  padding-left: 0.25rem;
-}
+
