@@ -1,0 +1,36 @@
+.page-wrapper {
+  margin: 0 10rem;
+}
+
+.header-wrapper {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  .nav-wrapper {
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      h1 {
+        font-size: 0.8rem;
+        font-weight: 400;
+      }
+      a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        color: black;
+      }
+      button {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.hero-wrapper {
+  margin: 5rem 9rem;
+  font-size: 6rem;
+}
