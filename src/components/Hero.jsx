@@ -3,8 +3,8 @@ import React from 'react'
 const Hero = () => {
   return (
     <div className='hero-wrapper'>
-      <div className='one'>CREATIVE</div>
-      <div className='two'>WEB DEVELOPER</div>
+      <div className='one'>I AM <span className='name'>JOE LEE</span></div>
+      <div className='two'><span className='adjective'>IMAGINATIVE </span>DEVELOPER</div>
     </div>
   )
 }

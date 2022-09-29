@@ -11,7 +11,7 @@
     nav {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
       margin-top: 2%;
       margin-bottom: 2%;
       h1 {
@@ -31,6 +31,23 @@
 }
 
 .hero-wrapper {
-  margin: 5rem 9rem;
-  font-size: 6rem;
+  height: 100%;
+  width: 100%;
+  font-size: 5rem;
+  display: grid;
+  align-content: center;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+  .one {
+    color: black;
+    .name {
+      color: blueviolet;
+    }
+  }
+  .two {
+    color: black;
+    .adjective {
+      color: lightblue;
+    }
+  }
 }
