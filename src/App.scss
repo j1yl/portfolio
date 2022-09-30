@@ -55,25 +55,4 @@
   }
 }
 
-.card-layout {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  row-gap: 2rem;
-  column-gap: 2rem;
-  #about {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 2;
-  }
-  .card-layout-items {
-    padding: 1rem;
-    border: 0.1rem black;
-    border-radius: 2rem;
-    .card-layout-items-title {
-      color: $color4;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-  }
-}
-
 
