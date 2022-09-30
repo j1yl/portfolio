@@ -24,14 +24,6 @@ const Work = () => {
           <h2 className='card-layout-items-title'>#4</h2><br></br>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non ex nec leo euismod ornare. Nullam congue leo id augue ornare, quis vulputate neque elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
         </div>
-        <div className='card-layout-items'>
-          <h2 className='card-layout-items-title'>#5</h2><br></br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non ex nec leo euismod ornare. Nullam congue leo id augue ornare, quis vulputate neque elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        </div>
-        <div className='card-layout-items'>
-          <h2 className='card-layout-items-title'>#6</h2><br></br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non ex nec leo euismod ornare. Nullam congue leo id augue ornare, quis vulputate neque elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        </div>
       </div>
     </div>
   )
