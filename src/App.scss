@@ -19,14 +19,17 @@ section {
 
 // hero
 .one {
+  color: white;
   background: $color1;
   flex-direction: column;
   justify-content: center;
   padding: 0 10vw;
   h1 {
+    font-weight: 400;
     font-size: 6rem;
   }
   h2 {
+    font-weight: 400;
     font-size: 4rem;
   }
 }
@@ -40,7 +43,8 @@ section {
   padding: 0 10vw;
 
   h2 {
-    font-size: 4rem;
+    font-weight: 400;
+    font-size: 3rem;
   }
 }
 
@@ -64,18 +68,21 @@ section {
   display: flex;
   flex-direction: column;
   background: white;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 1rem;
   
   h3 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: red;
+  }
+
+  p {
+    font-size: 1rem;
   }
 
   .card__cover {
     height: 2rem;
     width: 100%;
-    border-bottom: 1px solid black;
   }
   
   .card__content {
