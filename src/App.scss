@@ -1,1 +1,29 @@
 @import "var.scss";
+
+.page-container {
+  height: 100vh;
+}
+
+// fullscreen
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  background: $color1;
+}
+
+.two {
+  background: $color2;
+}
+
+.three {
+  background: $color3;
+}
+
+.four {
+  background: $color4;
+}
