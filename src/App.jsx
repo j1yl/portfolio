@@ -1,22 +1,15 @@
-import './App.scss'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
+import "./App.scss";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div className="App">
-      <div className='page-container'>
-        {/* <Header/> */}
-        <Hero/>
-        <Projects/>
-        <Skills/>
-        <Contact/>
+      <div className="page-container">
+        <Hero />
         {/* <Footer/> */}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
