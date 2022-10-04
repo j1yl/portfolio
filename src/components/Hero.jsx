@@ -2,10 +2,10 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='hero-wrapper'>
-      <div className='one'>I AM <span className='name'>JOE LEE</span></div>
-      <div className='two'><span className='adjective'>WEB </span>DEVELOPER</div>
-    </div>
+    <section className='one'>
+      <h1>JOE LEE</h1>
+      <h2>WEB DEVELOPER</h2>
+    </section>
   )
 }
 

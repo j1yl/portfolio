@@ -1,19 +1,19 @@
 import './App.scss'
-import Header from './components/Header'
 import Hero from './components/Hero'
-import Work from './components/Work'
+import Projects from './components/Projects'
 import Skills from './components/Skills'
-import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 function App() {
   return (
     <div className="App">
-      <div className='page-wrapper'>
-        <Header/>
+      <div className='page-container'>
+        {/* <Header/> */}
         <Hero/>
-        <Work/>
+        <Projects/>
         <Skills/>
-        <Footer/>
+        <Contact/>
+        {/* <Footer/> */}
       </div>
     </div>
   )
