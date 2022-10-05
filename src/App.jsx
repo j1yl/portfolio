@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./css/App.scss";
 import Hero from "./components/Hero";
 
 function App() {

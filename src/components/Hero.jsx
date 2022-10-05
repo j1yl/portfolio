@@ -17,19 +17,19 @@ const Hero = () => {
         </p>
       </div>
       <div className="projects">
+        <h2>Projects</h2>
         <ul>
-          <h2>My Work</h2>
           <li>
-            <a href="/">PROJECT NAME</a>
+            <a href="/">Project 1</a>
           </li>
           <li>
-            <a href="/">PROJECT NAME</a>
+            <a href="/">Project 2</a>
           </li>
           <li>
-            <a href="/">PROJECT NAME</a>
+            <a href="/">Project 3</a>
           </li>
           <li>
-            <a href="/">PROJECT NAME</a>
+            <a href="/">Project 4</a>
           </li>
         </ul>
       </div>
