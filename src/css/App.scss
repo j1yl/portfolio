@@ -58,6 +58,20 @@ body {
   }
 }
 
+.project-container {
+  height: 100vh;
+  h3 {
+    font-size: $step-2;
+    font-weight: 400;
+  }
+  p {
+    font-size: $step-0;
+  }
+  a {
+    font-size: $step--1;
+  }
+}
+
 @media (max-width: 576px) {
   .page-container {
     margin-inline: 2rem;
