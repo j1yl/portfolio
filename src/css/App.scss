@@ -48,6 +48,7 @@ body {
   ul {
     list-style-type: none;
     li {
+      cursor: pointer;
       margin-block: 0.5rem;
       a {
         font-size: $step-0;
@@ -55,6 +56,26 @@ body {
         text-decoration: none;
       }
     }
+  }
+}
+
+.project-container {
+  height: 100vh;
+  h3 {
+    font-size: $step-2;
+    font-weight: 400;
+  }
+  p {
+    font-size: $step-0;
+  }
+  a {
+    font-size: $step--1;
+    text-decoration: none;
+    color: $color1
+  }
+  .top-link {
+    font-size: $step--1;
+    color: $color1
   }
 }
 

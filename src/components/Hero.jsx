@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <section className="hero-container">
+    <section className="hero-container" id="top">
       <div className="intro">
         <h1>Hello! 🙋‍♂️</h1>
         <p>
@@ -20,16 +21,52 @@ const Hero = () => {
         <h2>Projects</h2>
         <ul>
           <li>
-            <a href="/">Project 1</a>
+            <Link
+              to="one"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className="project-links"
+            >
+              Project 1
+            </Link>
           </li>
           <li>
-            <a href="/">Project 2</a>
+            <Link
+              to="two"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className="project-links"
+            >
+              Project 2
+            </Link>
           </li>
           <li>
-            <a href="/">Project 3</a>
+            <Link
+              to="three"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className="project-links"
+            >
+              Project 3
+            </Link>
           </li>
           <li>
-            <a href="/">Project 4</a>
+            <Link
+              to="four"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className="project-links"
+            >
+              Project 4
+            </Link>
           </li>
         </ul>
       </div>
