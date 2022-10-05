@@ -29,7 +29,7 @@ const Hero = () => {
               duration={500}
               className="project-links"
             >
-              Project 1
+              Portfolio Website
             </Link>
           </li>
           <li>
@@ -41,7 +41,7 @@ const Hero = () => {
               duration={500}
               className="project-links"
             >
-              Project 2
+              MDX Blog
             </Link>
           </li>
           <li>
@@ -53,7 +53,7 @@ const Hero = () => {
               duration={500}
               className="project-links"
             >
-              Project 3
+              3D Playground
             </Link>
           </li>
           <li>
@@ -65,7 +65,7 @@ const Hero = () => {
               duration={500}
               className="project-links"
             >
-              Project 4
+              Roguelike Game
             </Link>
           </li>
         </ul>

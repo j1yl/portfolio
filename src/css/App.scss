@@ -16,6 +16,11 @@ body {
   margin-inline: 10rem;
 }
 
+.responsive-img {
+  max-width: 70%;
+  height: auto;
+}
+
 .hero-container {
   height: 100vh;
   display: flex;
@@ -60,7 +65,11 @@ body {
 }
 
 .project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 100vh;
+  border-top: 1px solid $color1;
   h3 {
     font-size: $step-2;
     font-weight: 400;
@@ -73,9 +82,17 @@ body {
     text-decoration: none;
     color: $color1
   }
-  .top-link {
-    font-size: $step--1;
-    color: $color1
+  img {
+    border: 1px dashed $color1;
+  }
+  .project-links-container {
+    display: flex;
+    .project-links {
+      font-size: $step--1;
+      color: $color1;
+      cursor: pointer;
+      padding-right: 1rem;
+    }
   }
 }
 
@@ -91,12 +108,13 @@ body {
   .projects {
     margin-block: 2rem;
   }
-
 }
 
 @media (max-width: 767px) {
   .page-container {
     margin-inline: 5rem;
   }
-
+  .project-links-container {
+    padding-right: 0.5rem;
+  }
 }
