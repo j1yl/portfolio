@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -16,59 +16,6 @@ const Hero = () => {
           correlations between statistics and creating unique and accessible
           visuals.
         </p>
-      </div>
-      <div className="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <Link
-              to="one"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className="project-links"
-            >
-              Portfolio Website
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="two"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className="project-links"
-            >
-              MDX Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="three"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className="project-links"
-            >
-              3D Playground
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="four"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className="project-links"
-            >
-              Roguelike Game
-            </Link>
-          </li>
-        </ul>
       </div>
     </section>
   );
