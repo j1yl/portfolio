@@ -8,32 +8,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  transform: translateY(-5rem);
   .intro {
     margin-inline: 10rem;
+    width: 50%;
     .hello {
-      color: $primary;
+      color: $gray;
       font-size: $step-0;
       margin-bottom: 1rem;
       font-family: 'Courier Prime', monospace;
       font-weight: 600;
     }
     .name {
-      color: $light;
-      font-size: $step-5;
+      color: $primary;
+      font-size: $step-6;
+      font-weight: 800;
     }
     .slogan {
-      color: $gray;
+      color: $light;
       font-size: $step-5;
       margin-bottom: 2rem;
+      font-weight: 800;
     }
     .info {
       color: $faded;
       font-size: $step-0;
+      font-weight: 400;
     }
     .school {
       color: $secondary;
     }
+  }
+}
+
+@media(max-width: 768px){
+  .hero-container {
+    transform: translateY(-6rem);
   }
 }

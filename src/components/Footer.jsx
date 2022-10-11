@@ -10,20 +10,20 @@ const Footer = () => {
       <div className="social-icon-container">
         <SocialIcon
           url="https://github.com/j1yl"
-          fgColor="#3E4149"
-          bgColor="#FF9999"
+          fgColor="#282b30"
+          bgColor="#7ac7d5"
           className="social-icon"
         />
         <SocialIcon
           url="https://linkedin.com/lefodev"
-          fgColor="#3E4149"
-          bgColor="#FF9999"
+          fgColor="#282b30"
+          bgColor="#7ac7d5"
           className="social-icon"
         />
         <SocialIcon
           url="https://twitter.com/lefodev"
-          fgColor="#3E4149"
-          bgColor="#FF9999"
+          fgColor="#282b30"
+          bgColor="#7ac7d5"
           className="social-icon"
         />
       </div>

@@ -6,10 +6,15 @@ $step-2: clamp(1.26rem, calc(0.94rem + 1.42vw), 1.95rem);
 $step-3: clamp(1.51rem, calc(1.08rem + 1.91vw), 2.44rem);
 $step-4: clamp(1.81rem, calc(1.24rem + 2.54vw), 3.05rem);
 $step-5: clamp(2.18rem, calc(1.42rem + 3.36vw), 3.82rem);
+$step-6: clamp(2.61rem, calc(1.62rem + 4.42vw), 4.77rem);
+$step-7: clamp(3.14rem, calc(1.83rem + 5.80vw), 5.96rem);
 
-$light: #EEEEEE;
-$dark: #3E4149;
-$gray: #c0c0c0;
-$primary: #FF9999;
-$secondary: #FFC8C8;
-$faded: #979797;
+$dark: #282b30;
+$light: #ededed;
+$gray: #c2c2c2;
+$faded: #969696;
+$primary: #7ac7d5;
+$secondary: #9ad7e2;
+// old colors
+// $primary: #FF9999;
+// $secondary: #FFC8C8;

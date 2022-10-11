@@ -9,8 +9,9 @@ const Hero = () => {
         <h1 className="name">Joe Lee.</h1>
         <h2 className="slogan">I create modern web experiences.</h2>
         <p className="info">
-          I love creating websites, creating pixel art, and automating everyday
-          tasks. <br></br>I am currently pursuing my undergraduate degree at
+          I love designing websites, creating pixel art, and automating everyday
+          tasks. I am currently pursuing my undergraduate degree in Computer
+          Science at
           <span className="school">
             {" "}
             California State University, Fullerton
