@@ -5,7 +5,7 @@ const Blog = ({ closeBlogModal }) => {
     <div className="modal-bg">
       <div className="modal-container">
         <div className="modal-title">
-          <h2>Responsive MDX Blog</h2>
+          <h2>Responsive Portfolio Website</h2>
         </div>
         <div className="modal-body">
           <img

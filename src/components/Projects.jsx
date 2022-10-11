@@ -15,7 +15,7 @@ const Projects = () => {
               setOpenBlogModal(true);
             }}
           >
-            MDX Blog
+            Portfolio Website
           </button>
         </div>
         {openBlogModal && <Blog closeBlogModal={setOpenBlogModal} />}
