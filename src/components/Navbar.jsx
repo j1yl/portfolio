@@ -28,7 +28,9 @@ const Navbar = () => {
           <a href="#">works</a>
         </li>
         <li>
-          <button className="contact-btn">contact</button>
+          <a href="mailto: lefodev@gmail.com" className="email">
+            contact
+          </a>
         </li>
       </ul>
     </nav>
