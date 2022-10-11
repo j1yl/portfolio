@@ -10,10 +10,9 @@
   font-size: $step-0;
   gap: 4rem;
   .content {
-    width: 60%;
-    padding: 0 3rem;
+    width: 50%;
     color: $gray;
-    padding-bottom: 1rem;
+    margin-inline: 10rem;
     h2 {
       font-size: $step-4;
       font-weight: 800;
@@ -34,12 +33,12 @@
     color: $secondary;
   }
 }
+
 @media (max-width: 767px) {
   .about-container {
     gap: 2rem;
     .content {
       width: 90%;
     }
-
   }
 }

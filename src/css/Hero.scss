@@ -43,5 +43,9 @@
 @media(max-width: 768px){
   .hero-container {
     transform: translateY(-6rem);
+    .intro {
+      width: 90%;
+      margin-inline: 0;
+    }
   }
 }

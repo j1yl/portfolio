@@ -11,8 +11,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5rem;
   z-index: 99;
+  padding-inline: 5rem;
   .email {
     font-family: 'Courier Prime', monospace;
     color: $primary;
@@ -28,7 +28,7 @@
 
 @media (max-width: 768px) {
   .footer-container {
-    padding: 0 2rem;
+    padding: 0 1rem;
     scale: 0.8;
   }
 }
