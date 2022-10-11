@@ -8,7 +8,6 @@ function App() {
       <div className="page-container">
         <Hero />
         <Projects />
-        {/* <Footer/> */}
       </div>
     </div>
   );
