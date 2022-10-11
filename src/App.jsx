@@ -1,15 +1,17 @@
-import "./css/App.scss";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+import "./css/App.scss";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <div className="page-container">
+        <Navbar />
         <Hero />
-        <Projects />
+        <Footer />
       </div>
-    </div>
+    </>
   );
 }
 
