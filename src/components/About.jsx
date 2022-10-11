@@ -19,8 +19,8 @@ const About = () => {
           <br></br>
           <br></br>
           Some of my goals include: finding comfortability in creating fullstack
-          website infracstructure, learning data structures and algorithms using
-          Leetcode, and learning how to create data visualizations through D3.js
+          web applications, learning data structures and algorithms using
+          Leetcode, and creating data visualizations through D3.js
         </p>
       </div>
       <div className="content">
