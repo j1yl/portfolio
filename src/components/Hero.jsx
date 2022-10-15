@@ -1,25 +1,29 @@
-import "../css/Hero.scss";
 import React from "react";
+import "../css/Hero.scss";
+import logoImg from "../assets/logo.png";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
-      <div className="intro">
-        <p className="hello">Hello! I am</p>
-        <h1 className="name">Joe Lee.</h1>
-        <h2 className="slogan">I create modern web experiences.</h2>
-        <p className="info">
-          I love designing websites, creating pixel art, and automating everyday
-          tasks. I am currently pursuing my undergraduate degree in Computer
-          Science at
-          <span className="school">
-            {" "}
-            California State University, Fullerton
-          </span>
-          .
-        </p>
+    <>
+      <div className="box-2">
+        <div className="main">
+          <h1>
+            I'm <span>Joe Lee</span>, <br></br>I create <span>elegant</span>{" "}
+            websites.
+          </h1>
+        </div>
+        <div className="labels">
+          <h2>Front-End Developer</h2>
+          <h2>Computer Science Student</h2>
+        </div>
       </div>
-    </div>
+      <div className="box-3">
+        <button>Let's Talk !</button>
+      </div>
+      <div className="box-4">
+        <img src={logoImg} />
+      </div>
+    </>
   );
 };
 

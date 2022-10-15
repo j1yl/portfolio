@@ -7,10 +7,114 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background: $dark;
+  background: $background;
 }
 
-// @media (max-width: 767px) {
-// }
-// @media (max-width: 400px) {
-// }
+[class ^= "box-"] {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.page-container {
+  height: 90vh;
+  width: 90%;
+  margin: 20px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+
+  grid-template-areas: 
+  "h h h h  h h h h  h h h h"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "m m m m  m m m m  m m m m"
+  "b b b b  b b b b  i i i i"
+  "b b b b  b b b b  i i i i"
+  ;
+}
+
+.page-container .box-1 {
+  grid-area: h;
+}
+.page-container .box-2 {
+  grid-area: m;
+}
+.page-container .box-3 {
+  grid-area: b;
+}
+.page-container .box-4 {
+  grid-area: i;
+}
+
+@media (min-width: 768px) {
+
+  .page-container {
+    height: 90vh;
+    width: 90%;
+    margin: 20px auto;
+
+    gap: 4rem;
+
+  
+    display: grid;
+  
+    grid-template-columns: repeat(12, 1fr);
+  
+    grid-template-areas: 
+    "h h h h  h h h h  h h h h"
+    "h h h h  h h h h  h h h h"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "b b b b  b b b b  i i i i"
+    "b b b b  b b b b  i i i i"
+    "b b b b  b b b b  i i i i"
+    "b b b b  b b b b  i i i i"
+  }
+
+}
+
+// pc
+@media (min-width: 1080px) {
+
+  .page-container {
+    height: 90vh;
+    width: 90%;
+    margin: 20px auto;
+  
+    display: grid;
+
+    gap: 4rem;
+  
+    grid-template-columns: repeat(12, 1fr);
+  
+    grid-template-areas: 
+    "h h h h  h h h h  h h h h"
+    "h h h h  h h h h  h h h h"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "b b b b  b b b b  i i i i"
+    "b b b b  b b b b  i i i i"
+    "b b b b  b b b b  i i i i"
+    "b b b b  b b b b  i i i i"
+  }
+
+}
