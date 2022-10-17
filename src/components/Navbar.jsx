@@ -20,13 +20,43 @@ const Navbar = () => {
       </div>
       <ul className="links">
         <li>
-          <a href="#">home</a>
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-1000}
+            hashSpy={true}
+            duration={500}
+            onClick={handleToggle}
+          >
+            home
+          </Link>
         </li>
         <li>
-          <a href="#">about</a>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            hashSpy={true}
+            duration={500}
+            onClick={handleToggle}
+          >
+            about
+          </Link>
         </li>
         <li>
-          <a href="#">works</a>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            hashSpy={true}
+            duration={500}
+            onClick={handleToggle}
+          >
+            works
+          </Link>
         </li>
         <li>
           <a href="mailto: lefodev@gmail.com" className="email">

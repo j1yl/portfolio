@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="content">
-        <h2>About</h2>
+        <h2 id="about">About</h2>
         <p>
           Hello! My name is <span className="highlight">Joe Lee</span> and I
           love creating and designing websites. I first began taking interest in
