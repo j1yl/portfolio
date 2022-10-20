@@ -35,9 +35,15 @@
     border-radius: 10px;
     cursor: pointer;
   }
+}
 
-  button:hover {
-    transition: 0.3s ease;
-    scale: 0.95;
+@media (max-width: 768px) {
+  .header_container {
+    button {
+      padding: 0.3rem 0.7rem;
+    }
+    .nav_links {
+      gap: 20px;
+    }
   }
 }
