@@ -11,7 +11,7 @@ const Header = () => {
           <a href="/">About</a>
           <a href="/">Works</a>
         </div>
-        <button>Let's Talk</button>
+        <button>Contact</button>
       </nav>
     </>
   );
