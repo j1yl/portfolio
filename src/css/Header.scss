@@ -9,7 +9,7 @@
   top: 0;
   z-index: 99;
   width: 90%;
-  height: 8%;
+  min-height: 8%;
   margin: 0 auto;
 
   h2 {
@@ -32,6 +32,7 @@
     background: none;
     font-size: $step--2;
     cursor: pointer;
+    color: black;
   }
 }
 
