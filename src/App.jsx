@@ -1,19 +1,19 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Footer from "./components/Footer";
-import "./css/App.scss";
+import "./App.scss";
+import Header from "./comps/Header";
+import Hero from "./comps/Hero";
+import About from "./comps/About";
+import Works from "./comps/Works";
+import Footer from "./comps/Footer";
 
 function App() {
   return (
-    <>
-      <div className="page-container">
-        <Navbar />
-        <Hero />
-        <About />
-        <Footer />
-      </div>
-    </>
+    <div className="App">
+      <Header />
+      <Hero />
+      <About />
+      <Works />
+      <Footer />
+    </div>
   );
 }
 

@@ -1,0 +1,46 @@
+@import "../vars.scss";
+
+.header_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 90%;
+  height: 8%;
+
+  h2 {
+    font-size: $step-0;
+    font-weight: 800;
+  }
+
+  .nav_links {
+    display: flex;
+    gap: 3rem;
+    a {
+      text-decoration: none;
+      font-size: $step--2;
+      color: black;
+    }
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background: none;
+    font-size: $step--2;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_container {
+    button {
+      padding: 0.3rem 0.5rem;
+    }
+    .nav_links {
+      gap: 20px;
+    }
+  }
+}

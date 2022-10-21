@@ -1,51 +1,14 @@
-@import "var.scss";
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-// font-family: 'Courier Prime', monospace;
+@import "../vars.scss";
 
-.hero-container {
-  height: 100vh;
-  width: 100vw;
+.hero_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  .intro {
-    margin-inline: 10rem;
-    width: 50%;
-    .hello {
-      color: $gray;
-      font-size: $step-0;
-      margin-bottom: 1rem;
-      font-family: 'Courier Prime', monospace;
-      font-weight: 600;
-    }
-    .name {
-      color: $primary;
-      font-size: $step-6;
-      font-weight: 800;
-    }
-    .slogan {
-      color: $light;
-      font-size: $step-5;
-      margin-bottom: 2rem;
-      font-weight: 800;
-    }
-    .info {
-      color: $faded;
-      font-size: $step-0;
-      font-weight: 400;
-    }
-    .school {
-      color: $secondary;
-    }
-  }
-}
 
-@media(max-width: 768px){
-  .hero-container {
-    transform: translateY(-6rem);
-    .intro {
-      width: 90%;
-      margin-inline: 0;
-    }
+  height: 100vh;
+  width: 90%;
+
+  h1 {
+    font-size: $step-2;
   }
 }
