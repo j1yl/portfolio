@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Header.scss";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -7,9 +8,33 @@ const Header = () => {
       <nav className="header_container">
         <h2>LefoDev</h2>
         <div className="nav_links">
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Works</a>
+          <Link
+            activeClass="active"
+            to="hero"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Home
+          </Link>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            About
+          </Link>
+          <Link
+            activeClass="active"
+            to="works"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Works
+          </Link>
         </div>
         <button>Contact</button>
       </nav>

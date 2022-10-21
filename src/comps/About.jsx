@@ -26,7 +26,7 @@ const item = {
 
 const About = () => {
   return (
-    <div className="about_container">
+    <div className="about_container" id="about">
       <motion.div variants={container} initial="hidden" whileInView="show">
         <div className="about_section">
           <motion.h2 variants={item}>About</motion.h2>

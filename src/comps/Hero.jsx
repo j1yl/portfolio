@@ -4,7 +4,7 @@ import useCursorVariant from "../App";
 
 const Hero = () => {
   return (
-    <div className="hero_container">
+    <div className="hero_container" id="hero">
       <motion.h1
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
