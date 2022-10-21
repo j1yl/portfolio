@@ -35,11 +35,24 @@
     color: black;
     cursor: none;
   }
+
+  li {
+    padding: 0.5rem 1rem;
+    font-size: $step--2;
+    background: none;
+    outline: 1px solid black;
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: #000;
+      cursor: none;
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .header_container {
-    button {
+    li {
       padding: 0.3rem 0.5rem;
     }
     .nav_links {

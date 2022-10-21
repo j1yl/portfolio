@@ -36,7 +36,9 @@ const Header = () => {
             Works
           </Link>
         </div>
-        <button>Contact</button>
+        <li>
+          <a href="mailto: lefodev@gmail.com">Contact</a>
+        </li>
       </nav>
     </>
   );
