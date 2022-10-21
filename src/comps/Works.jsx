@@ -1,4 +1,28 @@
 import "../css/Works.scss";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, scale: 0.95 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "tween",
+      duration: 1,
+    },
+  },
+};
 
 const projects = [
   {
@@ -24,31 +48,36 @@ const Works = () => {
 
 const Card = ({ name, about, tech, github, url, img }) => {
   return (
-    <div className="card_container">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      className="card_container"
+    >
       <div className="text">
-        <div className="header">
+        <motion.div variants={item} className="header">
           <h2>{name}</h2>
           <hr />
-        </div>
-        <div className="content">
+        </motion.div>
+        <motion.div variants={item} className="content">
           <p>
             {about}
             <br></br>
             <br></br>
             Tech: {tech}
           </p>
-        </div>
-        <div className="links">
+        </motion.div>
+        <motion.div variants={item} className="links">
           <li>
             <a href={url}>&lt; Visit /&gt;</a>
           </li>
           <li>
             <a href={github}>&lt; Code /&gt;</a>
           </li>
-        </div>
+        </motion.div>
       </div>
-      <img src={img} alt="project_img" />
-    </div>
+      <motion.img variants={item} src={img} alt="project_img" />
+    </motion.div>
   );
 };
 
