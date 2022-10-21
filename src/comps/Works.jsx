@@ -32,7 +32,7 @@ const projects = [
     tech: "React, JavaScript, NEXT, SpotifyAPI, SASS",
     github: "https://github.com/j1yl",
     url: "https://spotlyzer.vercel.app",
-    img: "src/assets/spotlyzer.png",
+    img: "https://i.imgur.com/v91zbT3.png",
   },
 ];
 
