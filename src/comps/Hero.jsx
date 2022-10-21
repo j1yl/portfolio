@@ -1,5 +1,6 @@
 import "../css/Hero.scss";
 import { motion } from "framer-motion";
+import useCursorVariant from "../App";
 
 const Hero = () => {
   return (

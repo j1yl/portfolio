@@ -24,6 +24,7 @@
       text-decoration: none;
       font-size: $step--2;
       color: black;
+      cursor: none;
     }
   }
 
@@ -31,8 +32,8 @@
     padding: 0.5rem 1rem;
     background: none;
     font-size: $step--2;
-    cursor: pointer;
     color: black;
+    cursor: none;
   }
 }
 
