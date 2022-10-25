@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="App font-mono">
+    <div className="App font-poppins">
       <Header />
       <Hero />
     </div>
