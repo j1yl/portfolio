@@ -14,6 +14,7 @@ const work = [
     ],
     gitUrl: "https://github.com/j1yl/product",
     deployUrl: "https://github.com/j1yl/product",
+    id: "1",
   },
   {
     name: "Portfolio",
@@ -23,6 +24,7 @@ const work = [
     stack: ["TYPESCRIPT", "REACT", "TAILWINDCSS", "VITE", "FRAMER"],
     gitUrl: "https://github.com/j1yl/portfolio",
     deployUrl: "https://github.com/j1yl/portfolio",
+    id: "2",
   },
   {
     name: "Spotlyzer",
@@ -32,7 +34,7 @@ const work = [
     stack: ["JAVASCRIPT", "REACT", "NEXT", "SASS", "SPOTIFYAPI", "NEXTAUTH"],
     gitUrl: "https://github.com/j1yl/spotlyzer",
     deployUrl: "https://spotlyzer.vercel.app",
-    key: "1",
+    id: "3",
   },
 ];
 
@@ -41,7 +43,7 @@ const Works = () => {
     <>
       <section className="max-w-6xl mx-auto">
         {work.map((item: any) => (
-          <Card {...item} />
+          <Card {...item} key={item.id} />
         ))}
       </section>
     </>
