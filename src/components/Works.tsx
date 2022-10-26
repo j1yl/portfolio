@@ -12,6 +12,8 @@ const work = [
       "REACT-THREE/FIBER",
       "REACT-THREE/DREI",
     ],
+    gitUrl: "https://github.com/j1yl/product",
+    deployUrl: "https://github.com/j1yl/product",
   },
   {
     name: "Portfolio",
@@ -19,6 +21,8 @@ const work = [
       "https://images.wallpaperscraft.com/image/single/astronaut_ring_neon_156673_1920x1080.jpg",
     desc: "Portfolio is a web application made to showcase my works, contact information, and information to future employers.",
     stack: ["TYPESCRIPT", "REACT", "TAILWINDCSS", "VITE", "FRAMER"],
+    gitUrl: "https://github.com/j1yl/portfolio",
+    deployUrl: "https://github.com/j1yl/portfolio",
   },
   {
     name: "Spotlyzer",
@@ -61,8 +65,11 @@ const Card = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col md:flex-row m-3 bg-zinc-900 rounded-xl">
-        <img src={imgUrl} className="w-full md:w-1/2 rounded-t-xl" />
+      <div className="flex flex-col md:flex-row m-3 md:m-0 md:mb-3 bg-zinc-900 rounded-xl">
+        <img
+          src={imgUrl}
+          className="w-full md:w-1/2 rounded-t-xl md:rounded-l-xl"
+        />
         <div className="px-2 py-2">
           <h2 className="text-3xl text-zinc-100 font-bold">{name}</h2>
           <p className="text-base text-zinc-100 font-regular mt-3">{desc}</p>

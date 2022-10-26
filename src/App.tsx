@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="App font-poppins">
+    <div className="App font-poppins bg-zinc-100">
       <Header />
       <Hero />
       <Skills />
