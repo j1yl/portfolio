@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <>
       <main className="h-screen px-4 md:px-0">
-        <section className="flex flex-col md:flex-row max-w-6xl h-2/3 mx-auto py-32 bg-neutral-50">
+        <section className="flex flex-col md:flex-row max-w-6xl h-2/3 mx-auto py-16 md:py-32 bg-neutral-50">
           <div className="flex flex-col gap-5 md:w-1/2 text-left justify-center">
             <h2 className="text-6xl md:text-8xl font-bold">JOE LEE</h2>
             <p className="text-zinc-500">
@@ -24,7 +24,7 @@ const Hero = () => {
             </h2>
           </div>
         </section>
-        <section className="flex max-w-6xl mx-auto flex-col h-1/3 justify-center gap-5">
+        <section className="flex max-w-6xl mx-auto flex-col h-1/3 justify-center gap-5 mt-16">
           <p className="text-2xl md:text-4xl font-semibold">
             COMMITED TO CRAFTING MEMORABLE USER EXPERIENCES
           </p>
