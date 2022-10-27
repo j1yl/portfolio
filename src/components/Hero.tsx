@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import AnimateWord from "./AnimateWord";
 import AnimateCharacter from "./AnimateCharacter";
 
 const Hero = () => {
   return (
     <>
-      <main className="h-screen px-4 pt-16 md:pt-0 md:px-0">
+      <main className="h-screen px-4 pt-16 md:pt-0 md:px-0" id="main">
         <section className="flex flex-col md:flex-row max-w-6xl mx-auto">
           <div className="flex flex-col gap-5 md:w-1/2 text-left justify-end md:justify-start md:mt-32">
             <h2 className="text-6xl md:text-8xl font-bold text-zinc-900">
@@ -36,7 +37,15 @@ const Hero = () => {
               onTapCancel={(e) => {}}
               className="text-left text-xl md:text-2xl px-16 py-6 md:px-24 md:py-12 w-max bg-zinc-900 rounded-3xl text-zinc-100"
             >
-              LET&apos;S TALK
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                LET&apos;S TALK
+              </Link>
             </motion.button>
           </div>
           <div className="flex flex-col md:w-1/2 text-right justify-end pt-16">

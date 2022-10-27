@@ -41,7 +41,7 @@ const work = [
 const Works = () => {
   return (
     <>
-      <section className="max-w-6xl mx-auto mt-16">
+      <section className="max-w-6xl mx-auto mt-16" id="works">
         {work.map((item: any) => (
           <Card {...item} key={item.id} />
         ))}

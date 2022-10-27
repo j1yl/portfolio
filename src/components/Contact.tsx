@@ -3,7 +3,10 @@ import AnimateWord from "./AnimateWord";
 
 const Contact = () => {
   return (
-    <section className="h-screen max-w-6xl mx-auto px-3 md:px-0 text-zinc-900">
+    <section
+      className="h-screen max-w-6xl mx-auto px-3 md:px-0 text-zinc-900"
+      id="contact"
+    >
       <div className="flex flex-col justify-center gap-16 h-full">
         <div className="text-4xl md:text-6xl flex flex-row flex-wrap">
           <AnimateWord
