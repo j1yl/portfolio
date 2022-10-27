@@ -1,5 +1,3 @@
-import { Link } from "react-scroll";
-
 const Header = () => {
   return (
     <>
@@ -8,34 +6,10 @@ const Header = () => {
           <a href="/" className="text-xl font-medium">
             LEFO
           </a>
-          <div className="flex gap-4 text-sm font-medium">
-            <Link
-              to="main"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              HOME
-            </Link>
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              ABOUT
-            </Link>
-            <Link
-              to="works"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              WORKS
-            </Link>
+          <div className="flex gap-4 text-md font-medium">
+            <a href="/">HOME</a>
+            <a href="/">ABOUT</a>
+            <a href="/">WORKS</a>
           </div>
         </nav>
       </header>
