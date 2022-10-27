@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <>
-      <section className="py-32 md:py-0 px-4 md:px-0 max-w-6xl items-center mx-auto">
+      <section
+        className="px-4 md:px-0 max-w-6xl items-center mx-auto h-screen"
+        id="about"
+      >
         <div className="h-1/2 w-full flex flex-col text-zinc-900">
           <h2 className="pt-32 pb-8 font-medium text-4xl md:text-6xl">
             <AnimateCharacter text="SKILLS" delay={0} />
