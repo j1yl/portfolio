@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Modal from "./Modal";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import AnimateCharacter from "./AnimateCharacter";
+import AnimateWord from "./AnimateWord";
 
 const Works = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -11,7 +13,7 @@ const Works = () => {
 
   return (
     <>
-      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+      <AnimatePresence initial={false} mode="sync" onExitComplete={() => null}>
         {modalOpen && (
           <Modal
             modalOpen={modalOpen}
@@ -26,11 +28,11 @@ const Works = () => {
       >
         <div className="flex flex-col justify-around w-full h-full">
           <div>
-            <h2 className="text-5xl text-left font-bold italic">
-              FEATURED WORKS
+            <h2 className="flex text-5xl text-left font-bold italic">
+              <AnimateWord text="FEATURED PROJECTS" delay={0.3} stagger={1} />
             </h2>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 z-2">
             <div>
               <a
                 className="text-5xl md:text-9xl text-left cursor-pointer"
@@ -39,7 +41,7 @@ const Works = () => {
                   modalOpen ? close() : open();
                 }}
               >
-                HEAVENSENT
+                <AnimateCharacter text="HEAVENSENT" delay={0.5} />
               </a>
             </div>
             <div>
@@ -50,7 +52,7 @@ const Works = () => {
                   modalOpen ? close() : open();
                 }}
               >
-                LEFODEV
+                <AnimateCharacter text="LEFODEV" delay={0.5} />
               </a>
             </div>
             <div>
@@ -61,7 +63,7 @@ const Works = () => {
                   modalOpen ? close() : open();
                 }}
               >
-                SPOTLYZER
+                <AnimateCharacter text="SPOTLYZER" delay={0.5} />
               </a>
             </div>
           </div>

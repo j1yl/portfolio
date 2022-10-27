@@ -54,8 +54,21 @@ const Modal = ({
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
-        className="p-10 w-full md:w-1/2 flex flex-col items-start bg-zinc-100 rounded-xl gap-5 border-2 border-zinc-900"
+        className="p-10 w-full md:w-1/2 z-10 flex flex-col items-start bg-zinc-100 rounded-xl gap-5 border-2 border-zinc-900"
         onClick={(e) => e.stopPropagation()}
+        initial={{
+          y: -200,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            type: "spring",
+            stiffness: 100,
+            bounce: 0.2,
+          },
+        }}
       >
         <h2 className="font-bold text-5xl">{selectedProject.title}</h2>
         <div className="flex flex-wrap gap-3">
