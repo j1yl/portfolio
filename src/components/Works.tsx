@@ -73,7 +73,7 @@ const Works = () => {
               target="_blank"
               className="text-2xl"
             >
-              VIEW MORE ON GITHUB
+              <AnimateCharacter text="VIEW MORE ON GITHUB" delay={1} />
             </a>
           </div>
         </div>
