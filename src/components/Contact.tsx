@@ -14,7 +14,11 @@ const Contact = () => {
         </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 1, duration: 1 } }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 1, duration: 1 },
+          }}
           className="font-medium text-2xl md:text-4xl"
         >
           REACH ME AT<br></br>
