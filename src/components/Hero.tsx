@@ -6,8 +6,11 @@ import AnimateCharacter from "./AnimateCharacter";
 const Hero = () => {
   return (
     <>
-      <main className="h-screen px-4 pt-16 md:pt-0 md:px-0" id="main">
-        <section className="flex flex-col md:flex-row max-w-6xl mx-auto">
+      <main
+        className="h-screen grid grid-rows-2 px-4 pt-16 md:pt-0 md:px-0"
+        id="main"
+      >
+        <section className="flex flex-col md:flex-row max-w-6xl h-max mx-auto">
           <div className="flex flex-col gap-5 md:w-1/2 text-left justify-end md:justify-start md:mt-32">
             <h2 className="text-6xl md:text-8xl font-bold text-zinc-900">
               <AnimateCharacter text="JOE LEE" delay={0} />
@@ -48,7 +51,7 @@ const Hero = () => {
               </Link>
             </motion.button>
           </div>
-          <div className="flex flex-col md:w-1/2 text-right justify-end pt-16">
+          <div className="flex flex-col md:w-1/2 text-right justify-end pt-4 md:pt-0">
             <h2 className="text-zinc-900 text-4xl md:text-6xl font-semibold flex justify-end">
               <AnimateCharacter text="FRONT-END" delay={1} />
             </h2>
@@ -57,7 +60,7 @@ const Hero = () => {
             </h2>
           </div>
         </section>
-        <section className="flex max-w-6xl mx-auto flex-col pt-16 justify-center gap-5">
+        <section className="flex max-w-6xl mx-auto flex-col h-full justify-center gap-5">
           <h2 className="text-2xl md:text-4xl font-semibold text-zinc-900">
             <AnimateWord
               text="COMMITED TO CRAFTING MEMORABLE USER EXPERIENCES"
