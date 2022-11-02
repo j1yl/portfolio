@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
       <main
-        className="h-screen grid grid-rows-2 px-4 pt-16 md:pt-0 md:px-0"
+        className="h-screen flex flex-col px-4 pt-16 md:pt-0 md:px-0"
         id="main"
       >
         <section className="flex flex-col md:flex-row max-w-6xl h-max mx-auto">
@@ -52,10 +52,10 @@ const Hero = () => {
             </motion.button>
           </div>
           <div className="flex flex-col md:w-1/2 text-right justify-end pt-4 md:pt-0">
-            <h2 className="text-zinc-900 text-4xl md:text-6xl font-semibold flex justify-end">
+            <h2 className="text-zinc-900 text-3xl md:text-6xl font-semibold flex justify-end">
               <AnimateCharacter text="FRONT-END" delay={1} />
             </h2>
-            <h2 className="text-zinc-900 text-4xl md:text-6xl font-semibold flex justify-end">
+            <h2 className="text-zinc-900 text-3xl md:text-6xl font-semibold flex justify-end">
               <AnimateCharacter text="DEVELOPER" delay={1} />
             </h2>
           </div>
