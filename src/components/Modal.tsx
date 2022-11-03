@@ -26,9 +26,15 @@ const projects = {
   three: {
     title: "SPOTLYZER",
     content:
-      "Spotify is a web application that displays the user's top tracks and artists. Due to Spotify's limits, the program will not be publicly available, but a demo will be provided on GitHub.",
+      "Spotlyzer is a web application that displays the user's top tracks and artists on the Spotify platform. Due to Spotify's limits, the program will not be publicly available, but a demo will be provided on GitHub.",
     tags: ["JAVASCRIPT", "REACT", "NEXT", "SASS", "SPOTIFYAPI", "NEXTAUTH"],
     github: "https://github.com/j1yl/spotlyzer",
+  },
+  four: {
+    title: "SHRINKURL",
+    content: "ShrinkURL is a simple link shortener with a beautiful interface.",
+    tags: ["TYPESCRIPT", "TAILWINDCSS", "REACT", "VITE"],
+    github: "https://github.com/j1yl/shrinkurl",
   },
 };
 
@@ -49,6 +55,8 @@ const Modal = ({
     selectedProject = projects.two;
   } else if (projectId === 3) {
     selectedProject = projects.three;
+  } else if (projectId === 4) {
+    selectedProject = projects.four;
   }
 
   return (

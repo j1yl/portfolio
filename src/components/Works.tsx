@@ -66,6 +66,17 @@ const Works = () => {
                 <AnimateCharacter text="SPOTLYZER" delay={0.5} />
               </a>
             </div>
+            <div>
+              <a
+                className="text-5xl md:text-9xl text-left cursor-pointer"
+                onClick={() => {
+                  setProjectId(4);
+                  modalOpen ? close() : open();
+                }}
+              >
+                <AnimateCharacter text="SHRINKURL" delay={0.5} />
+              </a>
+            </div>
           </div>
           <div>
             <a
