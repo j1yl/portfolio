@@ -1,57 +1,41 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isStart, setStart] = useState(false);
+
+  // useEffect(() => {
+  //   let mousePosition = {
+  //     x: 0,
+  //     y: 0,
+  //   };
+
+  //   window.addEventListener("mousemove", (e) => {
+  //     mousePosition.x = e.pageX;
+  //     mousePosition.y = e.pageY;
+  //   });
+
+  //   const lerp = (current: number, target: number, factor: number) => {
+  //     return current * (1 - factor) + target * factor;
+  //   };
+
+  //   const distance = (x1: number, x2: number, y1: number, y2: number) => {
+  //     // calculates the hypotenuse of given triangle, derived from distance formula
+  //     return Math.hypot(x1 - x2, y1 - y2);
+  //   };
+  // });
+
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <main className="h-screen w-screen grid place-content-center">
+        <button
+          onClick={() => setStart(!isStart)}
+          className="w-64 h-64 flex items-center justify-center rounded-full border-2 font-semibold text-2xl border-black select-none"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
-  )
+          START
+        </button>
+      </main>
+    </>
+  );
 }
