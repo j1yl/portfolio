@@ -34,7 +34,15 @@ export default function Home() {
               onClick={() => setStart(!isStart)}
               className="w-64 h-64 flex items-center justify-center rounded-full border border-black text-lg select-none"
               initial={{
-                opacity: 0.3,
+                opacity: 0,
+                x: 100,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 2,
+                },
               }}
               style={{
                 rotateX: rotateX,
@@ -50,45 +58,52 @@ export default function Home() {
                   duration: 1,
                 },
               }}
-              onHoverEnd={() => {}}
-              onHoverStart={() => {}}
-              exit={{ opacity: 0 }}
+              exit={{
+                opacity: 0,
+              }}
             >
-              Start
+              START
             </motion.button>
           </main>
         )}
-        {isStart && (
-          <>
-            <Hero />
-          </>
-        )}
       </AnimatePresence>
+      {isStart && (
+        <>
+          <Hero />
+        </>
+      )}
     </>
   );
 }
 
 function Hero() {
   return (
-    <main className="h-screen w-screen flex flex-col justify-center">
-      <div>
-        <div>Welcome to my space</div>
-        <div>I am Joe Lee, Creative Front-End Developer</div>
-        <div>I love making immersive websites using the latest technology.</div>
-        <div>
-          Currently, I am{" "}
-          <span>
-            pursuing my undergraduate degree at California State University,
-            Fullerton.
+    <main className="h-screen w-screen flex flex-col justify-evenly">
+      <div className="flex flex-col gap-5">
+        <div className="flex flex-col">
+          <span className="text-4xl md:text-6xl">WELCOME TO LEFO</span>
+          <span className="text-4xl md:text-6xl">I AM JOE LEE</span>
+          <span className="text-4xl md:text-6xl">
+            CREATIVE FRONT-END DEVELOPER
           </span>
         </div>
-        <button>Let&apos;s Talk !</button>
+        <span className="text-base w-full md:w-2/3">
+          I love making immersive websites curated with the latest technology.
+          Currently, I am pursuing my undergraduate degree in Computer Science
+          at California State University, Fullerton.
+        </span>
+        <button className="p-8 border border-black rounded-full w-max text-lg">
+          LET&apos;S TALK !
+        </button>
       </div>
       <div className="flex flex-col">
-        <span>Committed to Crafting Memorable User Experiences</span>
+        <span className="text-6xl">
+          COMMITTED TO CRAFTING MEMORABLE USER EXPERIENCES
+        </span>
         <span>
-          I take inspiration from anything visible to me and give it life on the
-          web.
+          Inspired by the best, I create interactive user interfaces while
+          following SEO best practices, optimizing for performance, and
+          implementing responsive design.
         </span>
       </div>
     </main>
