@@ -5,7 +5,7 @@ const projects = {
   one: {
     title: "HEAVENSENT",
     content:
-      "A product landing page with a stylish design and simple features.",
+      "A 3d product landing page with a stylish design and simple features.",
     tags: [
       "TYPESCRIPT",
       "REACT",
@@ -15,6 +15,7 @@ const projects = {
       "REACT-THREE/DREI",
     ],
     github: "https://github.com/j1yl/product",
+    url: "https://i.imgur.com/v4GssXr.png",
   },
   two: {
     title: "LEFODEV",
@@ -22,6 +23,7 @@ const projects = {
       "LefoDev is a web application made to showcase my works, contact information, and information to future employers.",
     tags: ["TYPESCRIPT", "REACT", "TAILWINDCSS", "VITE", "FRAMER"],
     github: "https://github.com/j1yl/portfolio",
+    url: "https://i.imgur.com/tzIOXg7.gif",
   },
   three: {
     title: "SPOTLYZER",
@@ -29,12 +31,14 @@ const projects = {
       "Spotlyzer is a web application that displays the user's top tracks and artists on the Spotify platform. Due to Spotify's limits, the program will not be publicly available, but a demo will be provided on GitHub.",
     tags: ["JAVASCRIPT", "REACT", "NEXT", "SASS", "SPOTIFYAPI", "NEXTAUTH"],
     github: "https://github.com/j1yl/spotlyzer",
+    url: "https://i.imgur.com/MCMZu1y.png",
   },
   four: {
     title: "SHRINKURL",
     content: "ShrinkURL is a simple link shortener with a beautiful interface.",
     tags: ["TYPESCRIPT", "TAILWINDCSS", "REACT", "VITE"],
     github: "https://github.com/j1yl/shrinkurl",
+    url: "https://i.imgur.com/zhL7NrT.gif",
   },
 };
 
@@ -88,6 +92,13 @@ const Modal = ({
               #{item}
             </span>
           ))}
+        </div>
+        <div>
+          <img
+            src={selectedProject.url}
+            alt="project screenshot"
+            className=""
+          ></img>
         </div>
         <article className="text-xl">{selectedProject.content}</article>
         <div className="flex gap-5">
