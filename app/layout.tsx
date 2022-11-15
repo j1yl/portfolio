@@ -1,6 +1,10 @@
-import "./globals.css";
-import { Montserrat } from "@next/font/google";
-const mont = Montserrat();
+import "../css/globals.css";
+import { Roboto } from "@next/font/google";
+
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -8,8 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={mont.className}>
-      <head></head>
+    <html lang="en" className={roboto.className}>
+      {/*
+        <head /> will contain the components returned by the nearest parent
+        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
+      */}
+      <head />
       <body>{children}</body>
     </html>
   );
