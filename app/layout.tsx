@@ -1,5 +1,6 @@
 import "../css/globals.css";
 import { Roboto } from "@next/font/google";
+import Navbar from "../components/Navbar";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -18,7 +19,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
