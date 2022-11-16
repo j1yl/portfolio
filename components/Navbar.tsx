@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="max-w-6xl mx-auto h-[8vh] flex justify-between items-center relative px-2 md:px-8 py-0">
+    <nav className="max-w-6xl mx-auto h-[8vh] flex justify-between items-center relative px-2 md:px-8 py-0 text-light">
       <Link href="/" className="text-3xl">
         LEFO
       </Link>

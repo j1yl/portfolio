@@ -3,7 +3,7 @@ import React from "react";
 import { UilGithubAlt } from "@iconscout/react-unicons";
 import { UilLinkedinAlt } from "@iconscout/react-unicons";
 
-const iconColor = "#000000";
+const iconColor = "#E0E7E9";
 
 const Footer = () => {
   return (
