@@ -19,7 +19,7 @@ export default function Home() {
               California State University, Fullerton.
             </span>
           </p>
-          <button className="w-max h-max text-3xl md:text-[3rem] shadow-black shadow-md border-2 border-light rounded-lg px-8 py-3 md:px-16 md:py-6">
+          <button className="w-max h-max text-3xl md:text-[3rem] border-2 border-light rounded-lg px-8 py-3 md:px-16 md:py-6">
             CONTACT ME
           </button>
         </section>
