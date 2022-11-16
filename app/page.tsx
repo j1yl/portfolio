@@ -4,10 +4,10 @@ export default function Home() {
       <main className="mx-auto h-[84vh] max-w-6xl flex flex-col justify-center px-2 md:px-8">
         <section className="flex flex-col gap-5">
           <div className="flex flex-col">
-            <h1 className="text-5xl md:text-[5rem] font-bold leading-none drop-shadow-xl">
+            <h1 className="text-5xl md:text-[5rem] font-bold leading-none">
               JOE LEE
             </h1>
-            <h2 className="text-5xl md:text-[5rem] font-bold leading-none drop-shadow-xl">
+            <h2 className="text-5xl md:text-[5rem] font-bold leading-none">
               WEB DEVELOPER
             </h2>
           </div>
@@ -24,7 +24,7 @@ export default function Home() {
           </button>
         </section>
         <section className="mt-16 flex flex-col gap-5">
-          <h2 className="text-3xl md:text-[2rem] font-bold drop-shadow-xl">
+          <h2 className="text-3xl md:text-[2rem] font-bold">
             FINDING BEAUTY IN SIMPLICITY
           </h2>
           <p className="md:w-2/3 w-full text-base">
