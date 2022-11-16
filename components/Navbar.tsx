@@ -33,17 +33,35 @@ const Navbar = () => {
         {isOpen && (
           <ul className="flex md:hidden absolute top-[60px] left-0 flex-col items-center w-full h-[90vh] bg-white">
             <li className="list-none py-6">
-              <Link href="/" className="text-base block w-full">
+              <Link
+                href="/"
+                className="text-base block w-full"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
                 HOME
               </Link>
             </li>
             <li className="list-none py-6">
-              <Link href="/about" className="text-base block w-full">
+              <Link
+                href="/about"
+                className="text-base block w-full"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
                 ABOUT
               </Link>
             </li>
             <li className="list-none py-6">
-              <Link href="/works" className="text-base block w-full">
+              <Link
+                href="/works"
+                className="text-base block w-full"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
                 WORKS
               </Link>
             </li>
@@ -51,17 +69,35 @@ const Navbar = () => {
         )}
         <ul className="hidden md:flex items-center w-full gap-10">
           <li className="list-none">
-            <Link href="/" className="text-base block w-full">
+            <Link
+              href="/"
+              className="text-base block w-full"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               HOME
             </Link>
           </li>
           <li className="list-none">
-            <Link href="/about" className="text-base block w-full">
+            <Link
+              href="/about"
+              className="text-base block w-full"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               ABOUT
             </Link>
           </li>
           <li className="list-none">
-            <Link href="/works" className="text-base block w-full">
+            <Link
+              href="/works"
+              className="text-base block w-full"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               WORKS
             </Link>
           </li>
