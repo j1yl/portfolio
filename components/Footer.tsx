@@ -8,7 +8,7 @@ const iconColor = "#000000";
 const Footer = () => {
   return (
     <>
-      <footer className="max-w-6xl mx-auto px-2 md:px-8 h-[8vh] w-full md:flex hidden gap-5 items-center justify-end">
+      <footer className="max-w-6xl mx-auto px-2 md:px-8 h-[8vh] w-full md:flex hidden gap-5 items-center justify-end bottom-0">
         <Link href={"https://github.com/j1yl"}>
           <UilGithubAlt size={"25"} color={iconColor} />
         </Link>
