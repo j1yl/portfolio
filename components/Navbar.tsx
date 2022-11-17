@@ -20,7 +20,7 @@ const Navbar = () => {
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
           viewBox="0 0 20 20"
-          fill="black"
+          fill="#E0E7E9"
         >
           <path
             fillRule="evenodd"
@@ -31,7 +31,7 @@ const Navbar = () => {
       </button>
       <div>
         {isOpen && (
-          <ul className="flex md:hidden absolute top-[60px] left-0 flex-col items-center w-full h-[90vh] bg-white">
+          <ul className="flex md:hidden absolute top-[60px] left-0 flex-col items-center w-full h-[90vh] bg-matcha text-light">
             <li className="list-none py-6">
               <Link
                 href="/"
