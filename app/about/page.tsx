@@ -8,7 +8,7 @@ const page = () => {
           <h2 className="text-3xl md:text-[2rem] font-bold text-second">
             ABOUT
           </h2>
-          <p className="text-base w-2/3 text-light">
+          <p className="text-base w-full md:w-2/3 text-light">
             Hi! I&apos;m Joe and I have a passion for designing and developing
             websites, specifically the creation of interactivity and working
             with animations. I love creating websites from scratch using
@@ -26,7 +26,7 @@ const page = () => {
           <h2 className="text-3xl md:text-[2rem] font-bold text-second">
             SKILLS
           </h2>
-          <p className="text-base w-2/3 text-light">
+          <p className="text-base w-full md:w-2/3 text-light">
             HTML, CSS (SASS, TAILWINDCSS), JAVASCRIPT, TYPESCRIPT, REACTJS,
             NEXTJS, THREEJS, FRAMER MOTION, NODE, EXPRESS, PYTHON, FLASK, DJANGO
           </p>
@@ -35,7 +35,7 @@ const page = () => {
           <h2 className="text-3xl md:text-[2rem] font-bold text-second">
             EXTRAS
           </h2>
-          <p className="text-base w-2/3 text-light">
+          <p className="text-base w-full md:w-2/3 text-light">
             GIT VERSION CONTROL, FIGMA, PENPOT, UI/UX, STACKOVERFLOW
           </p>
         </div>
