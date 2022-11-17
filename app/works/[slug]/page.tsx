@@ -9,7 +9,7 @@ const page = ({ params }: { params: { slug: string } }) => {
   current = proj[Number(params.slug) - 1];
   return (
     <>
-      <section className="h-[84vh] items-center max-w-6xl mx-auto px-2 md:px-8 flex flex-col md:flex-row gap-5 md:gap-0">
+      <section className="h-[84vh] md:items-center justify-center max-w-6xl mx-auto px-2 md:px-8 flex flex-col md:flex-row gap-5 md:gap-0">
         <div className="h-1/2 w-full md:w-1/2 flex flex-col justify-evenly">
           <h1 className="text-[2rem] md:text-[4rem] font-bold leading-none text-second underline">
             {current.name}
