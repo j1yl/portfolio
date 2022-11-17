@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Project from "../../components/Project";
 
@@ -14,7 +15,7 @@ const page = () => {
       <Project text="HEAVENSENT" url="/works/5" />
       <Project text="SPOTLYZER" url="/works/6" />
       <h2 className="text-[1.5rem] md:text-[3rem] font-bold text-second">
-        VIEW MORE ON GITHUB
+        <Link href={"https://github.com/j1yl"}>VIEW MORE ON GITHUB</Link>
       </h2>
     </section>
   );
