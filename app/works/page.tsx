@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import React from "react";
-import { isTemplateExpression } from "typescript";
 import { PageWrapper } from "../../components/PageWrapper";
 import Project from "../../components/Project";
 
