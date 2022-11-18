@@ -2,9 +2,24 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+
+const links = [
+  { href: "/", label: "home" },
+  {
+    href: "/about",
+    label: "about",
+  },
+  {
+    href: "/works",
+    label: "works",
+  },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
 
   return (
     <nav className="max-w-6xl mx-auto h-[8vh] flex justify-between items-center relative px-2 md:px-8 py-0 text-light">
@@ -68,39 +83,28 @@ const Navbar = () => {
           </ul>
         )}
         <ul className="hidden md:flex items-center w-full gap-10">
-          <li className="list-none">
-            <Link
-              href="/"
-              className="text-base block w-full"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              HOME
-            </Link>
-          </li>
-          <li className="list-none">
-            <Link
-              href="/about"
-              className="text-base block w-full"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              ABOUT
-            </Link>
-          </li>
-          <li className="list-none">
-            <Link
-              href="/works"
-              className="text-base block w-full"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              WORKS
-            </Link>
-          </li>
+          {links.map((link) => (
+            <li className="list-none" key={link.href}>
+              <Link
+                href={link.href}
+                className="text-base block w-full relative"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
+                {link.label.toUpperCase()}
+                {link.href === path && (
+                  <motion.span
+                    className="absolute left-0 top-full block h-[2px] w-full bg-light"
+                    transition={{
+                      duration: 0.2,
+                    }}
+                    layoutId="underline"
+                  ></motion.span>
+                )}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
