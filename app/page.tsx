@@ -1,4 +1,5 @@
 import { PageWrapper } from "../components/PageWrapper";
+import FloatingWord from "../components/FloatingWord";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
           <section className="flex flex-col gap-5">
             <div className="flex flex-col">
               <h1 className="text-5xl md:text-[5rem] font-bold leading-none text-second">
-                JOE LEE
+                <FloatingWord text={"JOE LEE"} />
               </h1>
               <h2 className="text-5xl md:text-[5rem] font-bold leading-none text-second">
                 WEB DEVELOPER
