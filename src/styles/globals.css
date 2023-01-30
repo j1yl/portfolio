@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fullpage {
+  @apply flex min-h-screen flex-col items-center justify-center
+}
