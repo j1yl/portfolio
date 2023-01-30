@@ -15,8 +15,23 @@ const Home: NextPage = () => {
       <main className="flex min-h-screen flex-col items-center justify-center">
         <p>Hello</p>
       </main>
+      <About />
+      <Works />
+      <Contact />
     </>
   );
+};
+
+const About = () => {
+  return <section className="fullpage">About</section>;
+};
+
+const Works = () => {
+  return <section className="fullpage">Works</section>;
+};
+
+const Contact = () => {
+  return <section className="fullpage">Contact</section>;
 };
 
 export default Home;
