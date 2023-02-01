@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  background: #eeeeee
+}
+
+/*
+Design System
+*/
+.fullpage {
+  @apply flex min-h-screen flex-col items-center justify-center
+}
+.link {
+  @apply px-4 py-2 font-semibold
+}
