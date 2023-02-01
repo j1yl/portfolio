@@ -23,15 +23,27 @@ const Home: NextPage = () => {
 };
 
 const About = () => {
-  return <section className="fullpage">About</section>;
+  return (
+    <section className="fullpage" id="about">
+      About
+    </section>
+  );
 };
 
 const Works = () => {
-  return <section className="fullpage">Works</section>;
+  return (
+    <section className="fullpage" id="works">
+      Works
+    </section>
+  );
 };
 
 const Contact = () => {
-  return <section className="fullpage">Contact</section>;
+  return (
+    <section className="fullpage" id="contact">
+      Contact
+    </section>
+  );
 };
 
 export default Home;
