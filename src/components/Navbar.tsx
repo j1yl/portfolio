@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 
-interface Link {
-  id: string;
-  name: string;
-  href: string;
-}
-
 const navLinks = [
   {
     id: "1",
@@ -34,10 +28,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative flex w-full items-center justify-between p-4">
-      <Link href="/" className="text-2xl">
+    <nav className="relative flex w-full items-center justify-between p-4 md:hidden">
+      <a href="/" className="text-2xl">
         lefodev
-      </Link>
+      </a>
       <button
         className="absolute top-[50%] right-[0px] block h-[40px] w-[40px] -translate-y-1/2 md:hidden"
         onClick={() => setIsOpen(!isOpen)}
@@ -59,7 +53,7 @@ const Navbar = () => {
       <div>
         {isOpen && (
           <ul className="absolute top-[60px] left-0 flex h-[90vh] w-full flex-col items-center bg-[#eeeeee] md:hidden">
-            {navLinks.map((link: Link) => (
+            {navLinks.map((link) => (
               <li
                 className="flex w-full justify-center p-4 text-sm"
                 key={link.id}
