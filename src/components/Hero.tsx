@@ -17,23 +17,59 @@ const Hero = () => {
             <br></br>Currently pursuing my undergraduate degree in Computer
             Science @ <span className="underline">CSUF</span>
           </p>
-          <CTAButton text={"Let's Connect"} to="contact" color="9FC0FF" />
+          <CTAButton text={"Let's Connect"} to="contact" />
         </div>
         <div className="hidden w-full flex-col items-center font-itim md:flex">
-          <CircularButton
-            color="FF9D9D"
-            translateAmt={-50}
-            text1="ABOUT"
-            text2="ME"
-            to="about"
-          />
-          <CircularButton
-            color="C89DFF"
-            translateAmt={150}
-            text1="PROJECT"
-            text2="CATALOG"
-            to="works"
-          />
+          <motion.button
+            initial={{
+              translateX: -50,
+            }}
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={{
+              duration: 0.5,
+              type: "spring" as any,
+              stiffness: "100" as any,
+            }}
+            animate={{
+              rotate: 360,
+            }}
+            className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#FF9D9D] text-left text-3xl`}
+          >
+            <Link to="about" smooth={true} duration={500}>
+              <p>
+                ABOUT
+                <br />
+                ME
+              </p>
+            </Link>
+          </motion.button>
+          <motion.button
+            initial={{
+              translateX: 150,
+            }}
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={{
+              duration: 0.5,
+              type: "spring" as any,
+              stiffness: "100" as any,
+            }}
+            animate={{
+              rotate: 360,
+            }}
+            className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#C89DFF] text-left text-3xl`}
+          >
+            <Link to="works" smooth={true} duration={500}>
+              <p>
+                PROJECT
+                <br />
+                CATALOG
+              </p>
+            </Link>
+          </motion.button>
           <motion.button
             initial={{
               translateX: -50,
@@ -65,57 +101,7 @@ const Hero = () => {
   );
 };
 
-const CircularButton = ({
-  color,
-  translateAmt,
-  text1,
-  text2,
-  to,
-}: {
-  color: string;
-  translateAmt: number;
-  text1: string;
-  text2: string;
-  to: string;
-}) => {
-  return (
-    <Link to={to} smooth={true} duration={500}>
-      <motion.button
-        initial={{
-          translateX: translateAmt,
-        }}
-        whileHover={{
-          scale: 1.1,
-        }}
-        transition={{
-          duration: 0.5,
-          type: "spring" as any,
-          stiffness: "100" as any,
-        }}
-        animate={{
-          rotate: 360,
-        }}
-        className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full text-left bg-[#${color}] text-3xl`}
-      >
-        <p>
-          {text1}
-          <br />
-          {text2}
-        </p>
-      </motion.button>
-    </Link>
-  );
-};
-
-const CTAButton = ({
-  text,
-  to,
-  color,
-}: {
-  text: string;
-  to: string;
-  color: string;
-}) => {
+const CTAButton = ({ text, to }: { text: string; to: string }) => {
   return (
     <motion.button
       whileHover={{
@@ -126,14 +112,9 @@ const CTAButton = ({
         type: "spring" as any,
         stiffness: "100" as any,
       }}
-      className="mt-2 w-max"
+      className={`mt-2 w-max rounded-2xl bg-[#9FC0FF] p-4 font-semibold`}
     >
-      <Link
-        to={to}
-        smooth={true}
-        duration={500}
-        className={`w-max rounded-2xl bg-[#${color}] p-4 font-semibold`}
-      >
+      <Link to={to} smooth={true} duration={500}>
         {text}
       </Link>
     </motion.button>
