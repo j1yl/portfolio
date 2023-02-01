@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Hero from "../components/Hero";
 
 const Home: NextPage = () => {
   return (
@@ -11,9 +12,15 @@ const Home: NextPage = () => {
           content="Personal website for Joe Lee, student at California State University, Fullerton."
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center">
-        <p>Hello</p>
+      <main className="flex min-h-screen flex-col items-center justify-center p-4 font-mont">
+        <Hero />
       </main>
       <About />
       <Works />
