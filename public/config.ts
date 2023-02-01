@@ -1,4 +1,5 @@
-export const langauges = ["TypeScript", "Python", "C++", "HTML", "CSS"];
+export const languages = ["TypeScript", "Python", "C++", "HTML", "CSS"];
+
 export const frameworks = [
   "React",
   "NextJS",
@@ -17,42 +18,56 @@ export const projects = [
     previewLink: "saveart.vercel.app",
     githubLink: "https://github.com/j1yl/saveart",
     techstack: ["Sveltekit", "Prisma", "Supabase", "TailwindCSS"],
+    status: "wip",
   },
   {
     id: "2",
+    title: "ShrinkURL",
+    previewLink: "shrinkurl.vercel.app",
+    githubLink: "https://github.com/j1yl/shrinkurl",
+    techstack: ["TypeScript", "React", "TailwindCSS", "GotinyAPI"],
+    status: "finished",
+  },
+  {
+    id: "3",
     title: "Spotlyzer",
     previewLink: "",
-    githubLink: "",
-    techstack: ["", "", "", "", ""],
+    githubLink: "https://github.com/j1yl/spotlyzer",
+    techstack: ["JavaScript", "SASS", "React", "NextJS", "SpotifyAPI"],
+    status: "finished",
   },
   {
-    id: "",
-    title: "",
+    id: "4",
+    title: "EasyCommerce",
     previewLink: "",
-    githubLink: "",
-    techstack: ["", "", "", "", ""],
+    githubLink: "https://github.com/j1yl/easycommerce",
+    techstack: ["TypeScript", "NextJS", "React", "Sanity", "Stripe"],
+    status: "wip",
   },
   {
-    id: "",
-    title: "",
+    id: "5",
+    title: "Cmail",
     previewLink: "",
-    githubLink: "",
-    techstack: ["", "", "", "", ""],
+    githubLink: "https://github.com/j1yl/cmail",
+    techstack: ["Python", "Yagmail", "Pandas"],
+    status: "finished",
   },
   {
-    id: "",
-    title: "",
-    previewLink: "",
-    githubLink: "",
-    techstack: ["", "", "", "", ""],
-  },
-  {
-    id: "",
-    title: "",
-    previewLink: "",
-    githubLink: "",
-    techstack: ["", "", "", "", ""],
+    id: "6",
+    title: "Portfolio",
+    previewLink: "https://lefo.dev",
+    githubLink: "https://github.com/j1yl/lefo",
+    techstack: [
+      "TypeScript",
+      "NextJS",
+      "React",
+      "TailwindCSS",
+      "Framer Motion",
+      "EmailJS",
+    ],
+    status: "finished",
   },
 ];
 
-export const resume = "";
+export const resume =
+  "https://drive.google.com/file/d/1bXIGnkkfMF7bSC-93_IiKM_si2lbdjrz/view?usp=share_link";
