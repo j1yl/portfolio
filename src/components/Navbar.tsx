@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 const navLinks = [
   {
@@ -29,9 +30,9 @@ const Navbar = () => {
 
   return (
     <nav className="relative flex w-full items-center justify-between p-4 md:hidden">
-      <a href="/" className="text-2xl">
+      <Link href="/" className="text-2xl">
         lefodev
-      </a>
+      </Link>
       <button
         className="absolute top-[50%] right-[0px] block h-[40px] w-[40px] -translate-y-1/2 md:hidden"
         onClick={() => setIsOpen(!isOpen)}
@@ -58,14 +59,14 @@ const Navbar = () => {
                 className="flex w-full justify-center p-4 text-sm"
                 key={link.id}
               >
-                <Link
+                <ScrollLink
                   to={link.href}
                   smooth={true}
                   duration={500}
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   {link.name}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
           </ul>
@@ -73,9 +74,9 @@ const Navbar = () => {
         <ul className="hidden w-full items-center gap-4 text-sm md:flex">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <Link to={link.href} smooth={true} duration={500}>
+              <ScrollLink to={link.href} smooth={true} duration={500}>
                 {link.name}
-              </Link>
+              </ScrollLink>
             </li>
           ))}
         </ul>
