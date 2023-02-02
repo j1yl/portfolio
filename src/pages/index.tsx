@@ -87,7 +87,12 @@ const Works = () => {
     >
       <div className="flex w-full justify-between">
         <div className="w-full">
-          <Image src={"/polar.svg"} alt={"polarbear"} />
+          <Image
+            src={"/polar.svg"}
+            alt={"polarbear"}
+            width={500}
+            height={500}
+          />
         </div>
         <div className="flex w-full flex-col items-end justify-center">
           {projects.map((proj) => (
