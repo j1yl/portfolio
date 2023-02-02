@@ -5,8 +5,6 @@ import { projects } from "../../../public/config";
 const Project = () => {
   const router = useRouter();
   const { id } = router.query;
-  let currentProject;
-
   return (
     <section className="fullpage min-w-6xl mx-auto max-w-6xl font-mont">
       {projects
@@ -14,11 +12,11 @@ const Project = () => {
           return project.id === id;
         })
         .map((project) => (
-          <div className="flex w-full flex-col gap-2">
+          <div className="flex w-full flex-col gap-2" key={project.id}>
             <h1 className="text-4xl">{project.title}</h1>
             <div className="flex gap-2">
-              {project.techstack.map((tech) => (
-                <span>#{tech}</span>
+              {project.techstack.map((tech, index) => (
+                <span key={index}>#{tech}</span>
               ))}
             </div>
             <p>{project.description}</p>

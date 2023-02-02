@@ -3,6 +3,7 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import { languages, frameworks, projects } from "../../public/config";
 import Link from "next/link";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -86,13 +87,14 @@ const Works = () => {
     >
       <div className="flex w-full justify-between">
         <div className="w-full">
-          <img src={"/polar.svg"} alt={"polarbear"} />
+          <Image src={"/polar.svg"} alt={"polarbear"} />
         </div>
         <div className="flex w-full flex-col items-end justify-center">
           {projects.map((proj) => (
             <Link
               href={`/works/${proj.id}`}
               className="w-max font-itim text-7xl"
+              key={proj.id}
             >
               {proj.title.toUpperCase()}
             </Link>
