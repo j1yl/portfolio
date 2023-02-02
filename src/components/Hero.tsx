@@ -1,4 +1,5 @@
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { resume } from "../../public/config";
 
@@ -27,23 +28,19 @@ const Hero = () => {
             whileHover={{
               scale: 1.1,
             }}
-            transition={{
-              duration: 0.5,
-              type: "spring" as any,
-              stiffness: "100" as any,
-            }}
+            transition={{ duration: 0.3 }}
             animate={{
               rotate: 360,
             }}
             className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#FF9D9D] text-left text-3xl`}
           >
-            <Link to="about" smooth={true} duration={500}>
+            <ScrollLink to="about" smooth={true} duration={500}>
               <p>
                 ABOUT
                 <br />
                 ME
               </p>
-            </Link>
+            </ScrollLink>
           </motion.button>
           <motion.button
             initial={{
@@ -52,23 +49,19 @@ const Hero = () => {
             whileHover={{
               scale: 1.1,
             }}
-            transition={{
-              duration: 0.5,
-              type: "spring" as any,
-              stiffness: "100" as any,
-            }}
+            transition={{ duration: 0.3 }}
             animate={{
               rotate: 360,
             }}
             className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#C89DFF] text-left text-3xl`}
           >
-            <Link to="works" smooth={true} duration={500}>
+            <ScrollLink to="works" smooth={true} duration={500}>
               <p>
                 PROJECT
                 <br />
                 CATALOG
               </p>
-            </Link>
+            </ScrollLink>
           </motion.button>
           <motion.button
             initial={{
@@ -77,23 +70,19 @@ const Hero = () => {
             whileHover={{
               scale: 1.1,
             }}
-            transition={{
-              duration: 0.5,
-              type: "spring" as any,
-              stiffness: "100" as any,
-            }}
+            transition={{ duration: 0.3 }}
             animate={{
               rotate: 360,
             }}
             className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#FFCC9D] text-left text-3xl`}
           >
-            <a href={resume} target="_blank">
+            <Link href={resume} target="_blank" rel="noreferrer">
               <p>
                 TECH
                 <br />
                 RESUME
               </p>
-            </a>
+            </Link>
           </motion.button>
         </div>
       </div>
@@ -108,15 +97,13 @@ const CTAButton = ({ text, to }: { text: string; to: string }) => {
         y: 5,
       }}
       transition={{
-        duration: 0.5,
-        type: "spring" as any,
-        stiffness: "100" as any,
+        duration: 0.3,
       }}
       className={`mt-2 w-max rounded-2xl bg-[#9FC0FF] p-4 font-semibold`}
     >
-      <Link to={to} smooth={true} duration={500}>
+      <ScrollLink to={to} smooth={true} duration={500}>
         {text}
-      </Link>
+      </ScrollLink>
     </motion.button>
   );
 };
