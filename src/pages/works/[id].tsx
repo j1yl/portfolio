@@ -20,7 +20,6 @@ const Project = () => {
               ))}
             </div>
             <p>{project.description}</p>
-            {/* replace with project description */}
             <div className="flex w-full gap-2">
               <Link
                 href={project.githubLink}
@@ -28,12 +27,18 @@ const Project = () => {
               >
                 Source
               </Link>
-              <Link
-                href={project.previewLink}
-                className="w-max rounded-xl bg-[#9FC0FF] px-4 py-2"
-              >
-                Demo
-              </Link>
+              {project.previewLink === "" ? (
+                <span className="w-max rounded-xl bg-[#bebebe] px-4 py-2">
+                  Demo Unavailable
+                </span>
+              ) : (
+                <Link
+                  href={project.previewLink}
+                  className="w-max rounded-xl bg-[#9FC0FF] px-4 py-2"
+                >
+                  Demo
+                </Link>
+              )}
             </div>
           </div>
         ))}
