@@ -80,4 +80,4 @@ export const projects = [
 ];
 
 export const resume =
-  "https://drive.google.com/file/d/1bXIGnkkfMF7bSC-93_IiKM_si2lbdjrz/view?usp=share_link";
+  "https://drive.google.com/file/d/1RBkBknA8NbNgASBV-vzaZ5FBX-cPk4-D/view?usp=share_link";
