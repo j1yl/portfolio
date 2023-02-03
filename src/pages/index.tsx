@@ -1,7 +1,9 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Hero from "../components/Hero";
-import { languages, frameworks } from "../../public/config";
+import { languages, frameworks, projects } from "../../public/config";
+import Link from "next/link";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -79,8 +81,31 @@ const About = () => {
 
 const Works = () => {
   return (
-    <section className="fullpage" id="works">
-      Works
+    <section
+      className="fullpage mx-auto w-full max-w-6xl p-2 font-mont"
+      id="works"
+    >
+      <div className="flex w-full justify-between">
+        <div className="w-full">
+          <Image
+            src={"/polar.svg"}
+            alt={"polarbear"}
+            width={500}
+            height={500}
+          />
+        </div>
+        <div className="flex w-full flex-col items-end justify-center">
+          {projects.map((proj) => (
+            <Link
+              href={`/works/${proj.id}`}
+              className="w-max font-itim text-7xl"
+              key={proj.id}
+            >
+              {proj.title.toUpperCase()}
+            </Link>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
