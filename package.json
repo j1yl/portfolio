@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@next/font": "^13.1.6",
     "framer-motion": "^8.5.5",
     "next": "13.1.6",
