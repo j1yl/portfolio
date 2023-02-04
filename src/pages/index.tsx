@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { env } from "../env/client.mjs";
 
 const Home: NextPage = () => {
   return (
@@ -121,10 +122,10 @@ const Contact = () => {
     setFormSubmit(true);
     emailjs
       .sendForm(
-        process.env.SERVICEID as string,
-        process.env.TEMPLATEID as string,
+        env.NEXT_PUBLIC_SERVICEID,
+        env.NEXT_PUBLIC_TEMPLATEID,
         form.current as HTMLFormElement,
-        process.env.PUBLICKEY as string
+        env.NEXT_PUBLIC_PUBLICKEY
       )
       .then(
         (res) => {
