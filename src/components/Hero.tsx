@@ -101,22 +101,4 @@ const Hero = () => {
   );
 };
 
-const CTAButton = ({ text, to }: { text: string; to: string }) => {
-  return (
-    <motion.button
-      whileHover={{
-        y: 5,
-      }}
-      transition={{
-        duration: 0.3,
-      }}
-      className={`mt-2 w-max rounded-2xl bg-[#9FC0FF] p-4 font-semibold`}
-    >
-      <ScrollLink to={to} smooth={true} duration={500}>
-        {text}
-      </ScrollLink>
-    </motion.button>
-  );
-};
-
 export default Hero;
