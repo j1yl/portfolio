@@ -17,6 +17,7 @@ const Home: NextPage = () => {
   const mouse = useMouse(ref, {
     enterDelay: 100,
     leaveDelay: 100,
+    fps: 60,
   });
 
   let mouseXPosition: number = 0;
@@ -36,13 +37,13 @@ const Home: NextPage = () => {
   const variants = {
     default: {
       opacity: 1,
-      height: 32,
-      width: 32,
-      x: mouseXPosition - 16,
-      y: mouseYPosition - 16,
+      height: 16,
+      width: 16,
+      x: mouseXPosition - 8,
+      y: mouseYPosition - 8,
       transition: {
         type: "spring",
-        stiffness: 100,
+        mass: 0.6,
       },
     },
     herotext: {
@@ -57,7 +58,6 @@ const Home: NextPage = () => {
       },
     },
   };
-
   return (
     <>
       <Head>
@@ -73,10 +73,13 @@ const Home: NextPage = () => {
           className={circleCSS}
           variants={variants}
           animate={cursorVariant}
+          initial={{
+            opacity: 0,
+          }}
           transition={{
             type: "spring",
-            damping: 50,
-            stiffness: 500,
+            damping: 20,
+            stiffness: 100,
           }}
         ></motion.div>
         <Hero />
