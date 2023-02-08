@@ -7,7 +7,7 @@ import HeroButton from "./HeroButton";
 
 const Hero = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 font-mont">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4">
       <div className="flex w-full items-center justify-between md:max-w-6xl">
         <div className="flex h-max w-full flex-col gap-4">
           <div className="flex flex-col gap-4">

@@ -6,7 +6,7 @@ const Project = () => {
   const router = useRouter();
   const { id } = router.query;
   return (
-    <section className="fullpage min-w-6xl mx-auto max-w-6xl font-mont">
+    <section className="fullpage min-w-6xl mx-auto max-w-6xl">
       {projects
         .filter((project) => {
           return project.id === id;

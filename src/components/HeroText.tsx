@@ -16,10 +16,7 @@ const child = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-    },
+    transition: {},
   },
   hidden: {
     opacity: 0,
@@ -42,15 +39,12 @@ const HeroText = ({ text }: { text: string }) => {
       {chars.map((letter, index) => (
         <motion.span
           whileHover={{
-            scaleY: [1, 1, 0.9, 1],
-            scaleX: [1, 1.3, 0.9, 1],
+            scaleY: [1, 1.2, 1],
+            scaleX: [1, 1.3, 1],
             color: randomColor(myColors),
           }}
           transition={{
-            duration: 0.3,
-            type: "spring",
-            stiffness: 100,
-            bounce: 2,
+            duration: 0.25,
           }}
           variants={child}
           key={index}

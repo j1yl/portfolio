@@ -29,10 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      className="fullpage min-w-6xl mx-auto max-w-6xl p-4 font-mont"
-      id="contact"
-    >
+    <section className="fullpage min-w-6xl mx-auto max-w-6xl p-4" id="contact">
       <form
         ref={form}
         className="flex w-full flex-col gap-4"

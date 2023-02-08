@@ -4,10 +4,7 @@ import { projects } from "../../public/config";
 
 const Works = () => {
   return (
-    <section
-      className="fullpage mx-auto w-full max-w-6xl p-2 font-mont"
-      id="works"
-    >
+    <section className="fullpage mx-auto w-full max-w-6xl p-2" id="works">
       <div className="flex w-full justify-between">
         <div className="w-full">
           <Image

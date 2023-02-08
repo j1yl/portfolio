@@ -2,10 +2,7 @@ import { languages, frameworks } from "../../public/config";
 
 const About = () => {
   return (
-    <section
-      className="fullpage w-full p-4 font-mont md:mx-auto md:max-w-6xl"
-      id="about"
-    >
+    <section className="fullpage w-full p-4 md:mx-auto md:max-w-6xl" id="about">
       <div className="flex w-full flex-col justify-between gap-8 md:flex-row">
         <div className="h-max w-full flex-col">
           <h2 className="mb-4 font-itim text-xl font-bold md:text-3xl">
