@@ -35,7 +35,7 @@ const HeroText = ({ text }: { text: string }) => {
   };
   return (
     <motion.div
-      className="flex flex-wrap"
+      className="flex select-none flex-wrap"
       variants={parent}
       initial="hidden"
       animate="visible"
