@@ -12,22 +12,22 @@ const Hero = () => {
       <div className="flex w-full items-center justify-between md:max-w-6xl">
         <div className="flex h-max w-full flex-col gap-4">
           <div className="flex flex-col gap-4">
-            <p className="font-mono text-[#9fc0ff]">{"<h1>"}</p>
+            <p className="htmltag  text-[#9fc0ff]">{"<h1>"}</p>
             <div>
               <HeroText text={"Hello! I'm Joe Lee,"} />
               <HeroText text={"Software Engineer"} />
             </div>
-            <p className="font-mono text-[#c89dff]">{"</h1>"}</p>
+            <p className="htmltag  text-[#c89dff]">{"</h1>"}</p>
           </div>
           <div className="flex flex-col gap-4">
-            <p className="font-mono text-[#ffcc9d]">{"<p>"}</p>
+            <p className="htmltag  text-[#ffcc9d]">{"<p>"}</p>
 
             <HeroDescriptionText
               text={
                 "I am passionate and dedicated to elevating your web experience. Currently pursuing my undergraduate degree in Computer Science @ CSUF."
               }
             />
-            <p className="font-mono text-[#ff9d9d]">{"</p>"}</p>
+            <p className="htmltag  text-[#ff9d9d]">{"</p>"}</p>
           </div>
           <HeroButton text={"Let's Connect"} to={"contact"} />
         </div>
