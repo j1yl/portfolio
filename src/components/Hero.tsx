@@ -1,6 +1,5 @@
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { resume } from "../../public/config";
 import HeroText from "../components/HeroText";
 import HeroDescriptionText from "./HeroDescriptionText";
@@ -32,18 +31,8 @@ const Hero = () => {
           <HeroButton text={"Let's Connect"} to={"contact"} />
         </div>
         <div className="hidden w-full flex-col items-center font-itim md:flex">
-          <motion.button
-            initial={{
-              translateX: -50,
-            }}
-            whileHover={{
-              scale: 1.1,
-            }}
-            transition={{ duration: 0.3 }}
-            animate={{
-              rotate: 360,
-            }}
-            className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#FF9D9D] text-left text-3xl`}
+          <button
+            className={` z-0 flex h-[200px] w-[200px] translate-x-[-100px] flex-col items-center justify-center rounded-full bg-[#FF9D9D] text-left text-3xl transition-all hover:scale-110`}
           >
             <ScrollLink to="about" smooth={true} duration={500}>
               <p>
@@ -52,19 +41,9 @@ const Hero = () => {
                 ME
               </p>
             </ScrollLink>
-          </motion.button>
-          <motion.button
-            initial={{
-              translateX: 150,
-            }}
-            whileHover={{
-              scale: 1.1,
-            }}
-            transition={{ duration: 0.3 }}
-            animate={{
-              rotate: 360,
-            }}
-            className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#C89DFF] text-left text-3xl`}
+          </button>
+          <button
+            className={`z-0 flex h-[200px] w-[200px] translate-x-[100px] flex-col items-center justify-center rounded-full bg-[#C89DFF] text-left text-3xl transition-all hover:scale-110`}
           >
             <ScrollLink to="works" smooth={true} duration={500}>
               <p>
@@ -73,19 +52,9 @@ const Hero = () => {
                 CATALOG
               </p>
             </ScrollLink>
-          </motion.button>
-          <motion.button
-            initial={{
-              translateX: -50,
-            }}
-            whileHover={{
-              scale: 1.1,
-            }}
-            transition={{ duration: 0.3 }}
-            animate={{
-              rotate: 360,
-            }}
-            className={`flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full bg-[#FFCC9D] text-left text-3xl`}
+          </button>
+          <button
+            className={`z-0 flex h-[200px] w-[200px] translate-x-[-100px] flex-col items-center justify-center rounded-full bg-[#FFCC9D] text-left text-3xl transition-all hover:scale-110`}
           >
             <Link href={resume} target="_blank" rel="noreferrer">
               <p>
@@ -94,7 +63,7 @@ const Hero = () => {
                 RESUME
               </p>
             </Link>
-          </motion.button>
+          </button>
         </div>
       </div>
     </main>
