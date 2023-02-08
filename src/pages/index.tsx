@@ -20,8 +20,8 @@ const Home: NextPage = () => {
     fps: 60,
   });
 
-  let mouseXPosition: number = 0;
-  let mouseYPosition: number = 0;
+  let mouseXPosition = 0;
+  let mouseYPosition = 0;
 
   if (mouse.x !== null) {
     mouseXPosition = mouse.clientX as number;
