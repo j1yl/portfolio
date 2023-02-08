@@ -37,14 +37,6 @@ const Home: NextPage = () => {
   const variants = {
     default: {
       opacity: 1,
-      height: 16,
-      width: 16,
-      x: mouseXPosition - 8,
-      y: mouseYPosition - 8,
-      transition: {
-        type: "spring",
-        mass: 0.6,
-      },
     },
     herotext: {
       opacity: 1,
