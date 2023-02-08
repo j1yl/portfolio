@@ -35,7 +35,7 @@ const HeroText = ({ text }: { text: string }) => {
   };
   return (
     <motion.div
-      className="flex"
+      className="flex flex-wrap"
       variants={parent}
       initial="hidden"
       animate="visible"
@@ -57,7 +57,7 @@ const HeroText = ({ text }: { text: string }) => {
           }}
           variants={child}
           key={index}
-          className="h-max w-max bg-clip-text text-5xl font-bold"
+          className="h-max w-max text-3xl font-bold md:text-5xl"
         >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
