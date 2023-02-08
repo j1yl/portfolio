@@ -19,7 +19,6 @@ const child = {
     transition: {
       type: "spring",
       stiffness: 100,
-      bounce: 2,
     },
   },
   hidden: {
