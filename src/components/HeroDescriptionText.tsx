@@ -33,7 +33,7 @@ const HeroDescriptionText = ({ text }: { text: string }) => {
   return (
     <>
       <motion.div
-        className="flex w-full select-none flex-wrap font-semibold"
+        className="flex w-full select-none flex-wrap font-semibold text-[#1e1e1e] dark:text-[#d1d1d1d1]"
         variants={parent}
         initial="hidden"
         animate="visible"
