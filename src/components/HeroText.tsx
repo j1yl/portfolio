@@ -42,8 +42,6 @@ const HeroText = ({ text }: { text: string }) => {
     >
       {chars.map((letter, index) => (
         <motion.span
-          onHoverStart={() => {}}
-          onHoverEnd={() => {}}
           whileHover={{
             scaleY: [1, 1, 0.9, 1],
             scaleX: [1, 1.3, 0.9, 1],
