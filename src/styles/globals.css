@@ -20,3 +20,6 @@ Design System
 .link {
   @apply px-4 py-2 font-semibold
 }
+.htmltag {
+  @apply font-mono font-semibold
+}
