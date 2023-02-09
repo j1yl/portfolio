@@ -81,8 +81,6 @@ const InputField = ({
   name: string;
   type: string;
 }) => {
-  const [data, setData] = useState<HTMLInputElement>();
-
   return (
     <>
       <div className="flex w-full flex-col gap-2">

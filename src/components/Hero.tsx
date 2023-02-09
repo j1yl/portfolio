@@ -1,8 +1,7 @@
 import HeroText from "../components/HeroText";
 import HeroDescriptionText from "./HeroDescriptionText";
 import HeroButton from "./HeroButton";
-import { Dispatch, SetStateAction } from "react";
-import { motion } from "framer-motion";
+import type { Dispatch, SetStateAction } from "react";
 
 const Hero = ({
   setCursorVariant,
