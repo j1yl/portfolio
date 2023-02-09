@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="fullpage p-4">
+    <section className="fullpage p-4" id="contact">
       <div className="min-w-6xl mx-auto flex w-full max-w-6xl p-4">
         <HeroText text={"Send me a message!"} />
       </div>
