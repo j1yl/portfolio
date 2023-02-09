@@ -48,6 +48,7 @@ const Contact = () => {
           <textarea
             rows={5}
             maxLength={1000}
+            name="message"
             className="w-full resize-none rounded-xl bg-third_white p-4 focus:outline-none dark:bg-primary_dark dark:placeholder-primary_white"
           />
         </div>
