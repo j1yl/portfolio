@@ -1,32 +1,25 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../../public/config";
 
+const variants = {
+  animate: {
+    x: [2000, -2000],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 25,
+        ease: "linear",
+      },
+    },
+  },
+};
+
 const Works = () => {
   return (
-    <section className="fullpage mx-auto w-full max-w-6xl p-2" id="works">
-      <div className="flex w-full justify-between">
-        <div className="w-full">
-          <Image
-            src={"/polar.svg"}
-            alt={"polarbear"}
-            width={500}
-            height={500}
-          />
-        </div>
-        <div className="flex w-full flex-col items-end justify-center">
-          {projects.map((proj) => (
-            <Link
-              href={`/works/${proj.id}`}
-              className="w-max font-itim text-7xl"
-              key={proj.id}
-            >
-              {proj.title.toUpperCase()}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+    <section className="fullpage w-full max-w-6xl p-2" id="works"></section>
   );
 };
 

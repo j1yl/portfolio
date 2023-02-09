@@ -34,7 +34,7 @@ const HeroText = ({ text }: { text: string }) => {
       className="flex select-none flex-wrap text-primary_dark dark:text-primary_white"
       variants={parent}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
     >
       {chars.map((letter, index) => (
         <motion.span

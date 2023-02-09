@@ -9,7 +9,6 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Works from "../components/Works";
 import Contact from "../components/Contact";
-import HoverPopup from "../components/HoverPopup";
 
 const Home: NextPage = () => {
   const ref = useRef(null);
@@ -70,7 +69,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div ref={ref}>
-        <HoverPopup cursorVariant={cursorVariant} variants={variants} />
         <Hero setCursorVariant={setCursorVariant} />
         <About />
         <Works />
