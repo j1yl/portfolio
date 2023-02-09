@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <nav className="relative w-full p-4">
       <div className="min-w-6xl relative mx-auto flex w-full max-w-6xl items-center justify-between">
-        <Link href="/" className="text-2xl dark:text-[#d1d1d1]">
+        <Link href="/" className="text-2xl dark:text-primary_white">
           lefodev
         </Link>
         <button
@@ -54,7 +54,7 @@ const Navbar = () => {
         </button>
         <div>
           {isOpen && (
-            <ul className="absolute top-[60px] left-0 flex h-[90vh] w-full flex-col items-center bg-[#d1d1d1] dark:bg-[#121212] dark:text-[#d1d1d1] md:hidden">
+            <ul className="absolute top-[60px] left-0 flex h-[90vh] w-full flex-col items-center bg-[#d1d1d1] dark:bg-[#121212] dark:text-primary_white md:hidden">
               {navLinks.map((link) => (
                 <li
                   className="flex w-full justify-center p-4 text-sm"
@@ -72,7 +72,7 @@ const Navbar = () => {
               ))}
             </ul>
           )}
-          <ul className="hidden w-full items-center gap-4 text-sm dark:text-[#d1d1d1] md:flex">
+          <ul className="hidden w-full items-center gap-4 text-sm dark:text-primary_white md:flex">
             {navLinks.map((link) => (
               <li key={link.id} className="cursor-pointer">
                 <ScrollLink to={link.href} smooth={true} duration={500}>

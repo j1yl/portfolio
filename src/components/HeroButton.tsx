@@ -31,7 +31,7 @@ const HeroButton = ({ text, to }: { text: string; to: string }) => {
         whileTap={{
           scale: 0.9,
         }}
-        className={`mt-2 w-max rounded-xl border-4 border-[#1e1e1e] p-4 font-semibold dark:border-[#d1d1d1] dark:text-[#d1d1d1] `}
+        className={`mt-2 w-max rounded-xl border-2 border-primary_blue p-4 font-semibold dark:text-primary_white`}
       >
         <Link className="h-full w-full" to={to} smooth={true} duration={500}>
           {text}
