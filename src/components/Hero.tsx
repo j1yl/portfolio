@@ -2,6 +2,7 @@ import HeroText from "../components/HeroText";
 import HeroDescriptionText from "./HeroDescriptionText";
 import HeroButton from "./HeroButton";
 import type { Dispatch, SetStateAction } from "react";
+import Hover from "./Hover";
 
 const Hero = ({
   setCursorVariant,
@@ -28,6 +29,9 @@ const Hero = ({
             <p className="htmltag text-primary_purple">{"</p>"}</p>
           </div>
           <HeroButton text={"Let's Connect"} to={"contact"} />
+        </div>
+        <div className="flex h-max w-full flex-col items-center justify-center">
+          <Hover text={"HOVER OVER ME !"} setCursorVariant={setCursorVariant} />
         </div>
       </div>
     </main>
