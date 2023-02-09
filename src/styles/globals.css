@@ -8,14 +8,17 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  background: #eeeeee
+  background: #d1d1d1d1
 }
 
-/*
-Design System
-*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212
+  }
+}
+
 .fullpage {
-  @apply flex min-h-screen flex-col items-center justify-center
+  @apply flex min-h-[85vh] flex-col items-center justify-center
 }
 .link {
   @apply px-4 py-2 font-semibold

@@ -1,32 +1,69 @@
-import Image from "next/image";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { projects } from "../../public/config";
+import HeroText from "./HeroText";
+
+const variants = {
+  animate: {
+    x: [0, -200],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 10,
+        ease: "linear",
+      },
+    },
+  },
+};
 
 const Works = () => {
   return (
-    <section className="fullpage mx-auto w-full max-w-6xl p-2" id="works">
-      <div className="flex w-full justify-between">
-        <div className="w-full">
-          <Image
-            src={"/polar.svg"}
-            alt={"polarbear"}
-            width={500}
-            height={500}
-          />
-        </div>
-        <div className="flex w-full flex-col items-end justify-center">
+    <section
+      className="fullpage mx-auto w-full max-w-6xl p-4 font-semibold  text-primary_dark dark:text-primary_white"
+      id="works"
+    >
+      <div className="flex w-full flex-col gap-4">
+        <HeroText text={"My Projects"} />
+        <div className="relative flex w-full max-w-6xl flex-col gap-2 overflow-x-hidden overflow-y-clip">
           {projects.map((proj) => (
-            <Link
-              href={`/works/${proj.id}`}
-              className="w-max font-itim text-7xl"
+            <Marquee
+              text={proj.title.toUpperCase()}
+              id={proj.id}
               key={proj.id}
-            >
-              {proj.title.toUpperCase()}
-            </Link>
+            />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+const Marquee = ({ text, id }: { text: string; id: string }) => {
+  return (
+    <motion.div
+      variants={variants}
+      whileHover="animate"
+      className="static whitespace-nowrap text-4xl dark:text-third_white md:text-8xl"
+    >
+      <Link href={`/works/${id}`}>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+        <span>{text}</span>
+      </Link>
+    </motion.div>
   );
 };
 

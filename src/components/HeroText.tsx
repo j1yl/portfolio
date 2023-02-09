@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const myColors: string[] = ["#9fc0ff", "#c89dff", "#ffcc9d", "#ff9d9d"];
+const myColors: string[] = ["#FF5353", "#7635FF", "#70CBFF"];
 
 const parent = {
   hidden: { opacity: 0 },
@@ -31,10 +31,10 @@ const HeroText = ({ text }: { text: string }) => {
   };
   return (
     <motion.div
-      className="flex select-none flex-wrap"
+      className="flex select-none flex-wrap text-primary_dark dark:text-primary_white"
       variants={parent}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
     >
       {chars.map((letter, index) => (
         <motion.span

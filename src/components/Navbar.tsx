@@ -29,57 +29,59 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative flex w-full items-center justify-between p-4 md:hidden">
-      <Link href="/" className="text-2xl">
-        lefodev
-      </Link>
-      <button
-        className="absolute top-[50%] right-[0px] block h-[40px] w-[40px] -translate-y-1/2 md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {/* icon from heroicons.com */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          viewBox="0 0 20 20"
-          fill="black"
+    <nav className="relative w-full p-4">
+      <div className="min-w-6xl relative mx-auto flex w-full max-w-6xl items-center justify-between">
+        <Link href="/" className="text-2xl dark:text-primary_white">
+          lefodev
+        </Link>
+        <button
+          className="absolute top-[50%] right-[0px] block h-[40px] w-[40px] -translate-y-1/2 md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-      <div>
-        {isOpen && (
-          <ul className="absolute top-[60px] left-0 flex h-[90vh] w-full flex-col items-center bg-[#eeeeee] md:hidden">
-            {navLinks.map((link) => (
-              <li
-                className="flex w-full justify-center p-4 text-sm"
-                key={link.id}
-              >
-                <ScrollLink
-                  to={link.href}
-                  smooth={true}
-                  duration={500}
-                  onClick={() => setIsOpen(!isOpen)}
+          {/* icon from heroicons.com */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            viewBox="0 0 20 20"
+            fill="black"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+        <div>
+          {isOpen && (
+            <ul className="absolute top-[60px] left-0 flex h-[90vh] w-full flex-col items-center bg-[#d1d1d1] dark:bg-[#121212] dark:text-primary_white md:hidden">
+              {navLinks.map((link) => (
+                <li
+                  className="flex w-full justify-center p-4 text-sm"
+                  key={link.id}
                 >
+                  <ScrollLink
+                    to={link.href}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    {link.name}
+                  </ScrollLink>
+                </li>
+              ))}
+            </ul>
+          )}
+          <ul className="hidden w-full items-center gap-4 text-sm dark:text-primary_white md:flex">
+            {navLinks.map((link) => (
+              <li key={link.id} className="cursor-pointer">
+                <ScrollLink to={link.href} smooth={true} duration={500}>
                   {link.name}
                 </ScrollLink>
               </li>
             ))}
           </ul>
-        )}
-        <ul className="hidden w-full items-center gap-4 text-sm md:flex">
-          {navLinks.map((link) => (
-            <li key={link.id}>
-              <ScrollLink to={link.href} smooth={true} duration={500}>
-                {link.name}
-              </ScrollLink>
-            </li>
-          ))}
-        </ul>
+        </div>
       </div>
     </nav>
   );

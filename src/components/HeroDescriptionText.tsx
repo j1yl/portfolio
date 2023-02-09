@@ -33,10 +33,10 @@ const HeroDescriptionText = ({ text }: { text: string }) => {
   return (
     <>
       <motion.div
-        className="flex w-full select-none flex-wrap font-semibold"
+        className="flex w-full select-none flex-wrap text-primary_dark dark:text-third_white"
         variants={parent}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
       >
         {words.map((word, index) => (
           <motion.span key={index} variants={child} className="mr-2">

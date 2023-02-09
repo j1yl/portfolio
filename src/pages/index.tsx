@@ -2,8 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import { useRef, useState } from "react";
 
-import useMouse from "@react-hook/mouse-position";
-import { motion } from "framer-motion";
+// import useMouse from "@react-hook/mouse-position";
 
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -14,42 +13,50 @@ const Home: NextPage = () => {
   const ref = useRef(null);
   const [cursorVariant, setCursorVariant] = useState("default");
 
-  const mouse = useMouse(ref, {
-    enterDelay: 100,
-    leaveDelay: 100,
-    fps: 60,
-  });
+  // const mouse = useMouse(ref, {
+  //   enterDelay: 100,
+  //   leaveDelay: 100,
+  //   fps: 60,
+  // });
 
-  let mouseXPosition = 0;
-  let mouseYPosition = 0;
+  // let mouseXPosition = 0;
+  // let mouseYPosition = 0;
 
-  if (mouse.x !== null) {
-    mouseXPosition = mouse.clientX as number;
-  }
+  // if (mouse.x !== null) {
+  //   mouseXPosition = mouse.clientX as number;
+  // }
 
-  if (mouse.y !== null) {
-    mouseYPosition = mouse.clientY as number;
-  }
+  // if (mouse.y !== null) {
+  //   mouseYPosition = mouse.clientY as number;
+  // }
 
-  const circleCSS =
-    "hidden z-100 pointers-events-none font-xl fixed top-0 left-0 md:flex flex-row items-center justify-center rounded-full bg-black text-center";
+  // const variants = {
+  //   default: {
+  //     opacity: 0,
+  //     background: "#000000",
+  //     x: mouseXPosition,
+  //     y: mouseYPosition,
+  //   },
+  //   1: {
+  //     opacity: 1,
+  //     background: "#FF5353",
+  //     x: mouseXPosition,
+  //     y: mouseYPosition,
+  //   },
+  //   2: {
+  //     opacity: 1,
+  //     background: "#7635FF",
+  //     x: mouseXPosition,
+  //     y: mouseYPosition,
+  //   },
+  //   3: {
+  //     opacity: 1,
+  //     background: "#70CBFF",
+  //     x: mouseXPosition,
+  //     y: mouseYPosition,
+  //   },
+  // };
 
-  const variants = {
-    default: {
-      opacity: 1,
-    },
-    herotext: {
-      opacity: 1,
-      height: 64,
-      width: 64,
-      x: mouseXPosition - 32,
-      y: mouseYPosition - 32,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-      },
-    },
-  };
   return (
     <>
       <Head>
@@ -61,20 +68,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div ref={ref}>
-        <motion.div
-          className={circleCSS}
-          variants={variants}
-          animate={cursorVariant}
-          initial={{
-            opacity: 0,
-          }}
-          transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 100,
-          }}
-        ></motion.div>
-        <Hero />
+        <Hero setCursorVariant={setCursorVariant} />
         <About />
         <Works />
         <Contact />
