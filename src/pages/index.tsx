@@ -38,13 +38,25 @@ const Home: NextPage = () => {
       y: mouseYPosition,
       width: 0,
       height: 0,
+      background: "#1D1D1D",
     },
-    active: {
+    qotd: {
       opacity: 1,
-      x: mouseXPosition - 64,
+      x: mouseXPosition - 256,
       y: mouseYPosition - 128,
-      width: 128,
+      width: 512,
       height: 128,
+      borderRadius: 32,
+      background: "#7635FF",
+    },
+    term: {
+      opacity: 1,
+      x: mouseXPosition - 256,
+      y: mouseYPosition - 256,
+      width: 512,
+      height: 256,
+      borderRadius: 32,
+      background: "#70CBFF",
     },
   };
 
