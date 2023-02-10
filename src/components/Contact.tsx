@@ -31,13 +31,13 @@ const Contact = () => {
 
   return (
     <section className="fullpage p-4" id="contact">
-      <div className="min-w-6xl mx-auto flex w-full max-w-6xl p-4">
+      <div className="min-w-6xl mx-auto flex w-full max-w-6xl">
         <HeroText text={"Send me a message!"} />
       </div>
       <form
         ref={form}
         onSubmit={handleFormSubmit}
-        className="min-w-6xl flex h-full w-full max-w-6xl flex-col gap-4 p-4 text-primary_dark dark:text-primary_white"
+        className="min-w-6xl flex h-full w-full max-w-6xl flex-col gap-4 text-primary_dark dark:text-primary_white"
       >
         <div className="flex flex-col justify-between gap-4 md:flex-row">
           <InputField name="name" type="text" text="What is your name?" />
