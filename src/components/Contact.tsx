@@ -49,6 +49,7 @@ const Contact = () => {
             rows={5}
             maxLength={1000}
             className="w-full resize-none rounded-xl bg-third_white p-4 focus:outline-none dark:bg-secondary_dark dark:placeholder-primary_white"
+            name="message"
           />
         </div>
         <div className="flex justify-between gap-4">
