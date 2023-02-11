@@ -41,9 +41,8 @@ const Navbar = () => {
           {/* icon from heroicons.com */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-6 w-6 fill-black dark:fill-primary_white"
             viewBox="0 0 20 20"
-            fill="black"
           >
             <path
               fillRule="evenodd"
@@ -54,7 +53,7 @@ const Navbar = () => {
         </button>
         <div>
           {isOpen && (
-            <ul className="absolute top-[60px] left-0 flex h-[90vh] w-full flex-col items-center bg-[#d1d1d1] dark:bg-[#121212] dark:text-primary_white md:hidden">
+            <ul className="absolute top-[60px] left-0 flex h-[90vh] w-full flex-col items-center bg-primary_white dark:bg-primary_dark dark:text-primary_white md:hidden">
               {navLinks.map((link) => (
                 <li
                   className="flex w-full justify-center p-4 text-sm"
