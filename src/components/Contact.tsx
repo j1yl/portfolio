@@ -31,13 +31,13 @@ const Contact = () => {
 
   return (
     <section className="fullpage p-4" id="contact">
-      <div className="min-w-6xl mx-auto flex w-full max-w-6xl p-4">
+      <div className="min-w-6xl mx-auto flex w-full max-w-6xl">
         <HeroText text={"Send me a message!"} />
       </div>
       <form
         ref={form}
         onSubmit={handleFormSubmit}
-        className="min-w-6xl flex h-full w-full max-w-6xl flex-col gap-4 p-4 text-primary_dark dark:text-primary_white"
+        className="min-w-6xl flex h-full w-full max-w-6xl flex-col gap-4 text-primary_dark dark:text-primary_white"
       >
         <div className="flex flex-col justify-between gap-4 md:flex-row">
           <InputField name="name" type="text" text="What is your name?" />
@@ -48,12 +48,12 @@ const Contact = () => {
           <textarea
             rows={5}
             maxLength={1000}
+            className="w-full resize-none rounded-xl bg-third_white p-4 focus:outline-none dark:bg-secondary_dark dark:placeholder-primary_white"
             name="message"
-            className="w-full resize-none rounded-xl bg-third_white p-4 focus:outline-none dark:bg-primary_dark dark:placeholder-primary_white"
           />
         </div>
         <div className="flex justify-between gap-4">
-          <button className="w-max rounded-xl bg-primary_dark px-4 py-2 font-semibold text-primary_white transition-all active:scale-95 dark:bg-primary_dark">
+          <button className="w-max rounded-xl bg-primary_dark px-8 py-4 font-semibold text-primary_white transition-all hover:bg-primary_purple active:scale-95 dark:bg-secondary_dark">
             Submit
           </button>
           {formSubmit ? (
@@ -89,7 +89,7 @@ const InputField = ({
         <input
           type={type}
           name={name}
-          className="rounded-xl bg-third_white p-4 focus:outline-none dark:bg-primary_dark dark:placeholder-primary_white"
+          className="rounded-xl bg-third_white p-4 focus:outline-none dark:bg-secondary_dark dark:placeholder-primary_white"
         />
       </div>
     </>

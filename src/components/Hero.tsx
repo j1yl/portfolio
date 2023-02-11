@@ -2,6 +2,9 @@ import HeroText from "../components/HeroText";
 import HeroDescriptionText from "./HeroDescriptionText";
 import HeroButton from "./HeroButton";
 import type { Dispatch, SetStateAction } from "react";
+import Hover from "./Hover";
+import Terminal from "./Terminal";
+import { motion } from "framer-motion";
 
 const Hero = ({
   setCursorVariant,
@@ -29,6 +32,31 @@ const Hero = ({
           </div>
           <HeroButton text={"Let's Connect"} to={"contact"} />
         </div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 200,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            type: "spring",
+            damping: 50,
+            stiffness: 200,
+            delay: 0.5,
+            duration: 1,
+          }}
+          className="hidden h-max w-full flex-col items-end justify-center gap-4 md:flex"
+        >
+          <Hover
+            text={"Hover Me For A Random Quote"}
+            selectVariant="qotd"
+            setCursorVariant={setCursorVariant}
+          />
+          <Terminal setCursorVariant={setCursorVariant} />
+        </motion.div>
       </div>
     </main>
   );
