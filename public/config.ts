@@ -21,6 +21,12 @@ export const projects = [
     githubLink: "https://github.com/j1yl/saveart",
     techstack: ["Sveltekit", "Prisma", "Supabase", "TailwindCSS"],
     status: "wip",
+    images: [
+      "https://i.imgur.com/ef5tqmT.jpg",
+      "https://i.imgur.com/9cB2tuI.png",
+      "https://i.imgur.com/8lc6Drc.jpeg",
+      "https://i.imgur.com/5gFkNjh.png",
+    ],
   },
   {
     id: "2",
@@ -31,6 +37,9 @@ export const projects = [
     githubLink: "https://github.com/j1yl/shrinkurl",
     techstack: ["TypeScript", "React", "TailwindCSS", "GotinyAPI"],
     status: "finished",
+    images: [
+      "https://camo.githubusercontent.com/0761ba0794b21d0902635bf2e6b03591272d77b4d556633e927c3e15205525a5/68747470733a2f2f692e696d6775722e636f6d2f746438624862792e676966",
+    ],
   },
   {
     id: "3",
@@ -41,24 +50,31 @@ export const projects = [
     githubLink: "https://github.com/j1yl/spotlyzer",
     techstack: ["JavaScript", "SASS", "React", "NextJS", "SpotifyAPI"],
     status: "finished",
+    images: [
+      "https://camo.githubusercontent.com/9331c62c6287ce9d39b843c0925a2012ffc9d4428924e4cd9efd71c69f43c11c/68747470733a2f2f692e696d6775722e636f6d2f4331726b4a7a422e706e67",
+      "https://camo.githubusercontent.com/31b8de98ada1d02a2f0ea88e2b3320a39e16b26f93c30fb8305dfae4fc1d04d2/68747470733a2f2f692e696d6775722e636f6d2f6b54487251394a2e706e67",
+    ],
   },
   {
     id: "4",
     title: "EasyCommerce",
-    description: "",
+    description: "Working on it right now...",
     previewLink: "",
     githubLink: "https://github.com/j1yl/easycommerce",
     techstack: ["TypeScript", "NextJS", "React", "Sanity", "Stripe"],
     status: "wip",
+    images: ["https://i.imgur.com/lrK2n2y.png"],
   },
   {
     id: "5",
     title: "Cmail",
-    description: "",
+    description:
+      "A python script that can send customizable emails using data from a csv. This was achieved using Pandas to analyze the csv and Yagmail to send the emails.",
     previewLink: "",
     githubLink: "https://github.com/j1yl/cmail",
     techstack: ["Python", "Yagmail", "Pandas"],
     status: "finished",
+    images: ["https://i.imgur.com/lrK2n2y.png"],
   },
   {
     id: "6",
@@ -76,6 +92,7 @@ export const projects = [
       "EmailJS",
     ],
     status: "finished",
+    images: ["https://i.imgur.com/x6WScOW.png"],
   },
 ];
 

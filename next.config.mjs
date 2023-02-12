@@ -14,5 +14,8 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ["i.imgur.com", "camo.githubusercontent.com"],
+  },
 };
 export default config;
