@@ -23,10 +23,10 @@ const variants = {
 const About = () => {
   return (
     <section
-      className="fullpage w-full p-4 text-primary_dark dark:text-primary_white md:mx-auto md:max-w-6xl"
+      className="fullpage p-4 text-primary_dark dark:text-primary_white"
       id="about"
     >
-      <div className="flex h-max w-full flex-col items-start justify-between gap-8 md:flex-row">
+      <div className="min-w-6xl mx-auto flex h-max w-full max-w-6xl flex-col items-start justify-between gap-8 md:flex-row">
         <div className="flex flex-col gap-4">
           <HeroText text={"Who Am I ?"} />
           <HeroDescriptionText

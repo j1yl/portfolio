@@ -20,10 +20,10 @@ const variants = {
 const Works = () => {
   return (
     <section
-      className="fullpage mx-auto w-full max-w-6xl p-4 font-semibold  text-primary_dark dark:text-primary_white"
+      className="fullpage p-4 font-semibold text-primary_dark dark:text-primary_white"
       id="works"
     >
-      <div className="flex w-full flex-col gap-4">
+      <div className="min-w-6xl mx-auto flex w-full max-w-6xl flex-col gap-4">
         <HeroText text={"My Projects"} />
         <div className="relative flex w-full max-w-6xl flex-col gap-2 overflow-x-hidden overflow-y-clip">
           {projects.map((proj) => (

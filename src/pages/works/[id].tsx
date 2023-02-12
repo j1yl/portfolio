@@ -7,13 +7,16 @@ const Project = () => {
   const router = useRouter();
   const { id } = router.query;
   return (
-    <section className="fullpage min-w-6xl mx-auto max-w-6xl p-4 text-primary_dark dark:text-primary_white">
+    <section className="fullpage p-4 text-primary_dark dark:text-primary_white">
       {projects
         .filter((project) => {
           return project.id === id;
         })
         .map((project) => (
-          <div className="flex w-full flex-col gap-2" key={project.id}>
+          <div
+            className="min-w-6xl mx-auto flex w-full max-w-6xl flex-col gap-2"
+            key={project.id}
+          >
             <h1 className="text-4xl font-bold">{project.title}</h1>
             <div className="flex flex-wrap gap-2">
               {project.techstack.map((tech, index) => (
