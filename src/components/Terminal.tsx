@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { type Dispatch, type SetStateAction, useRef, useState } from "react";
+import { resume } from "../../public/config";
 
 const Terminal = ({
   setCursorVariant,
@@ -56,7 +57,7 @@ const Terminal = ({
             }}
             className="flex h-max w-max overflow-hidden p-4 text-blue-500"
           >
-            <Link href="https://drive.google.com/file/d/1RBkBknA8NbNgASBV-vzaZ5FBX-cPk4-D/view?usp=sharing">
+            <Link href={resume} rel="noreferrer" target="_blank">
               open resume
             </Link>
           </motion.div>
