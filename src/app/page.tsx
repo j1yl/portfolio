@@ -8,8 +8,8 @@ export default function Home() {
         <p className="p">
           Hi there! My name is Joe Lee, a web developer with experience in
           building responsive, user-friendly websites. Whether you&apos;re
-          looking for a simple static site or a complex web application, I'm
-          here to bring your vision to life.
+          looking for a simple static site or a complex web application,
+          I&apos;m here to bring your vision to life.
         </p>
         <p className="hidden md:flex items-center p">
           View my <Bubble text="Projects" url="/projects" />,
