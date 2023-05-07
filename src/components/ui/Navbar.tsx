@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <nav>
@@ -15,6 +19,7 @@ const Navbar = () => {
             className="inline-flex items-center p-2 ml-3 text-sm text-gray-950 focus:text-gray-700 rounded-lg md:hidden focus:ring-2 focus:ring-gray-700"
             aria-controls="navbar-default"
             aria-expanded="false"
+            onClick={() => setIsOpen(!isOpen)}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -60,7 +65,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="mailto:lefodev@gmail.com"
+                  href="/contact"
                   className="block py-2 pr-4 rounded md:bg-transparent md:p-0"
                 >
                   Contact
@@ -69,6 +74,45 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
+        {isOpen && (
+          <div id="navbar-default" className="p-4">
+            <ul className="flex flex-col p p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+              <li>
+                <a
+                  href="/"
+                  className="block py-2 pr-4 rounded md:bg-transparent md:p-0"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/projects"
+                  className="block py-2 pr-4 rounded md:bg-transparent md:p-0"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/resume"
+                  className="block py-2 pr-4 rounded md:bg-transparent md:p-0"
+                >
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="block py-2 pr-4 rounded md:bg-transparent md:p-0"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
     </>
   );
