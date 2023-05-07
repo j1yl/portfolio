@@ -1,8 +1,10 @@
 import Bubble from "@/components/ui/Bubble";
+import Socials from "@/components/ui/Socials";
+import { socials } from "@/server/content";
 
 export default function Home() {
   return (
-    <main className="flex my-32 md:my-64 flex-col items-center justify-between p-4 leading-loose tracking-wide">
+    <main className="flex my-16 md:my-48 flex-col items-center justify-between p-4 leading-loose tracking-wide">
       <div className="flex flex-col h-full max-w-4xl gap-8">
         <h1 className="h1">Unlocking the Power of the Web</h1>
         <p className="p">
@@ -22,6 +24,11 @@ export default function Home() {
           <Bubble text="Resume" url="/resume" />
           <Bubble text="Contact" url="/contact" />
           <Bubble text="lefodev@gmail.com" url="mailto:lefodev@gmail.com" />
+        </div>
+        <div className="flex w-full gap-4">
+          {socials.map((s) => (
+            <Socials platform={s.platform} url={s.url} key={s.id} />
+          ))}
         </div>
       </div>
     </main>

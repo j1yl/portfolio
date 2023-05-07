@@ -65,3 +65,21 @@ export const resumes = [
     link: "https://drive.google.com/file/d/1dBfLBnG0PjuJLotz7jFP3oZF6dmCUdmK/view?usp=share_link",
   },
 ];
+
+export const socials = [
+  {
+    id: 1,
+    url: "https://github.com/j1yl",
+    platform: "github",
+  },
+  {
+    id: 2,
+    url: "https://www.linkedin.com/in/j1yl",
+    platform: "linkedin",
+  },
+  {
+    id: 3,
+    url: "https://twitter.com/lefodev",
+    platform: "twitter",
+  },
+];
