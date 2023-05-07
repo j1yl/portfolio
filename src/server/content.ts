@@ -56,6 +56,44 @@ export const projects = [
     demoLink: "",
     tags: ["NextJS", "React", "SCSS", "TypeScript", "SpotifyAPI"],
   },
+  {
+    id: 4,
+    title: "Fairview Ventures Website",
+    description:
+      "A website for Fairview Ventures, a real estate company based in Southern California",
+    image: "/projects/fairview.png",
+    imageAlt: "fairview ventures project image",
+    imageWidth: 1600,
+    imageHeight: 900,
+    githubLink: "https://github.com/j1yl/fairview",
+    demoLink: "https://fairviewventures.vercel.app",
+    tags: ["NextJS", "React", "TailwindCSS", "TypeScript", "Framer Motion"],
+  },
+  {
+    id: 5,
+    title: "iAssemble Anything Website",
+    description:
+      "A website for iAssemble Anything, an assembly company based in Southern California",
+    image: "/projects/iassemble.png",
+    imageAlt: "iassemble anything project image",
+    imageWidth: 1600,
+    imageHeight: 900,
+    githubLink: "https://github.com/j1yl/iassembleanything",
+    demoLink: "https://iassembleanything.vercel.app",
+    tags: ["NextJS", "React", "TailwindCSS", "TypeScript"],
+  },
+  {
+    id: 6,
+    title: "ShrinkURL",
+    description: "A URL shortener web application.",
+    image: "/projects/shrinkurl.png",
+    imageAlt: "shrinkurl project image",
+    imageWidth: 1600,
+    imageHeight: 900,
+    githubLink: "https://github.com/j1yl/shrinkurl",
+    demoLink: "https://shrinkurl.vercel.app",
+    tags: ["NextJS", "React", "TailwindCSS", "TypeScript"],
+  },
 ];
 
 export const resumes = [

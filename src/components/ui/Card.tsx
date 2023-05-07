@@ -45,10 +45,11 @@ const Card = (props: Props) => {
       </div>
       <p className="p">{description}</p>
       <div className="flex w-full gap-2">
-        <Bubble text="View Code" url={githubLink} />
+        <Bubble text="View Code" url={githubLink} newTab={true} />
         <Bubble
           text={demoLink !== "" ? "Demo" : "Demo Unavailable"}
           url={demoLink}
+          newTab={true}
         />
       </div>
     </div>
