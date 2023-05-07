@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f7fafc;
+}
+
+.h1 {
+  @apply text-5xl font-bold text-gray-950;
+}
+
+.h2 {
+  @apply text-4xl font-bold text-gray-950;
+}
+
+.h3 {
+  @apply text-3xl font-bold text-gray-950;
+}
+
+.p {
+  @apply text-sm text-gray-700;
+}
