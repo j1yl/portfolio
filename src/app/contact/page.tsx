@@ -37,7 +37,7 @@ export default function Contact() {
               type="text"
               name="name"
               required
-              className="bg-gray-300 p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
+              className="bg-light-100 p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
             />
           </fieldset>
           <fieldset className="flex flex-col gap-2">
@@ -46,7 +46,7 @@ export default function Contact() {
               type="email"
               name="email"
               required
-              className="bg-gray-300 p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
+              className="bg-light-100 p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
             />
           </fieldset>
           <fieldset className="flex flex-col gap-2">
@@ -55,7 +55,7 @@ export default function Contact() {
               type="text"
               name="subject"
               required
-              className="bg-gray-300 p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
+              className="bg-light-100 p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
             />
           </fieldset>
           <fieldset className="flex flex-col gap-2">
@@ -64,12 +64,12 @@ export default function Contact() {
               rows={8}
               name="message"
               required
-              className="bg-gray-300 resize-none p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
+              className="bg-light-100 resize-none p-2 rounded-lg focus:ring-2 focus:ring-slate-700 focus:outline-none"
             />
           </fieldset>
           <button
             type="submit"
-            className="mt-4 w-max py-1 px-2 bg-gray-300 hover:bg-gray-400 transition-all duration-150 cursor-pointer rounded-lg"
+            className="mt-4 w-max py-1 px-2 bg-light-100 hover:bg-light-200 transition-all duration-150 cursor-pointer rounded-lg"
           >
             Send Message
           </button>

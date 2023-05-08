@@ -9,7 +9,7 @@ export default function Home() {
   const [glitch, setGlitch] = useState(true);
 
   return (
-    <main className="flex my-16 md:my-48 flex-col items-center justify-between p-4 leading-loose tracking-wide">
+    <main className="flex my-16 md:my-48 flex-col items-center justify-between p-4">
       <div className="flex flex-col h-full max-w-4xl gap-8">
         {glitch ? (
           <h1 className="h1 glitch">
@@ -53,8 +53,10 @@ export default function Home() {
                 onChange={() => setGlitch(!glitch)}
                 checked={glitch}
               />
-              <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-gray-50 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-              <span className="ml-3 p">Glitch Effect</span>
+              <div className="w-11 h-6 bg-dark-50 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-0.5 after:left-[2px] after:bg-light-50 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-light-300"></div>
+              <span className="ml-3 text-sm text-dark-50 tracking-wide">
+                Glitch Effect
+              </span>
             </label>
           </div>
         </div>

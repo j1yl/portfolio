@@ -29,7 +29,7 @@ const Card = (props: Props) => {
   } = props;
 
   return (
-    <div className="bg-gray-100 p-4 flex flex-col gap-4 rounded-xl shadow-xl">
+    <div className="bg-red-50 p-4 flex flex-col gap-4 rounded-xl shadow-xl">
       <Image
         src={image}
         alt={imageAlt}

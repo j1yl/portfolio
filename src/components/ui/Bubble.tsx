@@ -12,7 +12,7 @@ const Bubble = (props: Props) => {
 
   if (url === "")
     return (
-      <div className="w-max py-1 px-2 md:mx-1 bg-gray-500 transition-all duration-150 cursor-not-allowed rounded-lg">
+      <div className="w-max py-1 px-2 md:mx-1 bg-light-300 transition-all duration-150 cursor-not-allowed rounded-lg">
         {text}
       </div>
     );
@@ -22,7 +22,7 @@ const Bubble = (props: Props) => {
       href={url}
       target={props.newTab ? "_blank" : "_self"}
       rel="noopener noreferrer"
-      className="w-max py-1 px-2 md:mx-1 bg-gray-300 hover:bg-gray-400 transition-all duration-150 cursor-pointer rounded-lg"
+      className="w-max py-1 px-2 md:mx-1 bg-light-100 hover:bg-light-200 transition-all duration-150 cursor-pointer rounded-lg"
     >
       {text}
     </Link>

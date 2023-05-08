@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 body {
-  background: #f7fafc;
+  background: #F5EBEB;
 }
 
 .h1 {
-  @apply text-5xl font-bold text-gray-950;
+  @apply text-5xl font-bold text-dark-300;
 }
 
 .h2 {
-  @apply text-3xl font-bold text-gray-950;
+  @apply text-3xl font-semibold text-dark-200;
 }
 
 .h3 {
-  @apply text-2xl font-bold text-gray-950;
+  @apply text-2xl font-semibold text-dark-100;
 }
 
 .p {
-  @apply text-sm text-gray-700;
+  @apply text-sm text-dark-50 tracking-wide leading-loose;
 }
 
 .glitch {
   position: relative;
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-    0.025em 0.04em 0 #fffc00;
+  text-shadow: 0.05em 0 0 #eeeeee, -0.03em -0.04em 0 #950000,
+    0.025em 0.04em 0 #ff0000;
   animation: glitch 725ms infinite;
 }
 
@@ -51,31 +51,31 @@ body {
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-      0.025em 0.04em 0 #fffc00;
+    text-shadow: 0.05em 0 0 #eeeeee, -0.03em -0.04em 0 #950000,
+      0.025em 0.04em 0 #ff0000;
   }
   15% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-      0.025em 0.04em 0 #fffc00;
+    text-shadow: 0.05em 0 0 #eeeeee, -0.03em -0.04em 0 #950000,
+      0.025em 0.04em 0 #ff0000;
   }
   16% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-      -0.05em -0.05em 0 #fffc00;
+    text-shadow: -0.05em -0.025em 0 #eeeeee, 0.025em 0.035em 0 #950000,
+      -0.05em -0.05em 0 #ff0000;
   }
   49% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-      -0.05em -0.05em 0 #fffc00;
+    text-shadow: -0.05em -0.025em 0 #eeeeee, 0.025em 0.035em 0 #950000,
+      -0.05em -0.05em 0 #ff0000;
   }
   50% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-      0 -0.04em 0 #fffc00;
+    text-shadow: 0.05em 0.035em 0 #eeeeee, 0.03em 0 0 #950000,
+      0 -0.04em 0 #ff0000;
   }
   99% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-      0 -0.04em 0 #fffc00;
+    text-shadow: 0.05em 0.035em 0 #eeeeee, 0.03em 0 0 #950000,
+      0 -0.04em 0 #ff0000;
   }
   100% {
-    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
-      -0.04em -0.025em 0 #fffc00;
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #950000,
+      -0.04em -0.025em 0 #ff0000;
   }
 }
