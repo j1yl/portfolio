@@ -79,3 +79,28 @@ body {
       -0.04em -0.025em 0 #ff0000;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .glitch {
+    position: relative;
+    text-shadow: none;
+    animation: none;
+  }
+  
+  .glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .glitch span:first-child {
+    animation: none;
+    display: none;
+  }
+  
+  .glitch span:last-child {
+    animation: none;
+    display: none;
+  }
+  
+}
