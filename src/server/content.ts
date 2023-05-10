@@ -10,7 +10,7 @@ export const projects = [
     githubLink: "https://github.com/j1yl/roulettor",
     demoLink: "https://www.roulettor.com",
     tags: [
-      "Next",
+      "NextJS",
       "React",
       "TailwindCSS",
       "DaisyUI",

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: #F5EBEB;
+  background: rgb(215, 215, 235);
 }
 
 .h1 {
@@ -24,8 +24,8 @@ body {
 
 .glitch {
   position: relative;
-  text-shadow: 0.05em 0 0 #eeeeee, -0.03em -0.04em 0 #950000,
-    0.025em 0.04em 0 #ff0000;
+  text-shadow: 0.05em 0 0 #0ffffb, -0.03em -0.04em 0 #d00fff,
+    0.025em 0.04em 0 #ff330f;
   animation: glitch 725ms infinite;
 }
 
@@ -51,32 +51,32 @@ body {
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #eeeeee, -0.03em -0.04em 0 #950000,
-      0.025em 0.04em 0 #ff0000;
+    text-shadow: 0.05em 0 0 #0ffffb, -0.03em -0.04em 0 #d00fff,
+      0.025em 0.04em 0 #ff330f;
   }
   15% {
-    text-shadow: 0.05em 0 0 #eeeeee, -0.03em -0.04em 0 #950000,
-      0.025em 0.04em 0 #ff0000;
+    text-shadow: 0.05em 0 0 #0ffffb, -0.03em -0.04em 0 #d00fff,
+      0.025em 0.04em 0 #ff330f;
   }
   16% {
-    text-shadow: -0.05em -0.025em 0 #eeeeee, 0.025em 0.035em 0 #950000,
-      -0.05em -0.05em 0 #ff0000;
+    text-shadow: -0.05em -0.025em 0 #0ffffb, 0.025em 0.035em 0 #d00fff,
+      -0.05em -0.05em 0 #ff330f;
   }
   49% {
-    text-shadow: -0.05em -0.025em 0 #eeeeee, 0.025em 0.035em 0 #950000,
-      -0.05em -0.05em 0 #ff0000;
+    text-shadow: -0.05em -0.025em 0 #0ffffb, 0.025em 0.035em 0 #d00fff,
+      -0.05em -0.05em 0 #ff330f;
   }
   50% {
-    text-shadow: 0.05em 0.035em 0 #eeeeee, 0.03em 0 0 #950000,
-      0 -0.04em 0 #ff0000;
+    text-shadow: 0.05em 0.035em 0 #0ffffb, 0.03em 0 0 #d00fff,
+      0 -0.04em 0 #ff330f;
   }
   99% {
-    text-shadow: 0.05em 0.035em 0 #eeeeee, 0.03em 0 0 #950000,
-      0 -0.04em 0 #ff0000;
+    text-shadow: 0.05em 0.035em 0 #0ffffb, 0.03em 0 0 #d00fff,
+      0 -0.04em 0 #ff330f;
   }
   100% {
-    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #950000,
-      -0.04em -0.025em 0 #ff0000;
+    text-shadow: -0.05em 0 0 #0ffffb, -0.025em -0.04em 0 #d00fff,
+      -0.04em -0.025em 0 #ff330f;
   }
 }
 
