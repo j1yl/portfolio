@@ -102,6 +102,11 @@ export const resumes = [
     date: "2023-05-07",
     link: "https://drive.google.com/file/d/1dBfLBnG0PjuJLotz7jFP3oZF6dmCUdmK/view?usp=share_link",
   },
+  {
+    id: 2,
+    date: "2022-06-18",
+    link: "https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=sharing",
+  },
 ];
 
 export const socials = [
