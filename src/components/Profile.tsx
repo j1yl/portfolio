@@ -20,6 +20,7 @@ const Profile = (props: Props) => {
           {content.socials.map((s, i) => (
             <Link
               key={s.name}
+              passHref
               href={s.url}
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out duration-250"
