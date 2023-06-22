@@ -1,17 +1,15 @@
-import Navbar from "@/components/ui/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "700", "800"],
 });
 
 export const metadata = {
-  title: "Joe Lee | Software Engineer Portfolio",
+  title: "Joe Lee | Web Developer Portfolio | Los Angeles, CA",
   description:
-    "Welcome to the portfolio of Joe Lee, a skilled web developer with experience in building beautiful and performant websites. Browse my projects and contact me to discuss your next web development project.",
+    "Passionate about code and numbers, I'm a highly motivated Computer Science student with a dash of mathematical prowess. Currently pursuing a Bachelor's degree in Computer Science with a minor in Mathematics at California State University, Fullerton, I'm on a mission to bring innovative web solutions to life.",
 };
 
 export default function RootLayout({
@@ -21,10 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <Navbar />
-        {children}
-      </body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }
