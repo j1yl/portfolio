@@ -1,11 +1,16 @@
+"use client";
+
 import CTAButton from "@/components/CTAButton";
 import Divider from "@/components/Divider";
-import Experience from "@/components/Experience";
 import Profile from "@/components/Profile";
 import { content } from "@/server/content";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
+
   return (
     <>
       <main className="container">
@@ -23,8 +28,11 @@ export default function Home() {
               to life.
             </p>
             <div className="flex gap-4 items-center">
-              <CTAButton url="/" text="Contact Me" />
-              <CTAButton url="/" text="View Resume" />
+              <CTAButton url="mailto:webverry@gmail.com" text="Contact Me" />
+              <CTAButton
+                url="https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=sharing"
+                text="View Resume"
+              />
             </div>
           </div>
         </div>
@@ -33,7 +41,34 @@ export default function Home() {
       <section className="container">
         <div className="flex flex-col gap-4 w-full">
           <h2 className="subheading">My Journey</h2>
-          <Experience />
+          <div className="flex gap-4">
+            <motion.span
+              style={{
+                scaleY: scrollYProgress,
+                transformOrigin: "top",
+              }}
+              className="w-[4px] bg-primary"
+            />
+            <div className="flex flex-col gap-8 md:gap-4">
+              {content.exp.map((e, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col md:flex-row md:items-center gap-4 md:h-[100px]"
+                >
+                  <div className="flex gap-2 items-center md:w-1/3">
+                    <div className="flex flex-col gap-2">
+                      <h2 className="font-bold">{e.title}</h2>
+                      <p className="body">{e.company}</p>
+                      <p className="body">{e.date}</p>
+                    </div>
+                  </div>
+                  <div className="w-full">
+                    <p className="body">{e.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
       <Divider />
@@ -45,13 +80,12 @@ export default function Home() {
               .filter((p) => p.featured)
               .map((p, i) => (
                 <Link
-                  className="flex items-center justify-center aspect-square border border-primary hover:bg-primary hover:bg-opacity-10 transition-all ease-in-out duration-250 cursor-pointer"
-                  href={p.url}
+                  href={`/projects/${p.id}`}
                   passHref
-                  target="_blank"
                   key={i}
+                  className="flex items-center justify-center relative aspect-square border border-primary hover:bg-primary hover:bg-opacity-10 transition-all ease-in-out duration-250"
                 >
-                  <h3 className="font-bold">{p.title}</h3>
+                  <h3 className="subheading">{p.title}</h3>
                 </Link>
               ))}
             <div className="grid grid-cols-2">
@@ -62,8 +96,7 @@ export default function Home() {
                   <Link
                     key={i}
                     passHref
-                    href={p.url}
-                    target="_blank"
+                    href={`/projects/${p.id}`}
                     className="flex items-center justify-center aspect-square border border-primary hover:bg-primary hover:bg-opacity-10 transition-all ease-in-out duration-250 cursor-pointer"
                   >
                     <h3 className="font-bold">{p.title}</h3>

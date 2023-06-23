@@ -16,8 +16,7 @@ export default function Projects() {
             <Link
               className="flex items-center justify-center aspect-square border border-primary hover:bg-primary hover:bg-opacity-10 transition-all ease-in-out duration-250 cursor-pointer"
               passHref
-              href={p.url}
-              target="_blank"
+              href={`/projects/${p.id}`}
               key={i}
             >
               <h3 className="font-bold">{p.title}</h3>

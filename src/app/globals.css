@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer components {
   .heading {
     @apply md:text-5xl text-4xl font-bold
   }
@@ -16,7 +16,10 @@
     @apply flex flex-col items-center justify-center mx-auto w-full p-4 max-w-screen-lg text-primary
   }
   .btn {
-    @apply px-4 py-2 items-center flex justify-center border border-primary text-sm
+    @apply px-4 py-2 items-center flex justify-center border border-primary text-sm transition-all ease-in-out hover:bg-primary hover:bg-opacity-10
+  }
+  .disabledbtn {
+    @apply px-4 py-2 items-center flex justify-center border border-primary text-sm transition-all ease-in-out hover:bg-primary hover:bg-opacity-10 cursor-not-allowed
   }
 }
 

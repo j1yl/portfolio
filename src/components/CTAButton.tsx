@@ -7,8 +7,10 @@ type Props = {
 };
 
 const CTAButton = (props: Props) => {
+  if (props.url === "") return <span className="disabledbtn">Unavailable</span>;
+
   return (
-    <Link href={props.url} className="btn">
+    <Link href={props.url} target="_blank" className="btn">
       {props.text}
     </Link>
   );
