@@ -36,7 +36,7 @@ export const content = {
     {
       title: "Web Developer",
       company: "Fairview Ventures LLC",
-      date: "Nov 2022 - June 2023",
+      date: "Nov 2022 - Jun 2023",
       tags: ["React", "Next.js", "TailwindCSS", "TypeScript", "Framer Motion"],
       description:
         "Created and deployed multiple websites for Fairview Ventures, a real estate company. Ensured adherence to accessibility standards, ensuring optimal user experience for diverse audiences.",
@@ -83,7 +83,7 @@ export const content = {
     {
       title: "Algorithm Officer",
       company: "acmCSUF",
-      date: "June 2023 - Current",
+      date: "Jun 2023 - Current",
       tags: [
         "Public Speaking",
         "Workshops",
@@ -98,7 +98,7 @@ export const content = {
     {
       title: "SI Leader",
       company: "Cal State Fullerton",
-      date: "August 2023 - Current",
+      date: "Aug 2023 - Current",
       tags: [
         "Mathematics",
         "Calculus",
