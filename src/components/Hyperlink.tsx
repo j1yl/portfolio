@@ -28,6 +28,8 @@ const Hyperlink = (props: Props) => {
       <Link
         passHref
         href={props.url}
+        role="link"
+        aria-label={props.text}
         className="flex items-center text-sm relative w-full"
         target={props.newTab ? "_blank" : ""}
       >

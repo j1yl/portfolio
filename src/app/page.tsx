@@ -74,6 +74,7 @@ export default function Home() {
             >
               <ReactScrollLink
                 to="about"
+                href="#about"
                 smooth={true}
                 duration={500}
                 offset={-100}
@@ -99,6 +100,7 @@ export default function Home() {
             >
               <ReactScrollLink
                 to="experience"
+                href="#experience"
                 smooth={true}
                 duration={500}
                 offset={-75}
@@ -124,6 +126,7 @@ export default function Home() {
             >
               <ReactScrollLink
                 to="projects"
+                href="#projects"
                 smooth={true}
                 duration={500}
                 className="flex gap-2 items-center"
@@ -142,11 +145,18 @@ export default function Home() {
         </div>
         <div className="flex gap-2">
           {content.socials.map((s, i) => (
-            <Link href={s.url} passHref target="_blank" key={i}>
+            <Link
+              href={s.url}
+              passHref
+              target="_blank"
+              key={i}
+              role="link"
+              aria-label={`go to ${s.name}`}
+              className="cursor-pointer transition-all ease-in-out duration-200 hover:scale-110"
+            >
               <Image
                 src={s.icon}
                 alt={s.icon.replace("/icon/", "")}
-                className="hover:scale-110 transition-all ease-in-out cursor-pointer"
                 width={24}
                 height={24}
               />
