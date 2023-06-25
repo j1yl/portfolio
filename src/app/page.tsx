@@ -1,136 +1,276 @@
 "use client";
 
-import CTAButton from "@/components/CTAButton";
-import Divider from "@/components/Divider";
-import Profile from "@/components/Profile";
 import { content } from "@/server/content";
-import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Link as ReactScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import ExperienceCard from "@/components/ExperienceCard";
+import Hyperlink from "@/components/Hyperlink";
+import ProjectCard from "@/components/ProjectCard";
+
+const lineVariants = {
+  selected: {
+    background: "#84C7C1",
+    width: "100px",
+  },
+  unselected: {
+    background: "#869F9E",
+    width: "50px",
+  },
+};
+
+const textVariants = {
+  selected: {
+    color: "#84C7C1",
+  },
+  unselected: {
+    color: "#869F9E",
+  },
+};
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
+  const [currentSection, setCurrentSection] = useState("about");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const scrollPosition =
+        window.scrollY || document.documentElement.scrollTop;
+
+      let currentSection = "";
+      sections.forEach((s) => {
+        const sectionTop = s.offsetTop - 100;
+
+        if (scrollPosition >= sectionTop) {
+          currentSection = s.id;
+        }
+      });
+
+      setCurrentSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <>
-      <main className="container">
-        <div className="flex flex-col gap-4">
-          <Profile titles={content.titles} />
-          <span className="w-full h-[1px] bg-primary mb-8" />
-          <div className="flex flex-col gap-4 w-full">
-            <h1 className="heading">Unlocking the Power of the Web</h1>
+    <main className="flex max-w-screen-xl min-h-screen md:flex-row flex-col mx-auto">
+      <aside className="w-full md:sticky md:top-0 md:max-h-screen md:py-16 py-8 flex gap-8 md:gap-0 flex-col justify-between md:pl-16 px-4">
+        <div>
+          <h1 className="h1 mb-2">Joe Lee</h1>
+          <h2 className="h2 mb-4">CS @ Cal State Fullerton</h2>
+          <p className="body md:w-1/2">
+            I engineer accessible and efficient web solutions for diverse needs.
+          </p>
+          <nav className="md:flex flex-col gap-4 mt-8 hidden">
+            <motion.div
+              whileHover="selected"
+              initial="unselected"
+              animate={currentSection === "about" ? "selected" : "unselected"}
+              className="cursor-pointer w-max"
+            >
+              <ReactScrollLink
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={-100}
+                className="flex gap-2 items-center"
+              >
+                <motion.span
+                  className="w-[50px] h-[1px]"
+                  variants={lineVariants}
+                  aria-hidden={true}
+                />
+                <motion.span className="h3" variants={textVariants}>
+                  About
+                </motion.span>
+              </ReactScrollLink>
+            </motion.div>
+            <motion.div
+              whileHover="selected"
+              initial="unselected"
+              animate={
+                currentSection === "experience" ? "selected" : "unselected"
+              }
+              className="cursor-pointer w-max"
+            >
+              <ReactScrollLink
+                to="experience"
+                smooth={true}
+                duration={500}
+                offset={-75}
+                className="flex gap-2 items-center"
+              >
+                <motion.span
+                  className="w-[50px] h-[1px]"
+                  variants={lineVariants}
+                  aria-hidden={true}
+                />
+                <motion.span className="h3" variants={textVariants}>
+                  Experience
+                </motion.span>
+              </ReactScrollLink>
+            </motion.div>
+            <motion.div
+              whileHover="selected"
+              initial="unselected"
+              animate={
+                currentSection === "projects" ? "selected" : "unselected"
+              }
+              className="cursor-pointer w-max"
+            >
+              <ReactScrollLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="flex gap-2 items-center"
+              >
+                <motion.span
+                  className="w-[50px] h-[1px]"
+                  variants={lineVariants}
+                  aria-hidden={true}
+                />
+                <motion.span className="h3" variants={textVariants}>
+                  Projects
+                </motion.span>
+              </ReactScrollLink>
+            </motion.div>
+          </nav>
+        </div>
+        <div className="flex gap-2">
+          {content.socials.map((s, i) => (
+            <Link href={s.url} passHref key={i}>
+              <Image
+                src={s.icon}
+                alt={s.icon.replace("/icon/", "")}
+                className="hover:scale-110 transition-all ease-in-out cursor-pointer"
+                width={24}
+                height={24}
+              />
+            </Link>
+          ))}
+        </div>
+      </aside>
+      <div className="w-full md:my-16 my-8">
+        <motion.section id="about" className="md:pr-16 px-4">
+          <div className="flex gap-4 md:gap-8 flex-col">
+            <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
+              <h2 className="text-primary uppercase font-semibold text-base">
+                About
+              </h2>
+            </div>
             <p className="body">
-              Passionate about code and numbers, I&apos;m a highly motivated
-              Computer Science student with a dash of mathematical prowess.
-              Currently pursuing a Bachelor&apos;s degree in Computer Science
-              with a minor in Mathematics at California State University,
-              Fullerton, I&apos;m on a mission to bring innovative web solutions
-              to life.
+              Back in 2018, I decided to take my chances and learn how to code
+              custom Discord bots and simple automation scripts. Fascinated by
+              the possibilities of{" "}
+              <span className="text-primary">software development</span>, I
+              dedicated countless hours honing my skills. Nowadays, I spend my
+              time creating software for businesses with distinct requirements.
             </p>
-            <div className="flex gap-4 items-center">
-              <CTAButton url="mailto:webverry@gmail.com" text="Contact Me" />
-              <CTAButton
-                url="https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=sharing"
-                text="View Resume"
+            <p className="body">
+              By understanding their needs and leveraging my technical
+              expertise, I develop{" "}
+              <span className="text-primary">tailor-made solutions</span> that{" "}
+              <span className="text-primary">streamline operations</span>,
+              enhance efficiency, and drive growth.
+            </p>
+            <p className="body">
+              It&apos;s incredibly{" "}
+              <span className="text-primary">fulfilling</span> to witness the
+              positive impact my creations have on organizations and their
+              users, and I continuously strive to{" "}
+              <span className="text-primary">push the boundaries</span> of what
+              is possible in the world of code.
+            </p>
+          </div>
+        </motion.section>
+        <div className="py-16" />
+        <motion.section id="experience" className="md:pr-16 px-4">
+          <div className="flex flex-col">
+            <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
+              <h2 className="text-primary uppercase font-semibold text-base">
+                Experience
+              </h2>
+            </div>
+            <div className="flex flex-col gap-16">
+              {content.exp.map((e, i) => (
+                <ExperienceCard
+                  key={i}
+                  title={e.title}
+                  company={e.company}
+                  date={e.date}
+                  description={e.description}
+                  tags={e.tags}
+                />
+              ))}
+              <Hyperlink
+                url="https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=drive_link"
+                text="View Full Resume"
+                newTab={true}
               />
             </div>
           </div>
-        </div>
-      </main>
-      <Divider />
-      <section className="container">
-        <div className="flex flex-col gap-4 w-full">
-          <h2 className="subheading">My Journey</h2>
-          <div className="flex gap-4">
-            <motion.span
-              style={{
-                scaleY: scrollYProgress,
-                transformOrigin: "top",
-              }}
-              className="w-[4px] bg-primary"
-            />
-            <div className="flex flex-col gap-8 md:gap-4">
-              {content.exp.map((e, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col md:flex-row md:items-center gap-4 md:h-[100px]"
-                >
-                  <div className="flex gap-2 items-center md:w-1/3">
-                    <div className="flex flex-col gap-2">
-                      <h2 className="font-bold">{e.title}</h2>
-                      <p className="body">{e.company}</p>
-                      <p className="body">{e.date}</p>
-                    </div>
-                  </div>
-                  <div className="w-full">
-                    <p className="body">{e.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        </motion.section>
+        <div className="py-16" />
+        <motion.section id="projects" className="md:pr-16 px-4">
+          <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
+            <h2 className="text-primary uppercase font-semibold text-base">
+              Projects
+            </h2>
           </div>
-        </div>
-      </section>
-      <Divider />
-      <section className="container">
-        <div className="flex flex-col gap-4 w-full">
-          <h2 className="subheading">My Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="flex flex-col gap-16">
             {content.projects
-              .filter((p) => p.featured)
+              .filter((p) => {
+                return p.id < 3;
+              })
               .map((p, i) => (
-                <Link
-                  href={`/projects/${p.id}`}
-                  passHref
+                <ProjectCard
                   key={i}
-                  className="flex items-center justify-center relative aspect-square border border-primary hover:bg-primary hover:bg-opacity-10 transition-all ease-in-out duration-250"
-                >
-                  <h3 className="subheading">{p.title}</h3>
-                </Link>
+                  title={p.title}
+                  description={p.description}
+                  tags={p.tags}
+                  imageUrl={p.image}
+                  url={p.github}
+                />
               ))}
-            <div className="grid grid-cols-2">
-              {content.projects
-                .filter((p) => !p.featured)
-                .splice(0, 3)
-                .map((p, i) => (
-                  <Link
-                    key={i}
-                    passHref
-                    href={`/projects/${p.id}`}
-                    className="flex items-center justify-center aspect-square border border-primary hover:bg-primary hover:bg-opacity-10 transition-all ease-in-out duration-250 cursor-pointer"
-                  >
-                    <h3 className="font-bold">{p.title}</h3>
-                  </Link>
-                ))}
-              <Link
-                passHref
-                href="/projects"
-                className="flex items-center justify-center aspect-square border border-primary hover:bg-primary hover:bg-opacity-10 transition-all ease-in-out duration-250 cursor-pointer"
-              >
-                <h3 className="font-bold">View Catalog</h3>
-              </Link>
-            </div>
+            <Hyperlink
+              url="/projects"
+              text="View All Projects"
+              newTab={false}
+            />
           </div>
-        </div>
-      </section>
-      <Divider />
-      <section className="container">
-        <div className="flex flex-col gap-4 w-full">
-          <h2 className="subheading">Contact Me</h2>
+        </motion.section>
+        <div className="md:py-16 py-8" />
+        <motion.section id="footer" className="md:pr-16 px-4">
           <p className="body">
-            Send me an email at{" "}
+            Built from scratch with{" "}
             <Link
-              className="underline"
-              href="mailto:webverry@gmail.com"
-              target="_blank"
+              href="https://nextjs.org/"
+              className="text-primary hover:text-accent ease-in-out transition-all"
             >
-              webverry@gmail.com
+              Next.js
             </Link>
-            . Let&apos;s connect and make something great!
+            ,{" "}
+            <Link
+              href="https://tailwindcss.com/"
+              className="text-primary hover:text-accent ease-in-out transition-all"
+            >
+              Tailwind CSS
+            </Link>
+            , and{" "}
+            <Link
+              href="https://www.framer.com/motion/"
+              className="text-primary hover:text-accent ease-in-out transition-all"
+            >
+              Framer Motion
+            </Link>{" "}
+            by yours truly.
           </p>
-        </div>
-      </section>
-      <Divider />
-    </>
+        </motion.section>
+      </div>
+    </main>
   );
 }

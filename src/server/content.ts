@@ -37,27 +37,46 @@ export const content = {
       title: "Web Developer",
       company: "Fairview Ventures LLC",
       date: "Nov 2022 - June 2023",
+      tags: ["React", "Next.js", "TailwindCSS", "TypeScript", "Framer Motion"],
       description:
-        "Created and deployed multiple websites for Fairview Ventures, a real estate company, utilizing React, Next.js, and Typescript. Ensured adherence to accessibility standards, ensuring optimal user experience for diverse audiences.",
+        "Created and deployed multiple websites for Fairview Ventures, a real estate company. Ensured adherence to accessibility standards, ensuring optimal user experience for diverse audiences.",
     },
     {
       title: "Python Developer",
       company: "Arcadia Pediatric Medical Group",
       date: "Nov 2022 - Apr 2023",
+      tags: ["Python", "NumPy", "Pandas", "Twilio", "API"],
       description:
-        "Developed a patient management system for Arcadia Pediatric Medical Group, integrating NumPy, Python, Pandas, and the TwilioSMS API. Streamlined and automated administrative tasks, resulting in a time-saving of over 10 hours per week.",
+        "Developed a patient management system for Arcadia Pediatric Medical Group. Streamlined and automated administrative tasks, resulting in a time-saving of over 10 hours per week.",
     },
     {
       title: "Development Officer",
       company: "acmCSUF",
       date: "Jan 2023 - May 2023",
+      tags: [
+        "Public Speaking",
+        "Workshops",
+        "HTTPS",
+        "API",
+        "Git",
+        "Project Management",
+      ],
       description:
-        "Conducted weekly workshops for the Development team, covering Web Development, HTTPS, APIs, Git, Project Management, and more. Engaged over 50 developers and provided technical guidance for semester-long projects.",
+        "Planned and conducted weekly workshops with the Spring 2023 Development team. Engaged over 50 developers and provided technical guidance for semester-long projects.",
     },
     {
       title: "Owner",
       company: "Webverry LLC",
       date: "May 2023 - Current",
+      tags: [
+        "Business",
+        "Sales",
+        "Prospecting",
+        "Customer Service",
+        "Development Leadership",
+        "Fullstack Development",
+        "Accessibility",
+      ],
       description:
         "Founded and operated a web development company. Managed all aspects of the business, including prospecting, client management, development process leadership, and customer service.",
     },
@@ -65,13 +84,28 @@ export const content = {
       title: "Algorithm Officer",
       company: "acmCSUF",
       date: "June 2023 - Current",
+      tags: [
+        "Public Speaking",
+        "Workshops",
+        "Data Structures",
+        "Algorithms",
+        "Leetcode",
+        "Technical Interviews",
+      ],
       description:
-        "Conducted weekly educational workshops for the Algorithm team, focusing on data structures, algorithms, leetcode problems, and technical interviews. Led workshops, presented at club meetings, and engaged over 50 developers weekly.",
+        "Planned and conducted weekly workshops with the Fall 2023 Algorithms team. Led workshops, presented at club meetings, and engaged over 50 developers weekly.",
     },
     {
       title: "SI Leader",
       company: "Cal State Fullerton",
       date: "August 2023 - Current",
+      tags: [
+        "Mathematics",
+        "Calculus",
+        "Tutoring",
+        "Collaborative Learning",
+        "Study Strategies",
+      ],
       description:
         "Fostered a collaborative learning environment where students could enhance their understanding of course material, discuss important concepts, and develop study strategies.",
     },

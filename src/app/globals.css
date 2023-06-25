@@ -3,26 +3,29 @@
 @tailwind utilities;
 
 @layer components {
-  .heading {
-    @apply md:text-5xl text-4xl font-bold
+  .h1 {
+    @apply text-5xl font-bold text-primary
   }
-  .subheading {
-    @apply md:text-3xl text-2xl font-bold
+  .h2 {
+    @apply text-lg text-primary
+  }
+  .h3 {
+    @apply text-xs text-primary uppercase font-semibold
   }
   .body {
-    @apply text-sm text-secondary
-  }
-  .container {
-    @apply flex flex-col items-center justify-center mx-auto w-full p-4 max-w-screen-lg text-primary
-  }
-  .btn {
-    @apply px-4 py-2 items-center flex justify-center border border-primary text-sm transition-all ease-in-out hover:bg-primary hover:bg-opacity-10
-  }
-  .disabledbtn {
-    @apply px-4 py-2 items-center flex justify-center border border-primary text-sm transition-all ease-in-out hover:bg-primary hover:bg-opacity-10 cursor-not-allowed
+    @apply text-sm text-secondary leading-7
   }
 }
 
 body {
-  background: #0f0f0f
+  background: #06030E
 }
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} 
