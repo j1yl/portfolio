@@ -1,128 +1,198 @@
-export const projects = [
-  {
-    id: 1,
-    title: "Roulettor",
-    description: "An all-inclusive realtime multiplayer casino game website.",
-    image: "/projects/roulettor.png",
-    imageAlt: "roulettor project image",
-    imageWidth: 1600,
-    imageHeight: 900,
-    githubLink: "https://github.com/j1yl/roulettor",
-    demoLink: "https://www.roulettor.com",
-    tags: [
-      "NextJS",
-      "React",
-      "TailwindCSS",
-      "DaisyUI",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "Socket.IO",
-      "Node",
-      "Express",
-    ],
-  },
-  {
-    id: 2,
-    title: "Saveart",
-    description:
-      "A mock social media application where users can create and share content by generating images with DALL-E.",
-    image: "/projects/saveart.webp",
-    imageAlt: "saveart project image",
-    imageWidth: 1600,
-    imageHeight: 900,
-    githubLink: "https://github.com/j1yl/saveart",
-    demoLink: "https://saveart.vercel.app",
-    tags: [
-      "SvelteKit",
-      "Svelte",
-      "TailwindCSS",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "DALL-E",
-    ],
-  },
-  {
-    id: 3,
-    title: "Spotlyzer",
-    description:
-      "A web application to access user data from Spotify and analyze it, displays the results in a dashboard.",
-    image: "/projects/spotlyzer.webp",
-    imageAlt: "spotlyzer project image",
-    imageWidth: 1600,
-    imageHeight: 900,
-    githubLink: "https://github.com/j1yl/spotlyzer",
-    demoLink: "",
-    tags: ["NextJS", "React", "SCSS", "TypeScript", "SpotifyAPI"],
-  },
-  {
-    id: 4,
-    title: "Fairview Ventures Website",
-    description:
-      "A website for Fairview Ventures, a real estate company based in Southern California",
-    image: "/projects/fairview.png",
-    imageAlt: "fairview ventures project image",
-    imageWidth: 1600,
-    imageHeight: 900,
-    githubLink: "https://github.com/j1yl/fairview",
-    demoLink: "https://fairviewventures.vercel.app",
-    tags: ["NextJS", "React", "TailwindCSS", "TypeScript", "Framer Motion"],
-  },
-  {
-    id: 5,
-    title: "iAssemble Anything Website",
-    description:
-      "A website for iAssemble Anything, an assembly company based in Southern California",
-    image: "/projects/iassemble.png",
-    imageAlt: "iassemble anything project image",
-    imageWidth: 1600,
-    imageHeight: 900,
-    githubLink: "https://github.com/j1yl/iassembleanything",
-    demoLink: "https://iassembleanything.vercel.app",
-    tags: ["NextJS", "React", "TailwindCSS", "TypeScript"],
-  },
-  {
-    id: 6,
-    title: "ShrinkURL",
-    description: "A URL shortener web application.",
-    image: "/projects/shrinkurl.png",
-    imageAlt: "shrinkurl project image",
-    imageWidth: 1600,
-    imageHeight: 900,
-    githubLink: "https://github.com/j1yl/shrinkurl",
-    demoLink: "https://shrinkurl.vercel.app",
-    tags: ["NextJS", "React", "TailwindCSS", "TypeScript"],
-  },
-];
-
-export const resumes = [
-  {
-    id: 1,
-    date: "2023-05-07",
-    link: "https://drive.google.com/file/d/1dBfLBnG0PjuJLotz7jFP3oZF6dmCUdmK/view?usp=share_link",
-  },
-  {
-    id: 2,
-    date: "2022-06-18",
-    link: "https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=sharing",
-  },
-];
-
-export const socials = [
-  {
-    id: 1,
-    url: "https://github.com/j1yl",
-    platform: "github",
-  },
-  {
-    id: 2,
-    url: "https://www.linkedin.com/in/j1yl",
-    platform: "linkedin",
-  },
-  {
-    id: 3,
-    url: "https://twitter.com/lefodev",
-    platform: "twitter",
-  },
-];
+export const content = {
+  titles: [
+    "Software Engineer",
+    "Web Dev Agency Owner",
+    "algoBoard @ acmCSUF",
+    "CS Major @ CSUF",
+  ],
+  socials: [
+    {
+      name: "github",
+      url: "https://github.com/j1yl",
+      icon: "/icon/github.svg",
+    },
+    {
+      name: "linkedin",
+      url: "https://linkedin.com/in/j1yl/",
+      icon: "/icon/linkedin.svg",
+    },
+    {
+      name: "youtube",
+      url: "https://www.youtube.com/channel/UCV6uWF2qp0SUeO6yomIWikA",
+      icon: "/icon/yt.svg",
+    },
+    {
+      name: "mail",
+      url: "mailto:webverry@gmail.com",
+      icon: "/icon/mail.svg",
+    },
+    {
+      name: "resume",
+      url: "https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=drive_link",
+      icon: "/icon/resume.svg",
+    },
+  ],
+  exp: [
+    {
+      title: "Web Developer",
+      company: "Fairview Ventures LLC",
+      date: "Nov 2022 - June 2023",
+      tags: ["React", "Next.js", "TailwindCSS", "TypeScript", "Framer Motion"],
+      description:
+        "Created and deployed multiple websites for Fairview Ventures, a real estate company. Ensured adherence to accessibility standards, ensuring optimal user experience for diverse audiences.",
+    },
+    {
+      title: "Python Developer",
+      company: "Arcadia Pediatric Medical Group",
+      date: "Nov 2022 - Apr 2023",
+      tags: ["Python", "NumPy", "Pandas", "Twilio", "API"],
+      description:
+        "Developed a patient management system for Arcadia Pediatric Medical Group. Streamlined and automated administrative tasks, resulting in a time-saving of over 10 hours per week.",
+    },
+    {
+      title: "Development Officer",
+      company: "acmCSUF",
+      date: "Jan 2023 - May 2023",
+      tags: [
+        "Public Speaking",
+        "Workshops",
+        "HTTPS",
+        "API",
+        "Git",
+        "Project Management",
+      ],
+      description:
+        "Planned and conducted weekly workshops with the Spring 2023 Development team. Engaged over 50 developers and provided technical guidance for semester-long projects.",
+    },
+    {
+      title: "Owner",
+      company: "Webverry LLC",
+      date: "May 2023 - Current",
+      tags: [
+        "Business",
+        "Sales",
+        "Prospecting",
+        "Customer Service",
+        "Development Leadership",
+        "Fullstack Development",
+        "Accessibility",
+      ],
+      description:
+        "Founded and operated a web development company. Managed all aspects of the business, including prospecting, client management, development process leadership, and customer service.",
+    },
+    {
+      title: "Algorithm Officer",
+      company: "acmCSUF",
+      date: "June 2023 - Current",
+      tags: [
+        "Public Speaking",
+        "Workshops",
+        "Data Structures",
+        "Algorithms",
+        "Leetcode",
+        "Technical Interviews",
+      ],
+      description:
+        "Planned and conducted weekly workshops with the Fall 2023 Algorithms team. Led workshops, presented at club meetings, and engaged over 50 developers weekly.",
+    },
+    {
+      title: "SI Leader",
+      company: "Cal State Fullerton",
+      date: "August 2023 - Current",
+      tags: [
+        "Mathematics",
+        "Calculus",
+        "Tutoring",
+        "Collaborative Learning",
+        "Study Strategies",
+      ],
+      description:
+        "Fostered a collaborative learning environment where students could enhance their understanding of course material, discuss important concepts, and develop study strategies.",
+    },
+  ],
+  projects: [
+    {
+      id: 0,
+      title: "Roulettor.com",
+      description: "All-inclusive real time multiplayer roulette game.",
+      tags: [
+        "Next.js",
+        "React",
+        "TailwindCSS",
+        "DaisyUI",
+        "TypeScript",
+        "Prisma",
+        "Socket.IO",
+        "PostgreSQL",
+        "Node.js",
+        "Express.js",
+      ],
+      demo: "https://roulettor.com",
+      github: "https://github.com/j1yl/roulettor",
+      image: "/images/roulettor.png",
+      featured: true,
+    },
+    {
+      id: 1,
+      title: "Saveart",
+      description:
+        "A mock social media application where users can create and share content by generating images with DALL-E.",
+      tags: [
+        "SvelteKit",
+        "Svelte",
+        "TailwindCSS",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "DALL-E API",
+      ],
+      demo: "https://saveart.vercel.app/",
+      github: "https://github.com/j1yl/saveart",
+      image: "/images/saveart.webp",
+      featured: false,
+    },
+    {
+      id: 2,
+      title: "Spotlyzer",
+      description:
+        "A web application to access user data from Spotify and analyze it, displays the results in a dashboard.",
+      tags: ["Next.js", "React", "SCSS", "TypeScript", "SpotifyAPI"],
+      demo: "",
+      github: "https://github.com/j1yl/spotlyzer",
+      image: "/images/spotlyzer.webp",
+      featured: false,
+    },
+    {
+      id: 3,
+      title: "Fairview Ventures",
+      description:
+        "A website for Fairview Ventures, a real estate company based in Southern California.",
+      tags: ["Next.js", "React", "TailwindCSS", "TypeScript", "Framer Motion"],
+      demo: "https://fairviewventures.com",
+      github: "https://github.com/j1yl/fairview",
+      image: "/images/fairview.png",
+      featured: false,
+    },
+    {
+      id: 4,
+      title: "iAssembleAnything",
+      description:
+        "A website for iAssemble Anything, an assembly company based in Southern California.",
+      tags: ["Next.js", "React", "TailwindCSS", "TypeScript"],
+      demo: "https://iassembleanything.vercel.app",
+      github: "https://github.com/j1yl/iassembleanything",
+      image: "/images/iassemble.png",
+      featured: false,
+    },
+    {
+      id: 5,
+      title: "ShrinkURL",
+      description: "A URL shortener web application.",
+      tags: ["Next.js", "React", "TailwindCSS", "TypeScript"],
+      demo: "https://shrinkurl.vercel.app",
+      github: "https://github.com/j1yl/shrinkurl",
+      image: "/images/shrinkurl.png",
+      featured: false,
+    },
+  ],
+};
