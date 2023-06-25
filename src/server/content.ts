@@ -7,27 +7,27 @@ export const content = {
   ],
   socials: [
     {
-      name: "github",
+      name: "GitHub",
       url: "https://github.com/j1yl",
       icon: "/icon/github.svg",
     },
     {
-      name: "linkedin",
+      name: "LinkedIn",
       url: "https://linkedin.com/in/j1yl/",
       icon: "/icon/linkedin.svg",
     },
     {
-      name: "youtube",
+      name: "YouTube",
       url: "https://www.youtube.com/channel/UCV6uWF2qp0SUeO6yomIWikA",
       icon: "/icon/yt.svg",
     },
     {
-      name: "mail",
+      name: "Email",
       url: "mailto:webverry@gmail.com",
       icon: "/icon/mail.svg",
     },
     {
-      name: "resume",
+      name: "Resume",
       url: "https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=drive_link",
       icon: "/icon/resume.svg",
     },
