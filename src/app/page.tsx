@@ -142,7 +142,7 @@ export default function Home() {
         </div>
         <div className="flex gap-2">
           {content.socials.map((s, i) => (
-            <Link href={s.url} passHref key={i}>
+            <Link href={s.url} passHref target="_blank" key={i}>
               <Image
                 src={s.icon}
                 alt={s.icon.replace("/icon/", "")}
