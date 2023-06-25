@@ -259,6 +259,7 @@ export default function Home() {
             Built from scratch with{" "}
             <Link
               href="https://nextjs.org/"
+              target="_blank"
               className="text-primary hover:text-accent ease-in-out transition-all"
             >
               Next.js
@@ -266,6 +267,7 @@ export default function Home() {
             ,{" "}
             <Link
               href="https://tailwindcss.com/"
+              target="_blank"
               className="text-primary hover:text-accent ease-in-out transition-all"
             >
               Tailwind CSS
@@ -273,6 +275,7 @@ export default function Home() {
             , and{" "}
             <Link
               href="https://www.framer.com/motion/"
+              target="_blank"
               className="text-primary hover:text-accent ease-in-out transition-all"
             >
               Framer Motion
