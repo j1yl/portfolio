@@ -26,7 +26,7 @@ const Cursor = (props: Props) => {
         x: position.x - 256,
         y: position.y - 256,
         background:
-          "radial-gradient(circle, rgba(134,159,158,0.15) 0%, rgba(193,227,224,0) 100%)",
+          "radial-gradient(50% 50.00% at 50% 50.00%, rgba(134, 159, 158, 0.05) 0%, rgba(132, 199, 193, 0.00) 100%)",
       }}
     ></motion.div>
   );
