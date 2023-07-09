@@ -232,20 +232,16 @@ export default function Home() {
             </h2>
           </div>
           <div className="flex flex-col gap-16">
-            {content.projects
-              .filter((p) => {
-                return p.id < 3;
-              })
-              .map((p, i) => (
-                <ProjectCard
-                  key={i}
-                  title={p.title}
-                  description={p.description}
-                  tags={p.tags}
-                  imageUrl={p.image}
-                  url={p.github}
-                />
-              ))}
+            {content.projects.map((p, i) => (
+              <ProjectCard
+                key={i}
+                title={p.title}
+                description={p.description}
+                tags={p.tags}
+                imageUrl={p.image}
+                url={p.github}
+              />
+            ))}
             <Hyperlink
               url="/projects"
               text="View All Projects"
