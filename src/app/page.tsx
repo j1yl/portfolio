@@ -242,11 +242,11 @@ export default function Home() {
                 url={p.github}
               />
             ))}
-            <Hyperlink
+            {/* <Hyperlink
               url="/projects"
               text="View All Projects"
               newTab={false}
-            />
+            /> */}
           </div>
         </motion.section>
         <div className="md:py-16 py-8" />

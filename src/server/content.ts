@@ -130,7 +130,22 @@ export const content = {
       demo: "https://roulettor.com",
       github: "https://github.com/j1yl/roulettor",
       image: "/images/roulettor.png",
-      featured: true,
+    },
+    {
+      id: 1,
+      title: "Flight Tracker",
+      description: "A realtime flight tracker using the OpenSky API.",
+      tags: [
+        "Next.js",
+        "React",
+        "TailwindCSS",
+        "TypeScript",
+        "OpenSky API",
+        "Leaflet",
+      ],
+      demo: "https://flights-umber.vercel.app/",
+      github: "https://github.com/j1yl/flights",
+      image: "/images/flights.png",
     },
     // {
     //   id: 1,
