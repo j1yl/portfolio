@@ -22,7 +22,8 @@ const ProjectCard = (props: Props) => {
         className="md:col-span-1 md:row-span-3 aspect-video rounded-lg"
       />
       <h3 className="md:col-span-2 text-primary">
-        <Hyperlink url={props.url} text={props.title} newTab={true} />
+        {/* <Hyperlink url={props.url} text={props.title} newTab={true} /> */}
+        {props.title}
       </h3>
       <p className="body md:col-span-2 md:col-start-2 leading-6">
         {props.description}

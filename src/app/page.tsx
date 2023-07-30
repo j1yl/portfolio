@@ -41,7 +41,7 @@ export default function Home() {
 
       let currentSection = "";
       sections.forEach((s) => {
-        const sectionTop = s.offsetTop - 100;
+        const sectionTop = s.offsetTop - 300;
 
         if (scrollPosition >= sectionTop) {
           currentSection = s.id;
