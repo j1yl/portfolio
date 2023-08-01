@@ -6,7 +6,7 @@ type Props = {
 
 const Badge = (props: Props) => {
   return (
-    <div className="px-2 py-1 rounded-full text-xs text-accent bg-secondary bg-opacity-10 w-max">
+    <div className="px-2 py-1 rounded-full text-xs text-accent bg-secondary/10 w-max">
       {props.text}
     </div>
   );

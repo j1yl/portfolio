@@ -8,17 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#06030E",
-        primary: "#C1E3E0",
-        secondary: "#869F9E",
-        accent: "#46d4c6",
+        // OG THEME
+        // background: "#06030E",
+        // primary: "#C1E3E0",
+        // secondary: "#869F9E",
+        // accent: "#46d4c6",
 
-        // light theme
-        // background: "#040307",
-        // primary: "#7a6bc7",
-        // secondary: "#1b1537",
-        // accent: "#6a59c0",
-        // text: "#ebe9f7",
+        // NEW GREEN
+        background: "hsl(189, 65%, 3%)",
+        primary: "hsl(108, 38%, 82%)",
+        secondary: "hsl(111, 12%, 57%)",
+        accent: "hsl(107, 62%, 55%)",
       },
     },
   },
