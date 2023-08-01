@@ -1,54 +1,41 @@
 "use client";
 
-import { content } from "@/server/content";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Link as ReactScrollLink } from "react-scroll";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+
+import { content } from "@/server/content";
+
 import ExperienceCard from "@/components/ExperienceCard";
-import Hyperlink from "@/components/Hyperlink";
 import ProjectCard from "@/components/ProjectCard";
 
-const lineVariants = {
-  selected: {
-    background: "#84C7C1",
-    width: "100px",
-  },
-  unselected: {
-    background: "#869F9E",
-    width: "50px",
-  },
-};
-
-const textVariants = {
-  selected: {
-    color: "#84C7C1",
-  },
-  unselected: {
-    color: "#869F9E",
-  },
-};
-
-export default function Home() {
-  const [currentSection, setCurrentSection] = useState("about");
+export default function Page() {
+  const [currentSectionInView, setCurrentSectionInView] = useState("about");
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       const scrollPosition =
         window.scrollY || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
 
       let currentSection = "";
-      sections.forEach((s) => {
-        const sectionTop = s.offsetTop - 100;
 
-        if (scrollPosition >= sectionTop) {
+      sections.forEach((s) => {
+        const sectionTop = s.offsetTop - 128;
+        const sectionBottom = sectionTop + s.offsetHeight;
+
+        if (
+          (scrollPosition >= sectionTop && scrollPosition < sectionBottom) ||
+          (scrollPosition + windowHeight >= documentHeight &&
+            s === sections[sections.length - 1])
+        ) {
           currentSection = s.id;
         }
       });
 
-      setCurrentSection(currentSection);
+      setCurrentSectionInView(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -57,101 +44,91 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex max-w-screen-xl min-h-screen md:flex-row flex-col mx-auto">
-      <aside className="w-full md:sticky md:top-0 md:max-h-screen md:py-16 py-8 flex gap-8 md:gap-0 flex-col justify-between md:pl-16 px-4">
+    <main className="flex max-w-6xl justify-evenly min-h-screen md:flex-row flex-col mx-auto md:px-0 px-8">
+      <aside className="w-full md:sticky md:top-0 max-h-screen flex gap-8 md:gap-0 flex-col justify-between py-16">
         <div>
           <h1 className="h1 mb-2">Joe Lee</h1>
           <h2 className="h2 mb-4">CS @ Cal State Fullerton</h2>
-          <p className="body md:w-1/2">
+          <p className="body">
             I engineer accessible and efficient web solutions for diverse needs.
           </p>
-          <nav className="md:flex flex-col gap-4 mt-8 hidden">
-            <motion.div
-              whileHover="selected"
-              initial="unselected"
-              animate={currentSection === "about" ? "selected" : "unselected"}
-              className="cursor-pointer w-max"
+          <nav className="md:flex flex-col gap-4 hidden mt-16">
+            <a
+              href="#about"
+              className="flex gap-2 items-center w-full group cursor-pointer"
             >
-              <ReactScrollLink
-                to="about"
-                href="#about"
-                smooth={true}
-                duration={500}
-                offset={-100}
-                className="flex gap-2 items-center"
+              <span
+                className={`w-50 group-hover:w-[100px] group-hover:bg-primary transition-all ease-in-out duration-300 h-[1px] bg-secondary ${
+                  currentSectionInView === "about"
+                    ? "w-[100px] bg-primary"
+                    : "w-[50px] bg-secondary"
+                }`}
+                aria-hidden={true}
+              />
+              <span
+                className={`h3 group-hover:text-primary transition-colors ${
+                  currentSectionInView === "about"
+                    ? "text-primary"
+                    : "text-secondary"
+                }`}
               >
-                <motion.span
-                  className="w-[50px] h-[1px]"
-                  variants={lineVariants}
-                  aria-hidden={true}
-                />
-                <motion.span className="h3" variants={textVariants}>
-                  About
-                </motion.span>
-              </ReactScrollLink>
-            </motion.div>
-            <motion.div
-              whileHover="selected"
-              initial="unselected"
-              animate={
-                currentSection === "experience" ? "selected" : "unselected"
-              }
-              className="cursor-pointer w-max"
+                About
+              </span>
+            </a>
+            <a
+              href="#experience"
+              className="flex gap-2 items-center w-full group cursor-pointer"
             >
-              <ReactScrollLink
-                to="experience"
-                href="#experience"
-                smooth={true}
-                duration={500}
-                offset={-75}
-                className="flex gap-2 items-center"
+              <span
+                className={`w-50 group-hover:w-[100px] group-hover:bg-primary transition-all ease-in-out duration-300 h-[1px] bg-secondary ${
+                  currentSectionInView === "experience"
+                    ? "w-[100px] bg-primary"
+                    : "w-[50px] bg-secondary"
+                }`}
+                aria-hidden={true}
+              />
+              <span
+                className={`h3 group-hover:text-primary transition-colors ${
+                  currentSectionInView === "experience"
+                    ? "text-primary"
+                    : "text-secondary"
+                }`}
               >
-                <motion.span
-                  className="w-[50px] h-[1px]"
-                  variants={lineVariants}
-                  aria-hidden={true}
-                />
-                <motion.span className="h3" variants={textVariants}>
-                  Experience
-                </motion.span>
-              </ReactScrollLink>
-            </motion.div>
-            <motion.div
-              whileHover="selected"
-              initial="unselected"
-              animate={
-                currentSection === "projects" ? "selected" : "unselected"
-              }
-              className="cursor-pointer w-max"
+                Experience
+              </span>
+            </a>
+            <a
+              href="#projects"
+              className="flex gap-2 items-center w-full group cursor-pointer"
             >
-              <ReactScrollLink
-                to="projects"
-                href="#projects"
-                smooth={true}
-                duration={500}
-                className="flex gap-2 items-center"
+              <span
+                className={`w-50 group-hover:w-[100px] group-hover:bg-primary transition-all ease-in-out duration-300 h-[1px] bg-secondary ${
+                  currentSectionInView === "projects"
+                    ? "w-[100px] bg-primary"
+                    : "w-[50px] bg-secondary"
+                }`}
+                aria-hidden={true}
+              />
+              <span
+                className={`h3 group-hover:text-primary transition-colors ${
+                  currentSectionInView === "projects"
+                    ? "text-primary"
+                    : "text-secondary"
+                }`}
               >
-                <motion.span
-                  className="w-[50px] h-[1px]"
-                  variants={lineVariants}
-                  aria-hidden={true}
-                />
-                <motion.span className="h3" variants={textVariants}>
-                  Projects
-                </motion.span>
-              </ReactScrollLink>
-            </motion.div>
+                Projects
+              </span>
+            </a>
           </nav>
         </div>
         <div className="flex gap-2">
           {content.socials.map((s, i) => (
             <Link
               href={s.url}
-              passHref
               target="_blank"
               key={i}
               role="link"
-              aria-label={`go to ${s.name}`}
+              aria-label={`open ${s.name}`}
               className="cursor-pointer transition-all ease-in-out duration-200 hover:scale-110"
             >
               <Image
@@ -164,68 +141,68 @@ export default function Home() {
           ))}
         </div>
       </aside>
-      <div className="w-full md:my-16 my-8">
-        <motion.section id="about" className="md:pr-16 px-4">
-          <div className="flex gap-4 md:gap-8 flex-col">
-            <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
-              <h2 className="text-primary uppercase font-semibold text-base">
-                About
-              </h2>
-            </div>
-            <p className="body">
-              Back in 2018, I decided to take my chances and learn how to code
-              custom Discord bots and simple automation scripts. Fascinated by
-              the possibilities of{" "}
-              <span className="text-primary">software development</span>, I
-              dedicated countless hours honing my skills. Nowadays, I spend my
-              time creating software for businesses with distinct requirements.
-            </p>
-            <p className="body">
-              By understanding their needs and leveraging my technical
-              expertise, I develop{" "}
-              <span className="text-primary">tailor-made solutions</span> that{" "}
-              <span className="text-primary">streamline operations</span>,
-              enhance efficiency, and drive growth.
-            </p>
-            <p className="body">
-              It&apos;s incredibly{" "}
-              <span className="text-primary">fulfilling</span> to witness the
-              positive impact my creations have on organizations and their
-              users, and I continuously strive to{" "}
-              <span className="text-primary">push the boundaries</span> of what
-              is possible in the world of code.
-            </p>
+      <div className="w-full py-16">
+        <section
+          id="about"
+          className="flex gap-4 md:gap-8 flex-col scroll-mt-16"
+        >
+          <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
+            <h2 className="text-primary uppercase font-semibold text-base">
+              About
+            </h2>
           </div>
-        </motion.section>
-        <div className="py-16" />
-        <motion.section id="experience" className="md:pr-16 px-4">
-          <div className="flex flex-col">
-            <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
-              <h2 className="text-primary uppercase font-semibold text-base">
-                Experience
-              </h2>
-            </div>
-            <div className="flex flex-col gap-16">
-              {content.exp.map((e, i) => (
-                <ExperienceCard
-                  key={i}
-                  title={e.title}
-                  company={e.company}
-                  date={e.date}
-                  description={e.description}
-                  tags={e.tags}
-                />
-              ))}
-              <Hyperlink
-                url="https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=drive_link"
-                text="View Full Resume"
-                newTab={true}
+          <p className="body">
+            Back in 2018, I decided to take my chances and learn how to code
+            custom Discord bots and simple automation scripts. Fascinated by the
+            possibilities of{" "}
+            <span className="text-primary">software development</span>, I
+            dedicated countless hours honing my skills. Nowadays, I spend my
+            time creating software for businesses with distinct requirements.
+          </p>
+          <p className="body">
+            By understanding their needs and leveraging my technical expertise,
+            I develop{" "}
+            <span className="text-primary">tailor-made solutions</span> that{" "}
+            <span className="text-primary">streamline operations</span>, enhance
+            efficiency, and drive growth.
+          </p>
+          <p className="body">
+            It&apos;s incredibly{" "}
+            <span className="text-primary">fulfilling</span> to witness the
+            positive impact my creations have on organizations and their users,
+            and I continuously strive to{" "}
+            <span className="text-primary">push the boundaries</span> of what is
+            possible in the world of code.
+          </p>
+        </section>
+        <div className="my-32" />
+        <section
+          id="experience"
+          className="flex gap-4 md:gap-8 flex-col scroll-mt-16"
+        >
+          <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
+            <h2 className="text-primary uppercase font-semibold text-base">
+              Experience
+            </h2>
+          </div>
+          <div className="flex flex-col gap-16">
+            {content.exp.map((e, i) => (
+              <ExperienceCard
+                key={i}
+                title={e.title}
+                company={e.company}
+                date={e.date}
+                description={e.description}
+                tags={e.tags}
               />
-            </div>
+            ))}
           </div>
-        </motion.section>
-        <div className="py-16" />
-        <motion.section id="projects" className="md:pr-16 px-4">
+        </section>
+        <div className="my-32" />
+        <section
+          id="projects"
+          className="flex gap-4 md:gap-8 flex-col scroll-mt-16"
+        >
           <div className="md:hidden sticky top-0 py-4 bg-background bg-opacity-90">
             <h2 className="text-primary uppercase font-semibold text-base">
               Projects
@@ -242,15 +219,10 @@ export default function Home() {
                 url={p.github}
               />
             ))}
-            {/* <Hyperlink
-              url="/projects"
-              text="View All Projects"
-              newTab={false}
-            /> */}
           </div>
-        </motion.section>
-        <div className="md:py-16 py-8" />
-        <motion.section id="footer" className="md:pr-16 px-4">
+        </section>
+        <div className="my-32 " />
+        <footer className="md:pr-16 px-4">
           <p className="body">
             Built from scratch with{" "}
             <Link
@@ -278,7 +250,7 @@ export default function Home() {
             </Link>{" "}
             by yours truly.
           </p>
-        </motion.section>
+        </footer>
       </div>
     </main>
   );

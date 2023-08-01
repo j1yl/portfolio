@@ -10,15 +10,19 @@
     @apply text-lg text-primary
   }
   .h3 {
-    @apply text-xs text-primary uppercase font-semibold
+    @apply text-xs text-secondary uppercase font-semibold
   }
   .body {
     @apply text-sm text-secondary leading-7
   }
 }
 
-body {
-  background: #06030E
+
+
+@layer base {
+  body {
+    @apply bg-background
+  }
 }
 
 html::-webkit-scrollbar {
@@ -28,4 +32,5 @@ html::-webkit-scrollbar {
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 } 

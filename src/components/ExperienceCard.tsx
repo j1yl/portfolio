@@ -12,7 +12,7 @@ type Props = {
 const ExperienceCard = (props: Props) => {
   return (
     <div className="md:grid md:grid-cols-3 md:grid-row-3 md:items-center gap-2 flex flex-col">
-      <p className="h3 text-secondary md:col-span-1 md:row-span-1">
+      <p className="h3 text-primary md:col-span-1 md:row-span-1">
         {props.date}
       </p>
       <h3 className="flex flex-wrap gap-2 items-center text-primary md:col-span-2 text-sm md:row-span-1">

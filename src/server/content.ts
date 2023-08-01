@@ -16,11 +16,11 @@ export const content = {
       url: "https://linkedin.com/in/j1yl/",
       icon: "/icon/linkedin.svg",
     },
-    {
-      name: "YouTube",
-      url: "https://www.youtube.com/channel/UCV6uWF2qp0SUeO6yomIWikA",
-      icon: "/icon/yt.svg",
-    },
+    // {
+    //   name: "YouTube",
+    //   url: "https://www.youtube.com/channel/UCV6uWF2qp0SUeO6yomIWikA",
+    //   icon: "/icon/yt.svg",
+    // },
     {
       name: "Email",
       url: "mailto:webverry@gmail.com",

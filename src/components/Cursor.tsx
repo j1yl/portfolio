@@ -3,9 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-type Props = {};
-
-const Cursor = (props: Props) => {
+const Cursor = () => {
   const [position, setPosition] = useState({ x: -1000, y: -1000 });
 
   useEffect(() => {
