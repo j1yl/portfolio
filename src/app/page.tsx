@@ -44,7 +44,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="flex max-w-6xl justify-evenly min-h-screen md:flex-row flex-col mx-auto md:px-0 px-8">
+    <main className="flex max-w-6xl justify-evenly min-h-screen md:flex-row flex-col mx-auto px-8">
       <aside className="w-full md:sticky md:top-0 max-h-screen flex gap-8 md:gap-0 flex-col justify-between py-16">
         <div>
           <h1 className="h1 mb-2">Joe Lee</h1>
