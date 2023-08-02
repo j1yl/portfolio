@@ -16,6 +16,7 @@ const ProjectCard = (props: Props) => {
     <Link
       href={props.url}
       target="_blank"
+      passHref
       referrerPolicy="no-referrer"
       className="md:grid md:grid-cols-3 md:grid-row-3 md:gap-x-4 md:gap-y-2 p-4 flex flex-col gap-2 hover:bg-secondary/10 transition-colors rounded-lg group"
     >

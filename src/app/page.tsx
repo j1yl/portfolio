@@ -127,6 +127,7 @@ export default function Page() {
               href={s.url}
               target="_blank"
               key={i}
+              passHref
               role="link"
               aria-label={`open ${s.name}`}
               className="cursor-pointer transition-all ease-in-out duration-200 hover:scale-110"
