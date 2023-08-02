@@ -1,4 +1,4 @@
-export const content = {
+export const config = {
   titles: [
     "Software Engineer",
     "Web Dev Agency Owner",
@@ -146,6 +146,25 @@ export const content = {
       demo: "https://flights-umber.vercel.app/",
       github: "https://github.com/j1yl/flights",
       image: "/images/flights.png",
+    },
+    {
+      id: 2,
+      title: "Pathfinding Visualizer",
+      description:
+        "Interactive tool using Next.js & TypeScript. Draw walls, generate mazes, and visualize pathfinding (A*, Dijkstra’s, BFS, DFS, etc.) in custom scenarios. Explore diverse strategies in user-created mazes.",
+      tags: [
+        "Next.js",
+        "React",
+        "TailwindCSS",
+        "TypeScript",
+        "Algorithms",
+        "Data Structures",
+        "Pathfinding",
+        "Mazes",
+      ],
+      demo: "https://path.joelee.info",
+      github: "https://github.com/j1yl/pathvis",
+      image: "/images/pathvis.png",
     },
     // {
     //   id: 1,

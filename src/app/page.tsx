@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { content } from "@/server/content";
+import { config } from "../../config";
 
 import ExperienceCard from "@/components/ExperienceCard";
 import ProjectCard from "@/components/ProjectCard";
@@ -122,7 +122,7 @@ export default function Page() {
           </nav>
         </div>
         <div className="flex gap-2">
-          {content.socials.map((s, i) => (
+          {config.socials.map((s, i) => (
             <Link
               href={s.url}
               target="_blank"
@@ -186,7 +186,7 @@ export default function Page() {
             </h2>
           </div>
           <div className="flex flex-col gap-16">
-            {content.exp.map((e, i) => (
+            {config.exp.map((e, i) => (
               <ExperienceCard
                 key={i}
                 title={e.title}
@@ -209,7 +209,7 @@ export default function Page() {
             </h2>
           </div>
           <div className="flex flex-col gap-16">
-            {content.projects.map((p, i) => (
+            {config.projects.map((p, i) => (
               <ProjectCard
                 key={i}
                 title={p.title}
