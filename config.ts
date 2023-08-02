@@ -28,7 +28,7 @@ export const config = {
     },
     {
       name: "Resume",
-      url: "https://drive.google.com/file/d/1lMDA1IGhZ-4Kb60I1ig7mxH9ATtsdUb5/view?usp=drive_link",
+      url: "https://drive.google.com/file/d/1X_aiY4AIc86dZUi3vAAy9GDKiocgccxE/view?usp=sharing",
       icon: "/icon/resume.svg",
     },
   ],
