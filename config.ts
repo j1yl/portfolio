@@ -151,7 +151,7 @@ export const config = {
       id: 2,
       title: "Pathfinding Visualizer",
       description:
-        "Interactive tool using Next.js & TypeScript. Draw walls, generate mazes, and visualize pathfinding (A*, Dijkstra’s, BFS, DFS, etc.) in custom scenarios. Explore diverse strategies in user-created mazes.",
+        "Draw walls, generate mazes, and visualize pathfinding (A*, Dijkstra’s, BFS, DFS, etc.) in custom scenarios.",
       tags: [
         "Next.js",
         "React",
