@@ -14,14 +14,8 @@ import Songs from "@/components/Songs";
 import Wishlist from "@/components/Wishlist";
 import Badge from "@/components/Badge";
 
-import {
-  cubicBezier,
-  stagger,
-  useAnimate,
-  useInView,
-  useScroll,
-} from "framer-motion";
-import { useEffect, useRef } from "react";
+import { cubicBezier, stagger, useAnimate } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Home() {
   const [scope, animate] = useAnimate<HTMLDivElement>();
@@ -84,8 +78,9 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen w-full px-4 flex items-center justify-center">
-        <div className="md:max-w-6xl md:mx-auto gap-4 my-16 relative grid md:grid-cols-4 grid-cols-1 w-full">
+      <main className="min-h-screen w-full px-4 flex items-center justify-center relative">
+        <div className="fixed top-0 left-0 z-0 noise w-full min-h-screen" />
+        <div className="md:max-w-6xl md:mx-auto z-20 gap-4 my-16 relative grid md:grid-cols-4 grid-cols-1 w-full">
           <nav
             id="navbar"
             className="p-4 w-full rounded-xl h-max flex flex-col gap-8 bg-neutral-50 dark:bg-neutral-900 md:sticky md:top-16"
