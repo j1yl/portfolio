@@ -17,7 +17,7 @@ const Experience = (props: Props) => {
         {exp.map((_, i) => (
           <li key={i} className="flex items-center justify-between gap-2">
             <span>{_.date}</span>
-            <span>
+            <span className="text-right">
               <strong>{_.title}</strong> {"->"} {_.company}
             </span>
           </li>
