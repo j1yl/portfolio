@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 
-import { interests, navlinks, projects, socials } from "@/config";
+import { business, interests, navlinks, projects, socials } from "@/config";
 
 import Books from "@/components/Books";
 import CookieBanner from "@/components/CookieBanner";
@@ -9,6 +10,7 @@ import LatestLeeLetter from "@/components/LatestLeeLetter";
 import MOTD from "@/components/MOTD";
 import Songs from "@/components/Songs";
 import Wishlist from "@/components/Wishlist";
+import Badge from "@/components/Badge";
 
 export default function Home() {
   return (
@@ -67,20 +69,6 @@ export default function Home() {
           <section className="w-full md:col-span-3 flex gap-4 flex-col">
             <CookieBanner />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="grid md:grid-cols-1 w-full h-max gap-4">
-                <h2 className="sr-only">projects</h2>
-                <div className="rounded-xl w-full bg-neutral-50 dark:bg-neutral-900 p-4 aspect-square">
-                  <h3>webverry</h3>
-                </div>
-                {projects.map((_, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl w-full bg-neutral-50 dark:bg-neutral-900 p-4 aspect-square"
-                  >
-                    {_.name}
-                  </div>
-                ))}
-              </div>
               <div className="md:col-span-2 grid grid-cols-1 gap-4">
                 <Experience />
                 <Songs />
@@ -88,6 +76,89 @@ export default function Home() {
                 <Wishlist />
                 <Books />
                 <LatestLeeLetter />
+              </div>
+              <div className="grid md:grid-cols-1 w-full h-max gap-4">
+                <h2 className="sr-only">projects</h2>
+                {business.map((_, i) => (
+                  <div
+                    key={i}
+                    className="rounded-xl flex flex-col justify-between w-full bg-neutral-50 dark:bg-neutral-900 p-4 gap-4"
+                  >
+                    <h3>
+                      <strong>
+                        <Link
+                          href={_.url}
+                          target="_blank"
+                          referrerPolicy="no-referrer"
+                          className="underline hover:no-underline"
+                        >
+                          {_.name} {"->"}
+                        </Link>
+                      </strong>
+                    </h3>
+                    <div className="relative">
+                      {_.images.map((_, i) => (
+                        <Image
+                          src={_}
+                          key={i}
+                          className={`object-cover aspect-[3/2] rounded-xl drop-shadow-xl w-2/3 ${
+                            i % 2 === 1
+                              ? "translate-x-1/2 -translate-y-1/3 z-0"
+                              : "translate-y-1/3 z-10"
+                          }`}
+                          alt={`photo ${i}`}
+                          width={320}
+                          height={300}
+                        />
+                      ))}
+                    </div>
+                    <div className="flex gap-2 items-center flex-wrap">
+                      {_.tags.map((_, i) => (
+                        <Badge text={_} key={i} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                {projects.map((_, i) => (
+                  <div
+                    key={i}
+                    className="rounded-xl flex flex-col justify-between w-full bg-neutral-50 dark:bg-neutral-900 p-4 gap-4"
+                  >
+                    <h3>
+                      <strong>
+                        <Link
+                          href={_.url}
+                          target="_blank"
+                          referrerPolicy="no-referrer"
+                          className="underline hover:no-underline"
+                        >
+                          {_.name} {"->"}
+                        </Link>
+                      </strong>
+                    </h3>
+                    <div className="relative">
+                      {_.images.map((_, i) => (
+                        <Image
+                          src={_}
+                          key={i}
+                          className={`object-cover aspect-[3/2] rounded-xl drop-shadow-xl w-2/3 ${
+                            i % 2 === 1
+                              ? "translate-x-1/2 -translate-y-1/3 z-0"
+                              : "translate-y-1/3 z-10"
+                          }`}
+                          alt={`photo ${i}`}
+                          width={320}
+                          height={300}
+                        />
+                      ))}
+                    </div>
+                    <div className="flex gap-2 items-center flex-wrap">
+                      {_.tags.map((_, i) => (
+                        <Badge text={_} key={i} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>

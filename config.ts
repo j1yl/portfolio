@@ -42,14 +42,23 @@ export const interests = [
 export const projects = [
   {
     name: "pathfinding visualizer",
+    images: ["/assets/images/pathfind1.webp", "/assets/images/pathfind2.webp"],
+    url: "https://path.joelee.info/",
     tags: ["project", "algorithm"],
   },
   {
     name: "roulettor",
+    images: [
+      "/assets/images/roulettor1.webp",
+      "/assets/images/roulettor2.webp",
+    ],
+    url: "https://roulettor.com",
     tags: ["project", "websockets"],
   },
   {
     name: "flight tracker",
+    images: ["/assets/images/flight1.webp", "/assets/images/flight2.webp"],
+    url: "https://flights-j1yl.vercel.app/",
     tags: ["project", "maps"],
   },
 ];
@@ -115,6 +124,8 @@ export const wishlist = [
 export const business = [
   {
     name: "webverry",
+    images: ["/assets/images/webverry1.webp", "/assets/images/webverry2.webp"],
+    url: "https://webverry.com",
     tags: ["business", "web design"],
   },
 ];
