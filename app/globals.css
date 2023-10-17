@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black dark:bg-neutral-950 dark:text-neutral-200 text-xs uppercase
+  }
+
+  ::selection {
+    @apply bg-neutral-950 text-neutral-50 dark:bg-neutral-50 dark:text-black
+  }
+
+  .noise {
+    @apply bg-[url('/assets/noise.gif')] opacity-20 backdrop-invert dark:backdrop-invert-0 motion-reduce:hidden
+  }
+}
