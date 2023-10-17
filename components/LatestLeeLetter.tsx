@@ -5,7 +5,7 @@ type Props = {};
 
 const LatestLeeLetter = (props: Props) => {
   return (
-    <div className="rounded-xl w-full bg-neutral-50 dark:bg-neutral-900 p-4 aspect-square">
+    <div className="module rounded-xl w-full bg-neutral-50 dark:bg-neutral-900 p-4 aspect-square">
       <div className="flex flex-col gap-4">
         <h3>
           <Link

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,7 +14,74 @@ import Songs from "@/components/Songs";
 import Wishlist from "@/components/Wishlist";
 import Badge from "@/components/Badge";
 
+import {
+  cubicBezier,
+  stagger,
+  useAnimate,
+  useInView,
+  useScroll,
+} from "framer-motion";
+import { useEffect, useRef } from "react";
+
 export default function Home() {
+  const [scope, animate] = useAnimate<HTMLDivElement>();
+
+  useEffect(() => {
+    animate(
+      ".module",
+      {
+        y: [32, 0],
+        scale: [0.9, 1],
+        opacity: [0, 1],
+        filter: ["blur(8px)", "blur(0px)"],
+      },
+      {
+        ease: ["anticipate"],
+        delay: stagger(0.1),
+        duration: 1,
+      }
+    );
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const modules = scope.current.querySelectorAll(".module");
+
+      modules.forEach((module, i) => {
+        const rect = module.getBoundingClientRect();
+
+        const top = rect.top;
+        const bottom = rect.bottom;
+
+        if (bottom < 128 || top > window.innerHeight) {
+          animate(
+            module,
+            {
+              opacity: 0.5,
+              filter: "blur(4px)",
+            },
+            { ease: cubicBezier(0.33, 1, 0.68, 1), duration: 0.3 }
+          );
+        } else {
+          animate(
+            module,
+            {
+              opacity: 1,
+              filter: "blur(0px)",
+            },
+            { ease: cubicBezier(0.33, 1, 0.68, 1), duration: 0.2 }
+          );
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <>
       <main className="min-h-screen w-full px-4 flex items-center justify-center">
@@ -66,7 +135,10 @@ export default function Home() {
               </ul>
             </div>
           </nav>
-          <section className="w-full md:col-span-3 flex gap-4 flex-col">
+          <section
+            ref={scope}
+            className="w-full md:col-span-3 flex gap-4 flex-col"
+          >
             <CookieBanner />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="md:col-span-2 grid grid-cols-1 gap-4">
@@ -82,7 +154,7 @@ export default function Home() {
                 {business.map((_, i) => (
                   <div
                     key={i}
-                    className="rounded-xl flex flex-col justify-between w-full bg-neutral-50 dark:bg-neutral-900 p-4 gap-4"
+                    className="module rounded-xl flex flex-col justify-between w-full bg-neutral-50 dark:bg-neutral-900 p-4 gap-4"
                   >
                     <h3>
                       <strong>
@@ -122,7 +194,7 @@ export default function Home() {
                 {projects.map((_, i) => (
                   <div
                     key={i}
-                    className="rounded-xl flex flex-col justify-between w-full bg-neutral-50 dark:bg-neutral-900 p-4 gap-4"
+                    className="module rounded-xl flex flex-col justify-between w-full bg-neutral-50 dark:bg-neutral-900 p-4 gap-4"
                   >
                     <h3>
                       <strong>
