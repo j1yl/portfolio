@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -18,8 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={interTight.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <GoogleAnalytics
+        GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID as string}
+      />
+      <body className={interTight.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

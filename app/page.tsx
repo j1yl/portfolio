@@ -15,10 +15,12 @@ import Wishlist from "@/components/Wishlist";
 import Badge from "@/components/Badge";
 
 import { cubicBezier, stagger, useAnimate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Settings from "@/components/Settings";
 
 export default function Home() {
   const [scope, animate] = useAnimate<HTMLDivElement>();
+  const [noise, setNoise] = useState<boolean>(true);
 
   useEffect(() => {
     animate(
@@ -79,7 +81,11 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen w-full px-4 flex items-center justify-center relative">
-        <div className="fixed top-0 left-0 z-0 noise w-full min-h-screen" />
+        <div
+          className={`fixed top-0 left-0 z-0 w-full min-h-screen ${
+            noise ? "noise" : ""
+          }`}
+        />
         <div className="md:max-w-6xl md:mx-auto z-20 gap-4 my-16 relative grid md:grid-cols-4 grid-cols-1 w-full">
           <nav
             id="navbar"
@@ -89,6 +95,7 @@ export default function Home() {
               <strong>Joe L. Lee</strong> is a designer, developer, and business
               owner who engineers digital experience & interaction.
             </h1>
+            <Settings noise={noise} setNoise={setNoise} />
             <div className="flex flex-col gap-2">
               <h2 className="font-bold">Sitemap</h2>
               <ul>
