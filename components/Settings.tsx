@@ -15,7 +15,7 @@ const Settings = (props: Props) => {
   React.useEffect(() => {
     setTheme("system");
     setMounted(true);
-  }, []);
+  }, [setTheme, setMounted]);
 
   if (!mounted) {
     return null;

@@ -4,6 +4,12 @@ import React, { useEffect, useState } from "react";
 
 import { getLocalStorage, setLocalStorage } from "@/lib/storageHelper";
 
+declare global {
+  interface Window {
+    gtag: any;
+  }
+}
+
 type Props = {};
 
 const CookieBanner = (props: Props) => {
