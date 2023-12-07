@@ -43,7 +43,15 @@ const getAccessToken = async () => {
 };
 
 export const fetchTopTracks = async () => {
+  if (!process.env.SPOTIFY_REFRESH_TOKEN) {
+    throw new Error("No Spotify refresh token found");
+  }
+
   const { access_token } = await getAccessToken();
+
+  if (!access_token) {
+    throw new Error("No Spotify access token found");
+  }
 
   const response = await fetch(
     "https://api.spotify.com/v1/me/top/tracks?limit=10",
