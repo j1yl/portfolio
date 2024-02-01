@@ -46,21 +46,21 @@ export const projects = [
     url: "https://path.joelee.info/",
     tags: ["project", "algorithm"],
   },
-  {
-    name: "roulettor",
-    images: [
-      "/assets/images/roulettor1.webp",
-      "/assets/images/roulettor2.webp",
-    ],
-    url: "https://roulettor.com",
-    tags: ["project", "websockets"],
-  },
-  {
-    name: "flight tracker",
-    images: ["/assets/images/flight1.webp", "/assets/images/flight2.webp"],
-    url: "https://flights-j1yl.vercel.app/",
-    tags: ["project", "maps"],
-  },
+  // {
+  //   name: "roulettor",
+  //   images: [
+  //     "/assets/images/roulettor1.webp",
+  //     "/assets/images/roulettor2.webp",
+  //   ],
+  //   url: "https://roulettor.com",
+  //   tags: ["project", "websockets"],
+  // },
+  // {
+  //   name: "flight tracker",
+  //   images: ["/assets/images/flight1.webp", "/assets/images/flight2.webp"],
+  //   url: "https://flights-j1yl.vercel.app/",
+  //   tags: ["project", "maps"],
+  // },
 ];
 
 export const exp = [
@@ -85,14 +85,19 @@ export const exp = [
     company: "webverry",
   },
   {
-    date: "jun 2023 -> current",
+    date: "jun 2023 -> dec 2023",
     title: "algo officer",
     company: "acmcsuf",
   },
   {
-    date: "aug 2023 -> current",
+    date: "aug 2023 -> dec 2023",
     title: "si leader",
     company: "csuf",
+  },
+  {
+    date: "dec 2023 -> current",
+    title: "design team lead",
+    company: "acmcsuf",
   },
 ];
 
@@ -110,15 +115,14 @@ export const songs = [
 ];
 
 export const wishlist = [
+  "✓ Reeder leather dr martens",
+  "✓ WH-1000XM5",
+  "✓ 4x SSR GTX 03",
+  "✓ disneyland annual pass",
   "Yeezy Slides 'Bone' 2022",
-  "Reeder leather dr martens",
-  "WH-1000XM4 Wireless Premium",
   "Sp5der Beluga Hoodie",
-  "4x SSR GTX 03",
   "Goyard Saint Sulpice",
   "van cleef bracelet",
-  "taillights for tony",
-  "disneyland annual pass",
 ];
 
 export const business = [

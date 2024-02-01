@@ -1,3 +1,5 @@
+"use server";
+
 type SpotifyTopSongsResponse = {
   items: SpotifyTopSong[];
 };
@@ -25,6 +27,10 @@ type SpotifyTopSong = {
 const getAccessToken = async () => {
   const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 
+  if (!refresh_token) {
+    throw new Error("No refresh token");
+  }
+
   const response = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {
@@ -39,28 +45,36 @@ const getAccessToken = async () => {
     } as any),
   });
 
-  return response.json();
+  const { access_token } = await response.json();
+
+  if (!access_token) {
+    throw new Error("No access token");
+  }
+
+  return access_token;
 };
 
 export const fetchTopTracks = async () => {
-  if (!process.env.SPOTIFY_REFRESH_TOKEN) {
-    throw new Error("No Spotify refresh token found");
-  }
-
-  const { access_token } = await getAccessToken();
+  const access_token = await getAccessToken();
 
   if (!access_token) {
-    throw new Error("No Spotify access token found");
+    return [];
   }
 
   const response = await fetch(
-    "https://api.spotify.com/v1/me/top/tracks?limit=10",
+    "https://api.spotify.com/v1/me/top/tracks?limit=20&time_range=short_term",
     {
       headers: {
         Authorization: `Bearer ${access_token}`,
       },
     }
   );
+
+  console.log(response);
+
+  if (!response.ok) {
+    return [];
+  }
 
   const data: SpotifyTopSongsResponse = await response.json();
 
@@ -76,12 +90,12 @@ export const fetchTopTracks = async () => {
   });
 };
 
-export const fetchTopArtists = async () => {
-  const { accessToken } = await getAccessToken();
+// export const fetchTopArtists = async () => {
+//   const { accessToken } = await getAccessToken();
 
-  return fetch("https://api.spotify.com/v1/me/top/artists", {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-  });
-};
+//   return fetch("https://api.spotify.com/v1/me/top/artists", {
+//     headers: {
+//       Authorization: `Bearer ${accessToken}`,
+//     },
+//   });
+// };

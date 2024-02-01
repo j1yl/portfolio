@@ -15,9 +15,7 @@ const Wishlist = (props: Props) => {
       </div>
       <ul>
         {wishlist.map((_, i) => (
-          <li key={i}>
-            <strong>#</strong> {_}
-          </li>
+          <li key={i}>{_}</li>
         ))}
       </ul>
     </div>
