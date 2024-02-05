@@ -70,8 +70,6 @@ export const fetchTopTracks = async () => {
     }
   );
 
-  console.log(response);
-
   if (!response.ok) {
     return [];
   }
@@ -89,13 +87,3 @@ export const fetchTopTracks = async () => {
     };
   });
 };
-
-// export const fetchTopArtists = async () => {
-//   const { accessToken } = await getAccessToken();
-
-//   return fetch("https://api.spotify.com/v1/me/top/artists", {
-//     headers: {
-//       Authorization: `Bearer ${accessToken}`,
-//     },
-//   });
-// };
