@@ -1,11 +1,30 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import { Providers } from "./providers";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const interTight = Inter_Tight({
-  subsets: ["latin"],
+// const lato = Spectral({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
+
+const gotham = localFont({
+  src: [
+    {
+      path: "../fonts/Gotham_Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Gotham_Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Gotham_Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -16,16 +35,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <GoogleAnalytics
-        GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID as string}
-      />
-      <body className={interTight.className}>
-        <Providers>{children}</Providers>
+      <body
+        className={`${gotham.className} leading-4 text-xs flex min-h-screen md:p-4 p-2 w-full bg-neutral-950 text-white`}
+      >
+        <div className="flex flex-grow h-full w-full md:mt-8">{children}</div>
       </body>
     </html>
   );
