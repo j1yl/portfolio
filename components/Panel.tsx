@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React from "react";
+import clsx from 'clsx';
+import React from 'react';
 
 type Props = {
   children: React.ReactNode;
@@ -7,9 +7,5 @@ type Props = {
 };
 
 export default function Panel({ children, className }: Props) {
-  return (
-    <div className={clsx("p-4 border border-white w-full h-max", className)}>
-      {children}
-    </div>
-  );
+  return <div className={clsx('h-max w-full border border-black p-4', className)}>{children}</div>;
 }
