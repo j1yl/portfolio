@@ -41,6 +41,12 @@ export const interests = [
 
 export const projects = [
   {
+    name: "graph traversal visualizer",
+    images: ["/assets/images/graph1.webp", "/assets/images/graph2.webp"],
+    url: "https://graphs.joelee.info/",
+    tags: ["project", "algorithm", "hackathon", "fullyhacks"],
+  },
+  {
     name: "pathfinding visualizer",
     images: ["/assets/images/pathfind1.webp", "/assets/images/pathfind2.webp"],
     url: "https://path.joelee.info/",
