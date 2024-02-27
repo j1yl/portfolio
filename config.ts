@@ -6,17 +6,17 @@ export const navlinks = [
 ];
 
 export const socials = [
-  {
-    platform: "x (twitter)",
-    link: "https://x.com/webverry",
-  },
+  // {
+  //   platform: "x (twitter)",
+  //   link: "https://x.com/webverry",
+  // },
   {
     platform: "instagram",
     link: "https://instagram.com/webverry",
   },
   {
     platform: "tiktok",
-    link: "https://tiktok.com/@iamjoelee",
+    link: "https://tiktok.com/@webverry",
   },
   {
     platform: "github",

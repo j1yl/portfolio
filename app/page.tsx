@@ -96,7 +96,7 @@ export default function Home() {
               owner who engineers digital experience & interaction.
             </h1>
             {/* <Settings noise={noise} setNoise={setNoise} /> */}
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
               <h2 className="font-bold">Sitemap</h2>
               <ul>
                 {navlinks.map((_, i) => (
@@ -110,7 +110,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
             <div className="flex flex-col gap-2">
               <h2 className="font-bold">Interests</h2>
               <ul>
